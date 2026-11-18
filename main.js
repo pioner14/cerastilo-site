@@ -114,7 +114,7 @@ const translations = {
     'faq.q7': "Does the app include any Jehovah’s Witnesses publications?",
     'faq.a7': "No. The app contains no images, texts or publications of Jehovah’s Witnesses or of the Watch Tower organization. You download the workbook yourself from its official source and import it into the app, which only lays the program out by weeks.",
     'faq.q8': "Is this an official app?",
-    'faq.a8': "No. Unofficial application. Not affiliated with the Watch Tower Bible and Tract Society / JW.org and not endorsed by them.",
+    'faq.a8': "No. Unofficial application. Not affiliated with the Watch Tower Bible and Tract Society / JW.org.",
     'support.label': "Feedback and support",
     'feedback.title': "Suggest an improvement",
     'feedback.body': "I develop Cerastilo on my own. If you are missing a feature or found a bug, tell me what you were trying to do and what happened.",
@@ -126,7 +126,7 @@ const translations = {
     'footer.tagline': "A scheduler for the Christian Life & Ministry meeting.",
     'footer.license': "License (LICENSE)",
     'footer.built': "Built with ♥ and",
-    'footer.disclaimer': "Unofficial application. Not affiliated with the Watch Tower Bible and Tract Society / JW.org and not endorsed by them.",
+    'footer.disclaimer': "Unofficial application. Not affiliated with the Watch Tower Bible and Tract Society / JW.org.",
   },
 
   ru: {
@@ -225,7 +225,7 @@ const translations = {
     'faq.q7': "Есть ли в приложении публикации Свидетелей Иеговы?",
     'faq.a7': "Нет. В приложении нет изображений, текстов и публикаций Свидетелей Иеговы или организации Watch Tower. Рабочую тетрадь вы скачиваете сами из её официального источника и импортируете в приложение — оно лишь раскладывает программу по неделям.",
     'faq.q8': "Это официальное приложение?",
-    'faq.a8': "Нет. Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org и не одобрено ими.",
+    'faq.a8': "Нет. Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.",
     'support.label': "Обратная связь и поддержка",
     'feedback.title': "Предложить улучшение",
     'feedback.body': "Я разрабатываю Cerastilo самостоятельно. Если вам не хватает функции или вы нашли ошибку, напишите, что вы хотели сделать и что произошло.",
@@ -237,7 +237,7 @@ const translations = {
     'footer.tagline': "Планировщик встречи «Христианская жизнь и служение».",
     'footer.license': "Лицензия (LICENSE)",
     'footer.built': "Создано с ♥ и",
-    'footer.disclaimer': "Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org и не одобрено ими.",
+    'footer.disclaimer': "Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.",
   },
 };
 
