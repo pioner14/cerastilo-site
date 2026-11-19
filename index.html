@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="auto">
+<html lang="ru">
 <head>
   <meta name="robots" content="noindex" />
   <meta charset="UTF-8" />
@@ -20,455 +20,1046 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" href="icon-256.png" />
 
-  <!-- Preconnect for performance -->
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Golos Text & Material Symbols (Stitch Design System) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500..800;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            "surface": "var(--st-surface)",
+            "surface-container-lowest": "var(--st-surface-lowest)",
+            "surface-container-low": "var(--st-surface-low)",
+            "surface-container": "var(--st-surface-container)",
+            "surface-container-high": "var(--st-surface-high)",
+            "surface-container-highest": "var(--st-surface-highest)",
+            "on-surface": "var(--st-on-surface)",
+            "on-surface-variant": "var(--st-on-surface-variant)",
+            "primary": "var(--st-primary)",
+            "on-primary": "var(--st-on-primary)",
+            "primary-container": "var(--st-primary-container)",
+            "on-primary-container": "var(--st-on-primary-container)",
+            "primary-fixed": "var(--st-primary-fixed)",
+            "on-primary-fixed": "var(--st-on-primary-fixed)",
+            "secondary": "var(--st-secondary)",
+            "on-secondary": "var(--st-on-secondary)",
+            "secondary-container": "var(--st-secondary-container)",
+            "on-secondary-container": "var(--st-on-secondary-container)",
+            "secondary-fixed": "var(--st-secondary-fixed)",
+            "on-secondary-fixed": "var(--st-on-secondary-fixed)",
+            "tertiary": "var(--st-tertiary)",
+            "tertiary-container": "var(--st-tertiary-container)",
+            "tertiary-fixed": "var(--st-tertiary-fixed)",
+            "on-tertiary-fixed": "var(--st-on-tertiary-fixed)",
+            "tertiary-fixed-dim": "var(--st-tertiary-fixed-dim)",
+            "outline": "var(--st-outline)",
+            "outline-variant": "var(--st-outline-variant)",
+            "error": "#ba1a1a"
+          },
+          fontFamily: {
+            "display-lg": ["Playfair Display", "Georgia", "serif"],
+            "display-md": ["Playfair Display", "Georgia", "serif"],
+            "headline-lg": ["Playfair Display", "Georgia", "serif"],
+            "headline-md": ["Playfair Display", "Georgia", "serif"],
+            "headline-sm": ["Playfair Display", "Georgia", "serif"],
+            "body-lg": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Golos Text", "Plus Jakarta Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display-lg": ["clamp(2.35rem, 4.8vw, 3.6rem)", { "lineHeight": "1.12", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "display-md": ["clamp(2rem, 4vw, 2.85rem)", { "lineHeight": "1.16", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-lg": ["clamp(1.75rem, 3.2vw, 2.35rem)", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["clamp(1.35rem, 2.2vw, 1.75rem)", { "lineHeight": "1.28", "fontWeight": "600" }],
+            "headline-sm": ["1.35rem", { "lineHeight": "1.32", "fontWeight": "600" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
+            "body-md": ["0.96rem", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "body-sm": ["0.85rem", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "label-lg": ["0.92rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-md": ["0.8rem", { "lineHeight": "1.35", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "label-sm": ["0.72rem", { "lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "700" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      /* Stitch Variant 1: Warm Editorial Craft & Violet (Light Mode) */
+      --st-surface: #f7f2ea;
+      --st-surface-lowest: #fffdf9;
+      --st-surface-low: #f1e9dc;
+      --st-surface-container: #ebe1d2;
+      --st-surface-high: #e3d7c5;
+      --st-surface-highest: #d9cbb6;
+      --st-on-surface: #1f1a1c;
+      --st-on-surface-variant: #4f4756;
+      --st-primary: #5d3e89;
+      --st-on-primary: #ffffff;
+      --st-primary-container: #7656a3;
+      --st-on-primary-container: #f2e7ff;
+      --st-primary-fixed: #eddcff;
+      --st-on-primary-fixed: #280253;
+      --st-secondary: #7b573a;
+      --st-on-secondary: #ffffff;
+      --st-secondary-container: #f5d5b8;
+      --st-on-secondary-container: #5c3d22;
+      --st-secondary-fixed: #f7DEC6;
+      --st-on-secondary-fixed: #2e1501;
+      --st-tertiary: #654907;
+      --st-tertiary-container: #7f6120;
+      --st-tertiary-fixed: #ffdea5;
+      --st-on-tertiary-fixed: #261900;
+      --st-tertiary-fixed-dim: #e9c176;
+      --st-outline: #7b7481;
+      --st-outline-variant: #d6c8b6;
+    }
+
+    /* Stitch Variant 2: Dark Craft Obsidian (Dark Mode — via system prefers-color-scheme or [data-theme="dark"]) */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --st-surface: #110d18;
+        --st-surface-lowest: #1a1426;
+        --st-surface-low: #16111f;
+        --st-surface-container: #211930;
+        --st-surface-high: #2a203d;
+        --st-surface-highest: #35284c;
+        --st-on-surface: #f5f1fa;
+        --st-on-surface-variant: #c5bdd6;
+        --st-primary: #9d71e8;
+        --st-on-primary: #110d18;
+        --st-primary-container: #b899ea;
+        --st-on-primary-container: #110d18;
+        --st-primary-fixed: #2d2046;
+        --st-on-primary-fixed: #e4d7fa;
+        --st-secondary: #e2b887;
+        --st-on-secondary: #1d1206;
+        --st-secondary-container: #38291b;
+        --st-on-secondary-container: #f7dec6;
+        --st-secondary-fixed: #332518;
+        --st-on-secondary-fixed: #f5d5b8;
+        --st-tertiary: #e9c176;
+        --st-tertiary-container: #4a3810;
+        --st-tertiary-fixed: #3b2c0c;
+        --st-on-tertiary-fixed: #ffdea5;
+        --st-tertiary-fixed-dim: #e9c176;
+        --st-outline: #8b809d;
+        --st-outline-variant: #312545;
+      }
+    }
+
+    [data-theme="dark"] {
+      --st-surface: #110d18;
+      --st-surface-lowest: #1a1426;
+      --st-surface-low: #16111f;
+      --st-surface-container: #211930;
+      --st-surface-high: #2a203d;
+      --st-surface-highest: #35284c;
+      --st-on-surface: #f5f1fa;
+      --st-on-surface-variant: #c5bdd6;
+      --st-primary: #9d71e8;
+      --st-on-primary: #110d18;
+      --st-primary-container: #b899ea;
+      --st-on-primary-container: #110d18;
+      --st-primary-fixed: #2d2046;
+      --st-on-primary-fixed: #e4d7fa;
+      --st-secondary: #e2b887;
+      --st-on-secondary: #1d1206;
+      --st-secondary-container: #38291b;
+      --st-on-secondary-container: #f7dec6;
+      --st-secondary-fixed: #332518;
+      --st-on-secondary-fixed: #f5d5b8;
+      --st-tertiary: #e9c176;
+      --st-tertiary-container: #4a3810;
+      --st-tertiary-fixed: #3b2c0c;
+      --st-on-tertiary-fixed: #ffdea5;
+      --st-tertiary-fixed-dim: #e9c176;
+      --st-outline: #8b809d;
+      --st-outline-variant: #312545;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1000;
+      padding: 0.5rem 1rem;
+      background: var(--st-primary);
+      color: var(--st-on-primary);
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transform: translateY(-250%);
+      transition: transform 0.2s;
+    }
+    .skip-link:focus-visible {
+      transform: translateY(0);
+    }
+
+    /* Theme icon visibility */
+    .icon-moon { display: none; }
+    [data-theme="dark"] .icon-sun   { display: none; }
+    [data-theme="dark"] .icon-moon  { display: block; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .icon-sun  { display: none; }
+      :root:not([data-theme="light"]) .icon-moon { display: block; }
+    }
+
+    /* Mobile drawer */
+    .mobile-menu { display: none; }
+    .mobile-menu.is-open { display: block; }
+
+    /* Feature tabs */
+    .feat-row[data-feat-panel] { display: none; }
+    .feat-row[data-feat-panel].is-active {
+      display: grid;
+      animation: stFade 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .feat-tab.is-active {
+      background-color: var(--st-primary);
+      color: var(--st-on-primary);
+      box-shadow: 0 4px 14px rgba(93, 62, 137, 0.28);
+    }
+
+    @keyframes stFade {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* FAQ details accordion */
+    details.faq-card > summary { list-style: none; }
+    details.faq-card > summary::-webkit-details-marker { display: none; }
+    details.faq-card[open] .faq-chevron { transform: rotate(180deg); }
+  </style>
 </head>
-<body>
 
-  <!-- Skip to content -->
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
   <a href="#main" class="skip-link" data-i18n="skip">Перейти к содержимому</a>
 
-  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
-  <header class="site-header" role="banner">
-    <nav class="container nav" aria-label="Основная навигация">
-      <a href="#" class="nav__logo" aria-label="Cerastilo — в начало страницы">
-        <img class="nav__logo-icon" src="icon-256.png" width="32" height="32" alt="" />
-        <span class="nav__wordmark">Cerastilo</span>
+  <!-- ═══════════════════════════════ STITCH HEADER ═══════════════════════════════ -->
+  <header class="fixed top-0 inset-x-0 w-full z-50 bg-surface backdrop-blur-xl border-b border-outline-variant shadow-[0_1px_12px_rgba(0,0,0,0.04)] transition-all" role="banner">
+    <nav class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6" aria-label="Основная навигация">
+      <a href="#" class="flex items-center gap-3 shrink-0 group" aria-label="Cerastilo — в начало страницы">
+        <img src="icon-256.png" width="38" height="38" alt="" class="w-9 h-9 rounded-xl shadow-sm group-hover:scale-105 transition-transform" />
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Cerastilo</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mt-0.5">Christian Life &amp; Ministry</span>
+        </div>
       </a>
 
-      <ul class="nav__links" role="list">
-        <li><a href="#two-apps" class="nav__link" data-i18n="nav.two">Две программы</a></li>
-        <li><a href="#features" class="nav__link" data-i18n="nav.features">Возможности</a></li>
-        <li><a href="#download" class="nav__link" data-i18n="nav.download">Скачать</a></li>
-        <li><a href="#beta" class="nav__link" data-i18n="nav.beta">Тестерам</a></li>
-        <li><a href="#faq" class="nav__link" data-i18n="nav.faq">Вопросы</a></li>
-        <li><a href="#donate" class="nav__link" data-i18n="nav.donate">Поддержать</a></li>
+      <ul class="hidden lg:flex items-center gap-6" role="list">
+        <li><a href="#two-apps" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.two">Две программы</a></li>
+        <li><a href="#features" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.features">Возможности</a></li>
+        <li><a href="#download" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.download">Скачать</a></li>
+        <li><a href="#beta" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.beta">Тестерам</a></li>
+        <li><a href="#faq" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.faq">Вопросы</a></li>
+        <li><a href="#donate" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.donate">Поддержать</a></li>
       </ul>
 
-      <div class="nav__controls">
-        <button class="btn-icon lang-toggle" id="lang-toggle" aria-label="Сменить язык сайта" title="Сменить язык сайта" data-i18n-aria="lang.toggle" data-i18n-title="lang.toggle">
+      <div class="flex items-center gap-2.5 shrink-0">
+        <button id="lang-toggle" type="button" class="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 font-label-sm text-label-sm uppercase tracking-wider transition-opacity cursor-pointer" aria-label="Сменить язык сайта" title="Сменить язык сайта" data-i18n-aria="lang.toggle" data-i18n-title="lang.toggle">
           <span class="lang-label">RU</span>
         </button>
-        <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Переключить тему" data-i18n-aria="theme.toggle">
-          <i data-lucide="sun" class="icon-sun" aria-hidden="true"></i>
-          <i data-lucide="moon" class="icon-moon" aria-hidden="true"></i>
+
+        <button id="theme-toggle" type="button" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" aria-label="Переключить тему" data-i18n-aria="theme.toggle">
+          <i data-lucide="sun" class="icon-sun w-4 h-4" aria-hidden="true"></i>
+          <i data-lucide="moon" class="icon-moon w-4 h-4" aria-hidden="true"></i>
         </button>
-        <button class="btn-icon hamburger" id="hamburger" aria-label="Открыть меню" data-i18n-aria="nav.menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i data-lucide="menu" aria-hidden="true"></i>
+
+        <a href="#download" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" data-i18n="nav.download">Скачать</a>
+
+        <button id="hamburger" type="button" class="lg:hidden w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface flex items-center justify-center" aria-label="Открыть меню" data-i18n-aria="nav.menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu" class="w-4 h-4" aria-hidden="true"></i>
         </button>
       </div>
     </nav>
 
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="navigation" aria-label="Меню сайта" data-i18n-aria="nav.menuLabel">
-      <ul role="list">
-        <li><a href="#two-apps" class="mobile-menu__link" data-i18n="nav.two">Две программы</a></li>
-        <li><a href="#features" class="mobile-menu__link" data-i18n="nav.features">Возможности</a></li>
-        <li><a href="#download" class="mobile-menu__link" data-i18n="nav.download">Скачать</a></li>
-        <li><a href="#beta" class="mobile-menu__link" data-i18n="nav.beta">Тестерам</a></li>
-        <li><a href="#faq" class="mobile-menu__link" data-i18n="nav.faq">Вопросы</a></li>
-        <li><a href="#donate" class="mobile-menu__link" data-i18n="nav.donate">Поддержать</a></li>
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-surface-container-lowest border-b border-outline-variant px-6 py-4 shadow-lg" aria-hidden="true" role="navigation" aria-label="Меню сайта" data-i18n-aria="nav.menuLabel">
+      <ul class="flex flex-col gap-2" role="list">
+        <li><a href="#two-apps" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.two">Две программы</a></li>
+        <li><a href="#features" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.features">Возможности</a></li>
+        <li><a href="#download" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.download">Скачать</a></li>
+        <li><a href="#beta" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.beta">Тестерам</a></li>
+        <li><a href="#faq" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.faq">Вопросы</a></li>
+        <li><a href="#donate" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.donate">Поддержать</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- ═══════════════════════════════ MAIN ══════════════════════════════ -->
-  <main id="main" tabindex="-1">
+  <!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+  <main id="main" tabindex="-1" class="w-full pt-20 bg-surface">
 
-    <!-- ── 1. HERO ─────────────────────────────────────────────────── -->
-    <section id="hero" class="hero" aria-labelledby="hero-heading">
-      <div class="container hero__content">
-        <div class="hero__text">
-          <h1 id="hero-heading" class="hero__headline" data-i18n="hero.headline">Расписание встречи — на компьютере и на планшете</h1>
-          <p class="hero__sub" data-i18n="hero.sub">Cerastilo — бесплатный планировщик встречи «Христианская жизнь и служение». Две программы: для компьютера (Linux, скоро Windows) и для Android-планшета. Каждая работает сама по себе, а вместе — делят одну базу.</p>
-          <div class="hero__ctas">
-            <a href="#download" class="btn btn--primary btn--lg">
-              <i data-lucide="download" aria-hidden="true"></i>
-              <span data-i18n="hero.cta1">Скачать</span>
-            </a>
-            <a href="#beta" class="btn btn--outline btn--lg">
-              <i data-lucide="flask-conical" aria-hidden="true"></i>
-              <span data-i18n="hero.cta2">Стать бета-тестером</span>
-            </a>
-          </div>
+    <!-- ── 1. STITCH HERO SECTION ─────────────────────────────────────── -->
+    <div class="relative w-full overflow-hidden border-b border-outline-variant">
+      <!-- Top ambient warm glow -->
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-primary via-secondary-container to-transparent blur-3xl pointer-events-none rounded-full"></div>
+
+      <section id="hero" class="relative max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-24 flex flex-col items-center text-center" aria-labelledby="hero-heading">
+        <!-- Stitch Badge Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant shadow-sm mb-6">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider" data-i18n="two.title">Две программы, одна база</span>
         </div>
 
-        <div class="devices" role="group" aria-label="Cerastilo на компьютере и на планшете" data-i18n-aria="hero.devices">
-          <a class="laptop" href="screenshots/raspisanie.png" target="_blank" rel="noopener">
-            <span class="laptop__screen">
-              <img src="screenshots/raspisanie.png" alt="Cerastilo на компьютере: таблица недельного расписания" data-i18n-alt="hero.altPc" width="1600" height="1000" fetchpriority="high" />
-            </span>
-            <span class="laptop__base" aria-hidden="true"></span>
+        <!-- Main Headline -->
+        <h1 id="hero-heading" class="font-display-lg text-display-lg max-w-4xl text-on-surface tracking-tight" data-i18n="hero.headline">
+          Расписание встречи — на компьютере и на планшете
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-6 leading-relaxed" data-i18n="hero.sub">
+          Cerastilo — бесплатный планировщик встречи «Христианская жизнь и служение». Две программы: для компьютера (Linux, скоро Windows) и для Android-планшета. Каждая работает сама по себе, а вместе — делят одну базу.
+        </p>
+
+        <!-- Action CTA row -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+          <a href="#download" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:-translate-y-0.5 transition-all">
+            <i data-lucide="download" class="w-5 h-5" aria-hidden="true"></i>
+            <span data-i18n="hero.cta1">Скачать</span>
           </a>
-          <a class="tablet" href="screenshots/tablet-mesyac.png" target="_blank" rel="noopener">
-            <span class="tablet__screen">
-              <img src="screenshots/tablet-mesyac.png" alt="Cerastilo на планшете: доска месяца" data-i18n-alt="hero.altTablet" width="1920" height="1040" loading="lazy" />
-            </span>
+          <a href="#beta" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant text-secondary hover:bg-surface-container-low font-label-lg text-label-lg shadow-sm hover:-translate-y-0.5 transition-all">
+            <i data-lucide="flask-conical" class="w-5 h-5" aria-hidden="true"></i>
+            <span data-i18n="hero.cta2">Стать бета-тестером</span>
           </a>
-          <div class="sync-badge" aria-hidden="true">
-            <i data-lucide="wifi"></i>
-            <span>Wi-Fi</span>
+        </div>
+
+        <!-- Micro-feature pills beneath (Stitch Hero Pills) -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <span class="material-symbols-outlined text-[16px] text-primary">computer</span>
+            <span data-i18n="two.pc.tag">Linux · Windows скоро</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <span class="material-symbols-outlined text-[16px] text-primary">tablet_android</span>
+            <span data-i18n="two.tab.tag">Android</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <span class="material-symbols-outlined text-[16px] text-primary">wifi</span>
+            <span data-i18n="two.sync.title">Синхронизация по Wi-Fi</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <span class="material-symbols-outlined text-[16px] text-primary">print</span>
+            <span data-i18n="feat.export.l1">PDF, Word, бланки S-89, печать.</span>
+          </span>
+        </div>
+
+        <!-- Stitch Interactive Dual Mockup Showcase with REAL Screenshots -->
+        <div class="w-full mt-14 relative flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 pb-6" role="group" aria-label="Cerastilo на компьютере и на планшете" data-i18n-aria="hero.devices">
+
+          <!-- Desktop Window Mockup (Left/Back) -->
+          <a href="screenshots/raspisanie.png" target="_blank" rel="noopener" class="w-full lg:w-[66%] rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-2xl overflow-hidden text-left transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 z-10 block">
+            <div class="bg-surface-container-high px-4 py-3 flex items-center justify-between border-b border-outline-variant">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+                <span class="ml-3 font-label-md text-label-md text-on-surface font-medium truncate">Cerastilo — Desktop</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm" data-i18n="two.pc.title">Компьютер</span>
+            </div>
+            <img src="screenshots/raspisanie.png" alt="Cerastilo на компьютере: таблица недельного расписания" data-i18n-alt="hero.altPc" width="1600" height="1000" fetchpriority="high" class="w-full h-auto block" />
+          </a>
+
+          <!-- Android Tablet Mockup (Right/Front Overlapping) -->
+          <a href="screenshots/tablet-mesyac.png" target="_blank" rel="noopener" class="w-full lg:w-[46%] lg:-ml-14 lg:mt-16 rounded-2xl bg-surface-container-lowest p-3 border-2 border-primary shadow-2xl z-20 transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 block">
+            <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-surface-container-high">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-secondary text-[18px]">tablet_android</span>
+                <span class="font-label-md text-label-md font-bold text-on-surface" data-i18n="two.tab.title">Планшет</span>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary">Android • Wi-Fi</span>
+            </div>
+            <img src="screenshots/tablet-mesyac.png" alt="Cerastilo на планшете: доска месяца" data-i18n-alt="hero.altTablet" width="1920" height="1040" loading="lazy" class="w-full h-auto rounded-lg block" />
+          </a>
+
+          <!-- Floating Wi-Fi Sync Capsule Card (Stitch Style) -->
+          <div class="lg:absolute -bottom-3 left-1/2 lg:-translate-x-1/2 z-30 px-5 py-2.5 rounded-full bg-surface-container-lowest border-2 border-primary shadow-xl flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+              <i data-lucide="wifi" class="w-4 h-4" aria-hidden="true"></i>
+            </div>
+            <div class="text-left">
+              <div class="font-label-md text-label-md text-on-surface font-bold">
+                <span data-i18n="two.sync.title">Синхронизация по Wi-Fi</span>
+                <span class="ml-1.5 tracking-widest font-mono text-primary font-bold">[ 6-CHAR ]</span>
+              </div>
+            </div>
           </div>
+
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- ── 2. TWO APPS ─────────────────────────────────────────────── -->
-    <section id="two-apps" class="two-apps section" aria-labelledby="two-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="two-heading" class="section-title" data-i18n="two.title">Две программы, одна база</h2>
-          <p class="section-sub" data-i18n="two.sub">Каждая программа полностью работает сама по себе. Если у вас есть и компьютер, и планшет — они синхронизируются по Wi-Fi и всегда показывают одно и то же.</p>
-        </div>
-
-        <ul class="two-apps__grid" role="list">
-          <li class="app-card">
-            <div class="feature-card__icon" aria-hidden="true"><i data-lucide="monitor"></i></div>
-            <h3 data-i18n="two.pc.title">Компьютер</h3>
-            <p data-i18n="two.pc.desc">Полноценное планирование: доска месяца, авто-распределение, печать, экспорт, письма участникам.</p>
-            <span class="shot shot--small shot--crop" aria-hidden="true"><img src="screenshots/raspisanie.png" alt="" width="1600" height="1000" loading="lazy" /></span>
-            <span class="app-card__tag" data-i18n="two.pc.tag">Linux · Windows скоро</span>
-          </li>
-          <li class="app-card">
-            <div class="feature-card__icon" aria-hidden="true"><i data-lucide="tablet"></i></div>
-            <h3 data-i18n="two.tab.title">Планшет</h3>
-            <p data-i18n="two.tab.desc">То же самое приложение и тот же вид. Работает без компьютера — удобно держать в руках прямо на встрече.</p>
-            <span class="shot shot--small shot--crop" aria-hidden="true"><img src="screenshots/tablet-raspisanie.png" alt="" width="1920" height="1040" loading="lazy" /></span>
-            <span class="app-card__tag" data-i18n="two.tab.tag">Android</span>
-          </li>
-          <li class="app-card app-card--sync">
-            <div class="feature-card__icon" aria-hidden="true"><i data-lucide="refresh-cw"></i></div>
-            <h3 data-i18n="two.sync.title">Синхронизация по Wi-Fi</h3>
-            <p data-i18n="two.sync.desc">Планшет становится сервером, компьютер подключается сам — по адресу и коду из 6 символов. Брандмауэр настраивать не нужно.</p>
-            <p class="app-card__note" data-i18n="two.sync.merge">Базы объединяются: побеждает более свежая правка, а копия перед слиянием сохраняется.</p>
-            <a class="shot shot--small" href="screenshots/sinhronizaciya.png" target="_blank" rel="noopener">
-              <img src="screenshots/sinhronizaciya.png" alt="Окно синхронизации: адрес и код" data-i18n-alt="two.sync.alt" width="560" height="256" loading="lazy" />
-            </a>
-          </li>
-        </ul>
-
-        <p class="two-apps__note"><i data-lucide="check" aria-hidden="true"></i><span data-i18n="two.note">Нужен только компьютер или только планшет — берите одну программу. Синхронизация — по желанию.</span></p>
-      </div>
-    </section>
-
-    <!-- ── 3. FEATURES ─────────────────────────────────────────────── -->
-    <section id="features" class="features section" aria-labelledby="features-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="features-heading" class="section-title" data-i18n="feat.title">От рабочей тетради до расписания</h2>
-          <p class="section-sub" data-i18n="feat.sub">Реальные скриншоты приложения (демо-база с вымышленными именами). Нажмите на картинку, чтобы открыть крупно.</p>
-        </div>
-
-        <div class="feat-rows">
-          <article class="feat-row">
-            <a class="shot" href="screenshots/mesyac.png" target="_blank" rel="noopener">
-              <div class="browser-frame">
-                <div class="browser-frame__bar"><div class="browser-frame__dots"><span class="browser-frame__dot browser-frame__dot--red"></span><span class="browser-frame__dot browser-frame__dot--yellow"></span><span class="browser-frame__dot browser-frame__dot--green"></span></div></div>
-                <img src="screenshots/mesyac.png" alt="Доска месяца с назначениями по неделям" data-i18n-alt="feat.month.alt" class="browser-frame__img" width="1600" height="1000" loading="lazy" />
-              </div>
-            </a>
-            <div class="feat-row__text">
-              <div class="feature-card__icon" aria-hidden="true"><i data-lucide="wand-2"></i></div>
-              <h3 data-i18n="feat.month.title">Доска месяца и авто-распределение</h3>
-              <ul class="checklist">
-              <li data-i18n="feat.month.l1">Учитывает квалификации, пол, отдых и отпуск.</li>
-              <li data-i18n="feat.month.l2">Заполняет только пустые пункты — ваши ручные назначения остаются.</li>
-              <li data-i18n="feat.month.l3">Не понравилось — откат одним нажатием.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="feat-row feat-row--rev">
-            <a class="shot" href="screenshots/segodnya.png" target="_blank" rel="noopener">
-              <div class="browser-frame">
-                <div class="browser-frame__bar"><div class="browser-frame__dots"><span class="browser-frame__dot browser-frame__dot--red"></span><span class="browser-frame__dot browser-frame__dot--yellow"></span><span class="browser-frame__dot browser-frame__dot--green"></span></div></div>
-                <img src="screenshots/segodnya.png" alt="Экран «Сегодня»: неотложные дела и ближайшая встреча" data-i18n-alt="feat.today.alt" class="browser-frame__img" width="1600" height="1000" loading="lazy" />
-              </div>
-            </a>
-            <div class="feat-row__text">
-              <div class="feature-card__icon" aria-hidden="true"><i data-lucide="layout-dashboard"></i></div>
-              <h3 data-i18n="feat.today.title">Сегодня — что сделать</h3>
-              <ul class="checklist">
-              <li data-i18n="feat.today.l1">Кто не ответил на уведомление и кто ещё не уведомлён.</li>
-              <li data-i18n="feat.today.l2">Карточка ближайшей встречи.</li>
-              <li data-i18n="feat.today.l3">Неотложные дела — на одном экране.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="feat-row">
-            <a class="shot" href="screenshots/vozveshchateli.png" target="_blank" rel="noopener">
-              <div class="browser-frame">
-                <div class="browser-frame__bar"><div class="browser-frame__dots"><span class="browser-frame__dot browser-frame__dot--red"></span><span class="browser-frame__dot browser-frame__dot--yellow"></span><span class="browser-frame__dot browser-frame__dot--green"></span></div></div>
-                <img src="screenshots/vozveshchateli.png" alt="База возвещателей с карточками участников" data-i18n-alt="feat.people.alt" class="browser-frame__img" width="1600" height="1000" loading="lazy" />
-              </div>
-            </a>
-            <div class="feat-row__text">
-              <div class="feature-card__icon" aria-hidden="true"><i data-lucide="users"></i></div>
-              <h3 data-i18n="feat.people.title">Возвещатели и история</h3>
-              <ul class="checklist">
-              <li data-i18n="feat.people.l1">Карточки: квалификации, семья, отпуск, контакты.</li>
-              <li data-i18n="feat.people.l2">История назначений и «в паре N раз» — видно, кто с кем уже был.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="feat-row feat-row--rev">
-            <a class="shot" href="screenshots/statistika.png" target="_blank" rel="noopener">
-              <div class="browser-frame">
-                <div class="browser-frame__bar"><div class="browser-frame__dots"><span class="browser-frame__dot browser-frame__dot--red"></span><span class="browser-frame__dot browser-frame__dot--yellow"></span><span class="browser-frame__dot browser-frame__dot--green"></span></div></div>
-                <img src="screenshots/statistika.png" alt="Статистика нагрузки по категориям назначений" data-i18n-alt="feat.stats.alt" class="browser-frame__img" width="1600" height="1000" loading="lazy" />
-              </div>
-            </a>
-            <div class="feat-row__text">
-              <div class="feature-card__icon" aria-hidden="true"><i data-lucide="bar-chart-3"></i></div>
-              <h3 data-i18n="feat.stats.title">Статистика нагрузки</h3>
-              <ul class="checklist">
-              <li data-i18n="feat.stats.l1">Графики по категориям назначений.</li>
-              <li data-i18n="feat.stats.l2">Сразу видно, кто перегружен, а кто давно не участвовал.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="feat-row">
-            <a class="shot" href="screenshots/tetradi.png" target="_blank" rel="noopener">
-              <div class="browser-frame">
-                <div class="browser-frame__bar"><div class="browser-frame__dots"><span class="browser-frame__dot browser-frame__dot--red"></span><span class="browser-frame__dot browser-frame__dot--yellow"></span><span class="browser-frame__dot browser-frame__dot--green"></span></div></div>
-                <img src="screenshots/tetradi.png" alt="Импорт рабочей тетради по неделям" data-i18n-alt="feat.books.alt" class="browser-frame__img" width="1600" height="1000" loading="lazy" />
-              </div>
-            </a>
-            <div class="feat-row__text">
-              <div class="feature-card__icon" aria-hidden="true"><i data-lucide="book-open"></i></div>
-              <h3 data-i18n="feat.books.title">Рабочие тетради</h3>
-              <ul class="checklist">
-              <li data-i18n="feat.books.l1">Импорт из EPUB — вы скачиваете тетрадь сами, из официального источника.</li>
-              <li data-i18n="feat.books.l2">Программа автоматически раскладывается по неделям.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="feat-row feat-row--rev">
-            <a class="shot" href="screenshots/raspisanie.png" target="_blank" rel="noopener">
-              <div class="browser-frame">
-                <div class="browser-frame__bar"><div class="browser-frame__dots"><span class="browser-frame__dot browser-frame__dot--red"></span><span class="browser-frame__dot browser-frame__dot--yellow"></span><span class="browser-frame__dot browser-frame__dot--green"></span></div></div>
-                <img src="screenshots/raspisanie.png" alt="Таблица недельного расписания" data-i18n-alt="feat.export.alt" class="browser-frame__img" width="1600" height="1000" loading="lazy" />
-              </div>
-            </a>
-            <div class="feat-row__text">
-              <div class="feature-card__icon" aria-hidden="true"><i data-lucide="printer"></i></div>
-              <h3 data-i18n="feat.export.title">Печать и экспорт</h3>
-              <ul class="checklist">
-              <li data-i18n="feat.export.l1">PDF, Word, бланки S-89, печать.</li>
-              <li data-i18n="feat.export.l2">Письма участникам с файлом календаря .ics.</li>
-              <li data-i18n="feat.export.l3">Один и тот же вид расписания на ПК и на планшете.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 4. DOWNLOAD ─────────────────────────────────────────────── -->
-    <section id="download" class="download section" aria-labelledby="download-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="download-heading" class="section-title" data-i18n="dl.title">Скачать Cerastilo</h2>
-          <p class="section-sub" data-i18n="dl.sub">Бесплатно для личного использования. Неофициальное приложение. Скачивание появится скоро.</p>
-        </div>
-
-        <!-- TODO: когда сборки будут опубликованы, поставить href на https://github.com/pioner14/cerastilo/releases
-             (и убрать aria-disabled / класс is-disabled у кнопок). -->
-        <ul class="download__grid" role="list">
-          <li class="dl-card">
-            <i data-lucide="tablet" aria-hidden="true"></i>
-            <h3>Android</h3>
-            <p data-i18n="dl.android">Планшет: APK на GitHub Releases. В Google Play пока нет — сначала закрытое тестирование.</p>
-            <span class="install__badge" data-i18n="install.soon">Скоро</span>
-            <a class="btn btn--primary is-disabled" role="link" aria-disabled="true" data-i18n="dl.btnApk">Скачать APK</a>
-          </li>
-          <li class="dl-card">
-            <i data-lucide="terminal" aria-hidden="true"></i>
-            <h3>Linux</h3>
-            <p data-i18n="dl.linux">AUR-пакет «cerastilo» и AppImage для других дистрибутивов.</p>
-            <span class="install__badge" data-i18n="install.soon">Скоро</span>
-            <div class="dl-card__btns">
-              <a class="btn btn--primary is-disabled" role="link" aria-disabled="true" data-i18n="dl.btnAur">AUR</a>
-              <a class="btn btn--outline is-disabled" role="link" aria-disabled="true" data-i18n="dl.btnAppimage">AppImage</a>
-            </div>
-          </li>
-          <li class="dl-card">
-            <i data-lucide="panels-top-left" aria-hidden="true"></i>
-            <h3>Windows</h3>
-            <p data-i18n="dl.windows">Установщик .exe — готовится.</p>
-            <span class="install__badge" data-i18n="install.soon">Скоро</span>
-            <a class="btn btn--primary is-disabled" role="link" aria-disabled="true" data-i18n="dl.btnExe">Скачать .exe</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ── 5. BETA ─────────────────────────────────────────────────── -->
-    <section id="beta" class="beta section" aria-labelledby="beta-heading">
-      <div class="container beta__inner">
-        <div class="beta__icon" aria-hidden="true"><i data-lucide="flask-conical"></i></div>
-        <div class="beta__text">
-          <h2 id="beta-heading" data-i18n="beta.title">Ищу бета-тестеров</h2>
-          <p data-i18n="beta.body">Чтобы опубликовать Cerastilo в Google Play, нужны тестеры с Android-планшетом или телефоном. Что делать: установить приложение через Google Play (закрытое тестирование), пользоваться им пару недель и рассказать мне об ошибках.</p>
-          <p class="beta__contact">
-            <i data-lucide="mail" aria-hidden="true"></i>
-            <span data-i18n="beta.contact">Напишите мне:</span>
-            <a href="mailto:hello@cerastilo.com?subject=Cerastilo%20beta">hello@cerastilo.com</a>
+    <!-- ── 2. STITCH BENTO GRID: "ДВЕ ПРОГРАММЫ, ОДНА БАЗА" ───────────── -->
+    <section id="two-apps" class="w-full bg-surface-container-low py-24 border-b border-outline-variant" aria-labelledby="two-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">Cerastilo</span>
+          <h2 id="two-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="two.title">
+            Две программы, одна база
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mt-4" data-i18n="two.sub">
+            Каждая программа полностью работает сама по себе. Если у вас есть и компьютер, и планшет — они синхронизируются по Wi-Fi и всегда показывают одно и то же.
           </p>
-          <p><span data-i18n="beta.issues">Или оставьте сообщение в разделе Issues на GitHub:</span> <a href="https://github.com/pioner14/cerastilo/issues" target="_blank" rel="noopener noreferrer">github.com/pioner14/cerastilo/issues</a></p>
+        </div>
+
+        <!-- Bento Grid (12 Columns: 7 + 5 + 12) -->
+        <ul class="grid grid-cols-1 md:grid-cols-12 gap-6" role="list">
+
+          <!-- Card 1: Computer (7 Cols) -->
+          <li class="md:col-span-7 rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold" data-i18n="two.pc.tag">
+                  Linux · Windows скоро
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                  <i data-lucide="monitor" class="w-5 h-5" aria-hidden="true"></i>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="two.pc.title">
+                Компьютер
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="two.pc.desc">
+                Полноценное планирование: доска месяца, авто-распределение, печать, экспорт, письма участникам.
+              </p>
+            </div>
+            <a href="screenshots/raspisanie.png" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
+              <img src="screenshots/raspisanie.png" alt="" width="1600" height="1000" loading="lazy" class="w-full h-56 object-cover object-left-top" />
+            </a>
+          </li>
+
+          <!-- Card 2: Tablet (5 Cols) -->
+          <li class="md:col-span-5 rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold" data-i18n="two.tab.tag">
+                  Android
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+                  <i data-lucide="tablet" class="w-5 h-5" aria-hidden="true"></i>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="two.tab.title">
+                Планшет
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="two.tab.desc">
+                То же самое приложение и тот же вид. Работает без компьютера — удобно держать в руках прямо на встрече.
+              </p>
+            </div>
+            <a href="screenshots/tablet-raspisanie.png" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
+              <img src="screenshots/tablet-raspisanie.png" alt="" width="1920" height="1040" loading="lazy" class="w-full h-56 object-cover object-left-top" />
+            </a>
+          </li>
+
+          <!-- Card 3: Wi-Fi Sync (12 Cols Full-Width Bento Span) -->
+          <li class="md:col-span-12 rounded-2xl bg-surface-container-lowest border-2 border-primary p-8 lg:p-10 shadow-md hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider mb-4">
+                  <i data-lucide="refresh-cw" class="w-3.5 h-3.5" aria-hidden="true"></i>
+                  <span>Wi-Fi • SQLite</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface mb-3" data-i18n="two.sync.title">
+                  Синхронизация по Wi-Fi
+                </h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-4 leading-relaxed" data-i18n="two.sync.desc">
+                  Планшет становится сервером, компьютер подключается сам — по адресу и коду из 6 символов. Брандмауэр настраивать не нужно.
+                </p>
+                <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-[22px] mt-0.5">merge</span>
+                  <p class="font-body-md text-body-md text-on-surface font-medium" data-i18n="two.sync.merge">
+                    Базы объединяются: побеждает более свежая правка, а копия перед слиянием сохраняется.
+                  </p>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 p-5 rounded-xl bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center">
+                <a href="screenshots/sinhronizaciya.png" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-md hover:scale-[1.02] transition-transform">
+                  <img src="screenshots/sinhronizaciya.png" alt="Окно синхронизации: адрес и код" data-i18n-alt="two.sync.alt" width="560" height="256" loading="lazy" class="w-full h-auto block" />
+                </a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <!-- Optional sync note -->
+        <p class="mt-8 flex items-center justify-center gap-2 text-center font-label-lg text-on-surface-variant">
+          <i data-lucide="check" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+          <span data-i18n="two.note">Нужен только компьютер или только планшет — берите одну программу. Синхронизация — по желанию.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 3. STITCH INTERACTIVE FEATURE SHOWCASE TABS ────────────────── -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full" aria-labelledby="features-heading">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">UI &amp; Workflow</span>
+        <h2 id="features-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="feat.title">
+          От рабочей тетради до расписания
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mt-3" data-i18n="feat.sub">
+          Реальные скриншоты приложения (демо-база с вымышленными именами). Нажмите на картинку, чтобы открыть крупно.
+        </p>
+      </div>
+
+      <!-- Stitch Pill Tabs Bar -->
+      <div class="feat-tabs flex flex-wrap items-center justify-center gap-2.5 pb-2 mb-8" role="tablist" aria-labelledby="features-heading">
+        <button type="button" class="feat-tab is-active inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="true" aria-controls="feat-panel-0" id="feat-tab-0" data-feat-tab="0">
+          <i data-lucide="wand-2" class="w-4 h-4" aria-hidden="true"></i>
+          <span data-i18n="feat.month.title">Доска месяца и авто-распределение</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-1" id="feat-tab-1" data-feat-tab="1">
+          <i data-lucide="layout-dashboard" class="w-4 h-4" aria-hidden="true"></i>
+          <span data-i18n="feat.today.title">Сегодня — что сделать</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-2" id="feat-tab-2" data-feat-tab="2">
+          <i data-lucide="users" class="w-4 h-4" aria-hidden="true"></i>
+          <span data-i18n="feat.people.title">Возвещатели и история</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-3" id="feat-tab-3" data-feat-tab="3">
+          <i data-lucide="bar-chart-3" class="w-4 h-4" aria-hidden="true"></i>
+          <span data-i18n="feat.stats.title">Статистика нагрузки</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-4" id="feat-tab-4" data-feat-tab="4">
+          <i data-lucide="book-open" class="w-4 h-4" aria-hidden="true"></i>
+          <span data-i18n="feat.books.title">Рабочие тетради</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-5" id="feat-tab-5" data-feat-tab="5">
+          <i data-lucide="printer" class="w-4 h-4" aria-hidden="true"></i>
+          <span data-i18n="feat.export.title">Печать и экспорт</span>
+        </button>
+      </div>
+
+      <!-- Stitch Showcase Container with REAL Screenshots -->
+      <div class="rounded-3xl bg-surface-container-lowest border border-outline-variant p-6 lg:p-10 shadow-lg">
+
+        <!-- Panel 0: Monthly Board -->
+        <article class="feat-row is-active grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-0" role="tabpanel" aria-labelledby="feat-tab-0" data-feat-panel="0">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <i data-lucide="wand-2" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.month.title">Доска месяца и авто-распределение</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.month.l1">Учитывает квалификации, пол, отдых и отпуск.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.month.l2">Заполняет только пустые пункты — ваши ручные назначения остаются.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.month.l3">Не понравилось — откат одним нажатием.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="screenshots/mesyac.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="screenshots/mesyac.png" alt="Доска месяца с назначениями по неделям" data-i18n-alt="feat.month.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 1: Today -->
+        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-1" role="tabpanel" aria-labelledby="feat-tab-1" data-feat-panel="1">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
+              <i data-lucide="layout-dashboard" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.today.title">Сегодня — что сделать</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.today.l1">Кто не ответил на уведомление и кто ещё не уведомлён.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.today.l2">Карточка ближайшей встречи.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.today.l3">Неотложные дела — на одном экране.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="screenshots/segodnya.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="screenshots/segodnya.png" alt="Экран «Сегодня»: неотложные дела и ближайшая встреча" data-i18n-alt="feat.today.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 2: Participants -->
+        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-2" role="tabpanel" aria-labelledby="feat-tab-2" data-feat-panel="2">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <i data-lucide="users" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.people.title">Возвещатели и история</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.people.l1">Карточки: квалификации, семья, отпуск, контакты.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.people.l2">История назначений и «в паре N раз» — видно, кто с кем уже был.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="screenshots/vozveshchateli.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="screenshots/vozveshchateli.png" alt="База возвещателей с карточками участников" data-i18n-alt="feat.people.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 3: Statistics -->
+        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-3" role="tabpanel" aria-labelledby="feat-tab-3" data-feat-panel="3">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
+              <i data-lucide="bar-chart-3" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.stats.title">Статистика нагрузки</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.stats.l1">Графики по категориям назначений.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.stats.l2">Сразу видно, кто перегружен, а кто давно не участвовал.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="screenshots/statistika.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="screenshots/statistika.png" alt="Статистика нагрузки по категориям назначений" data-i18n-alt="feat.stats.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 4: Workbooks -->
+        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-4" role="tabpanel" aria-labelledby="feat-tab-4" data-feat-panel="4">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center shadow-sm">
+              <i data-lucide="book-open" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.books.title">Рабочие тетради</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.books.l1">Импорт из EPUB — вы скачиваете тетрадь сами, из официального источника.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.books.l2">Программа автоматически раскладывается по неделям.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="screenshots/tetradi.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="screenshots/tetradi.png" alt="Импорт рабочей тетради по неделям" data-i18n-alt="feat.books.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 5: Print & Export -->
+        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-5" role="tabpanel" aria-labelledby="feat-tab-5" data-feat-panel="5">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <i data-lucide="printer" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.export.title">Печать и экспорт</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.export.l1">PDF, Word, бланки S-89, печать.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.export.l2">Письма участникам с файлом календаря .ics.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <span data-i18n="feat.export.l3">Один и тот же вид расписания на ПК и на планшете.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="screenshots/raspisanie.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="screenshots/raspisanie.png" alt="Таблица недельного расписания" data-i18n-alt="feat.export.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── 4. STITCH DOWNLOAD SECTION (#download) ─────────────────────── -->
+    <section id="download" class="w-full bg-surface-container-low py-24 border-y border-outline-variant" aria-labelledby="download-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">Releases</span>
+          <h2 id="download-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="dl.title">
+            Скачать Cerastilo
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mt-3" data-i18n="dl.sub">
+            Бесплатно для личного использования. Неофициальное приложение. Скачивание появится скоро.
+          </p>
+        </div>
+
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-6" role="list">
+          <!-- Android -->
+          <li class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+                  <i data-lucide="tablet" class="w-6 h-6" aria-hidden="true"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="install.soon">Скоро</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Android</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.android">
+                Планшет: APK на GitHub Releases. В Google Play пока нет — сначала закрытое тестирование.
+              </p>
+            </div>
+            <a class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm opacity-75 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnApk">
+              Скачать APK
+            </a>
+          </li>
+
+          <!-- Linux -->
+          <li class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                  <i data-lucide="terminal" class="w-6 h-6" aria-hidden="true"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="install.soon">Скоро</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Linux</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.linux">
+                AUR-пакет «cerastilo» и AppImage для других дистрибутивов.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a class="py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm opacity-75 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnAur">
+                AUR
+              </a>
+              <a class="py-3.5 px-4 rounded-xl bg-surface-container-high border-2 border-primary text-on-surface font-label-lg text-label-lg text-center shadow-sm opacity-80 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnAppimage">
+                AppImage
+              </a>
+            </div>
+          </li>
+
+          <!-- Windows -->
+          <li class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+                  <i data-lucide="panels-top-left" class="w-6 h-6" aria-hidden="true"></i>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="install.soon">Скоро</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Windows</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.windows">
+                Установщик .exe — готовится.
+              </p>
+            </div>
+            <a class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm opacity-75 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnExe">
+              Скачать .exe
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── 5. STITCH BETA TESTERS SECTION (#beta) ─────────────────────── -->
+    <section id="beta" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full" aria-labelledby="beta-heading">
+      <div class="rounded-3xl bg-surface-container-lowest border-2 border-primary p-8 lg:p-12 shadow-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 flex flex-col gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <i data-lucide="flask-conical" class="w-7 h-7" aria-hidden="true"></i>
+            </div>
+            <h2 id="beta-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="beta.title">
+              Ищу бета-тестеров
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-i18n="beta.body">
+              Чтобы опубликовать Cerastilo в Google Play, нужны тестеры с Android-планшетом или телефоном. Что делать: установить приложение через Google Play (закрытое тестирование), пользоваться им пару недель и рассказать мне об ошибках.
+            </p>
+          </div>
+
+          <div class="lg:col-span-5 p-6 lg:p-8 rounded-2xl bg-surface-container-low border border-outline-variant flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="font-label-md text-label-md text-on-surface-variant" data-i18n="beta.contact">Напишите мне:</div>
+                <a href="mailto:hello@cerastilo.com?subject=Cerastilo%20beta" class="font-label-lg text-label-lg text-primary hover:underline">hello@cerastilo.com</a>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-outline-variant font-body-sm text-body-sm text-on-surface-variant">
+              <span data-i18n="beta.issues">Или оставьте сообщение в разделе Issues на GitHub:</span>
+              <a href="https://github.com/pioner14/cerastilo/issues" target="_blank" rel="noopener noreferrer" class="block mt-1 font-label-md text-primary hover:underline">github.com/pioner14/cerastilo/issues</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ── 6. FAQ ──────────────────────────────────────────────────── -->
-    <section id="faq" class="faq section" aria-labelledby="faq-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="faq-heading" class="section-title" data-i18n="faq.title">Часто задаваемые вопросы</h2>
+    <!-- ── 6. STITCH FAQ ACCORDION (#faq) ─────────────────────────────── -->
+    <section id="faq" class="w-full bg-surface-container-low py-24 border-y border-outline-variant" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">FAQ</span>
+          <h2 id="faq-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="faq.title">
+            Часто задаваемые вопросы
+          </h2>
         </div>
 
-        <div class="faq__list">
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q1">Cerastilo бесплатный?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a1">Да. Cerastilo бесплатное для личного использования. Исходный код можно посмотреть, но проект не является открытым: изменять, распространять и продавать приложение можно только с письменного разрешения автора. Подробности — в файле LICENSE.</p>
+        <div class="space-y-4">
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q1">Cerastilo бесплатный?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a1">Да. Cerastilo бесплатное для личного использования. Исходный код можно посмотреть, но проект не является открытым: изменять, распространять и продавать приложение можно только с письменного разрешения автора. Подробности — в файле LICENSE.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q2">Какие платформы поддерживаются?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a2">Компьютер: Linux (AUR-пакет «cerastilo» и AppImage), версия для Windows готовится. Android-планшеты: APK (позже — Google Play). Пока сборки не опубликованы — скоро.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q2">Какие платформы поддерживаются?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a2">Компьютер: Linux (AUR-пакет «cerastilo» и AppImage), версия для Windows готовится. Android-планшеты: APK (позже — Google Play). Пока сборки не опубликованы — скоро.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q3">Данные собрания в безопасности?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a3">Данные хранятся в локальной базе SQLite на вашем устройстве, своих серверов у проекта нет. Синхронизация идёт напрямую между вашими устройствами в локальной сети Wi-Fi: планшет — сервер, компьютер подключается к нему. Письма участникам уходят через ваш собственный SMTP-сервер.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q3">Данные собрания в безопасности?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a3">Данные хранятся в локальной базе SQLite на вашем устройстве, своих серверов у проекта нет. Синхронизация идёт напрямую между вашими устройствами в локальной сети Wi-Fi: планшет — сервер, компьютер подключается к нему. Письма участникам уходят через ваш собственный SMTP-сервер.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q9">Нужны ли оба устройства?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a9">Нет. Каждая программа работает сама по себе — можно пользоваться только компьютером или только планшетом. Синхронизация нужна, только если вы хотите, чтобы на обоих устройствах была одна и та же база.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q9">Нужны ли оба устройства?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a9">Нет. Каждая программа работает сама по себе — можно пользоваться только компьютером или только планшетом. Синхронизация нужна, только если вы хотите, чтобы на обоих устройствах была одна и та же база.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q4">Нужен ли интернет?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a4">Для работы с расписанием — нет. Интернет нужен только для отправки и получения писем.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q4">Нужен ли интернет?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a4">Для работы с расписанием — нет. Интернет нужен только для отправки и получения писем.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q5">Можно перенести историю назначений из другой программы?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a5">Прямого импорта из NW Scheduler нет. Историю назначений можно загрузить из CSV-файла.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q5">Можно перенести историю назначений из другой программы?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a5">Прямого импорта из NW Scheduler нет. Историю назначений можно загрузить из CSV-файла.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q6">Есть ли английский интерфейс?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a6">Да. Интерфейс есть на русском и английском; язык выбирается в «Настройках» и применяется после перезапуска.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q6">Есть ли английский интерфейс?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a6">Да. Интерфейс есть на русском и английском; язык выбирается в «Настройках» и применяется после перезапуска.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q7">Есть ли в приложении публикации Свидетелей Иеговы?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a7">Нет. Cerastilo не содержит текстов, изображений и других материалов JW.org и сам ничего не скачивает с этого сайта. Рабочую тетрадь вы скачиваете сами для личного использования и открываете в программе. Она раскладывает программу встреч по неделям только на вашем устройстве и никуда её не публикует. Cerastilo бесплатное и некоммерческое.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q7">Есть ли в приложении публикации Свидетелей Иеговы?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a7">Нет. Cerastilo не содержит текстов, изображений и других материалов JW.org и сам ничего не скачивает с этого сайта. Рабочую тетрадь вы скачиваете сами для личного использования и открываете в программе. Она раскладывает программу встреч по неделям только на вашем устройстве и никуда её не публикует. Cerastilo бесплатное и некоммерческое.</p>
             </div>
           </details>
 
-          <details class="faq__item">
-            <summary class="faq__question" data-i18n="faq.q8">Это официальное приложение?</summary>
-            <div class="faq__answer-wrapper">
-              <p class="faq__answer" data-i18n="faq.a8">Нет. Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.</p>
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q8">Это официальное приложение?</span>
+              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a8">Нет. Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.</p>
             </div>
           </details>
-
         </div>
       </div>
     </section>
 
-    <!-- ── 7. FEEDBACK + DONATE ────────────────────────────────────── -->
-    <section class="support section" aria-label="Обратная связь и поддержка" data-i18n-aria="support.label">
-      <div class="container support__grid">
-        <div id="feedback" class="support__card">
-          <i data-lucide="message-square" aria-hidden="true"></i>
-          <h2 data-i18n="feedback.title">Предложить улучшение</h2>
-          <p data-i18n="feedback.body">Я разрабатываю Cerastilo самостоятельно. Если вам не хватает функции или вы нашли ошибку, напишите, что вы хотели сделать и что произошло.</p>
-          <p><span data-i18n="feedback.channel">Для предложений и сообщений об ошибках — раздел Issues в репозитории на GitHub.</span> <a href="https://github.com/pioner14/cerastilo/issues" target="_blank" rel="noopener noreferrer">github.com/pioner14/cerastilo/issues</a></p>
+    <!-- ── 7. STITCH FEEDBACK + DONATE SECTION ────────────────────────── -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full" aria-label="Обратная связь и поддержка" data-i18n-aria="support.label">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Feedback Card -->
+        <div id="feedback" class="rounded-3xl bg-surface-container-lowest border border-outline-variant p-8 lg:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-6">
+              <i data-lucide="message-square" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="feedback.title">
+              Предложить улучшение
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed" data-i18n="feedback.body">
+              Я разрабатываю Cerastilo самостоятельно. Если вам не хватает функции или вы нашли ошибку, напишите, что вы хотели сделать и что произошло.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant font-body-sm text-body-sm text-on-surface-variant">
+            <span data-i18n="feedback.channel">Для предложений и сообщений об ошибках — раздел Issues в репозитории на GitHub.</span>
+            <a href="https://github.com/pioner14/cerastilo/issues" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1.5 font-label-md text-primary hover:underline block">
+              github.com/pioner14/cerastilo/issues
+            </a>
+          </div>
         </div>
-        <div id="donate" class="support__card">
-          <i data-lucide="heart" aria-hidden="true"></i>
-          <h2 data-i18n="donate.title">Поддержать проект</h2>
-          <p data-i18n="donate.body">Cerastilo делает один человек в свободное время. Приложение бесплатное, но если оно вам помогает, вы можете поддержать разработку. Это совершенно необязательно.</p>
-          <div class="donate__buttons">
-            <a class="btn btn--primary" href="https://paypal.me/NikolaiGolotaistrov/5EUR" target="_blank" rel="noopener noreferrer">
+
+        <!-- Donate Card -->
+        <div id="donate" class="rounded-3xl bg-gradient-to-br from-surface-container-lowest to-surface-container-low border border-outline-variant p-8 lg:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-6">
+              <i data-lucide="heart" class="w-6 h-6" aria-hidden="true"></i>
+            </div>
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="donate.title">
+              Поддержать проект
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed" data-i18n="donate.body">
+              Cerastilo делает один человек в свободное время. Приложение бесплатное, но если оно вам помогает, вы можете поддержать разработку. Это совершенно необязательно.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://paypal.me/NikolaiGolotaistrov/5EUR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all">
               <span data-i18n="donate.btn5">☕ 5 €</span>
             </a>
-            <a class="btn btn--outline" href="https://paypal.me/NikolaiGolotaistrov" target="_blank" rel="noopener noreferrer">
+            <a href="https://paypal.me/NikolaiGolotaistrov" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-on-surface font-label-lg text-label-lg shadow-sm transition-all">
               <span data-i18n="donate.btnOwn">💝 Своя сумма</span>
             </a>
           </div>
         </div>
+
       </div>
     </section>
+
   </main>
 
-<!-- ═══════════════════════════════ FOOTER ════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
+  <!-- ═══════════════════════════════ STITCH FOOTER ═══════════════════════════════ -->
+  <footer class="w-full bg-surface-container-low border-t border-outline-variant" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10">
 
-      <div class="footer__col footer__col--brand">
-        <a href="#" class="footer__logo" aria-label="Cerastilo — в начало страницы">
-          <img src="icon-256.png" width="24" height="24" alt="" />
-          <span>Cerastilo</span>
-        </a>
-        <p class="footer__tagline" data-i18n="footer.tagline">Планировщик встречи «Христианская жизнь и служение».</p>
+        <div class="md:col-span-5 flex flex-col items-start gap-3">
+          <a href="#" class="flex items-center gap-3" aria-label="Cerastilo — в начало страницы">
+            <img src="icon-256.png" width="32" height="32" alt="" class="w-8 h-8 rounded-lg" />
+            <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Cerastilo</span>
+          </a>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm" data-i18n="footer.tagline">
+            Планировщик встречи «Христианская жизнь и служение».
+          </p>
+        </div>
+
+        <nav class="md:col-span-4 flex flex-col gap-2" aria-label="Навигация внизу страницы">
+          <ul class="grid grid-cols-2 gap-2 font-body-sm text-body-sm text-on-surface-variant" role="list">
+            <li><a href="#two-apps" class="hover:text-primary transition-colors" data-i18n="nav.two">Две программы</a></li>
+            <li><a href="#features" class="hover:text-primary transition-colors" data-i18n="nav.features">Возможности</a></li>
+            <li><a href="#download" class="hover:text-primary transition-colors" data-i18n="nav.download">Скачать</a></li>
+            <li><a href="#beta" class="hover:text-primary transition-colors" data-i18n="nav.beta">Тестерам</a></li>
+            <li><a href="#faq" class="hover:text-primary transition-colors" data-i18n="nav.faq">Вопросы</a></li>
+            <li><a href="#feedback" class="hover:text-primary transition-colors" data-i18n="nav.feedback">Обратная связь</a></li>
+            <li><a href="#donate" class="hover:text-primary transition-colors" data-i18n="nav.donate">Поддержать</a></li>
+          </ul>
+        </nav>
+
+        <div class="md:col-span-3 flex flex-col items-start gap-3">
+          <a href="https://github.com/pioner14/cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant text-on-surface hover:border-primary transition-colors font-label-md text-label-md shadow-sm">
+            <i data-lucide="shield-check" class="w-4 h-4 text-primary" aria-hidden="true"></i>
+            <span data-i18n="footer.license">Лицензия (LICENSE)</span>
+          </a>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            <span data-i18n="footer.built">Создано с ♥ и</span>
+            <a href="https://python.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Python</a>
+          </p>
+        </div>
+
       </div>
 
-      <nav class="footer__col footer__col--nav" aria-label="Навигация внизу страницы">
-        <ul role="list">
-          <li><a href="#two-apps" data-i18n="nav.two">Две программы</a></li>
-          <li><a href="#features" data-i18n="nav.features">Возможности</a></li>
-          <li><a href="#download" data-i18n="nav.download">Скачать</a></li>
-          <li><a href="#beta" data-i18n="nav.beta">Тестерам</a></li>
-          <li><a href="#faq" data-i18n="nav.faq">Вопросы</a></li>
-          <li><a href="#feedback" data-i18n="nav.feedback">Обратная связь</a></li>
-          <li><a href="#donate" data-i18n="nav.donate">Поддержать</a></li>
-        </ul>
-      </nav>
-
-      <div class="footer__col footer__col--meta">
-        <a class="footer__license" href="https://github.com/pioner14/cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="shield-check" aria-hidden="true"></i>
-          <span data-i18n="footer.license">Лицензия (LICENSE)</span>
-        </a>
-        <p class="footer__built">
-          <span data-i18n="footer.built">Создано с ♥ и</span>
-          <a href="https://python.org" target="_blank" rel="noopener noreferrer">Python</a>
+      <div class="my-6 p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant border-l-4 border-l-secondary text-center">
+        <p class="font-body-md text-body-md text-on-surface" role="note">
+          <strong data-i18n="footer.disclaimer">Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.</strong>
         </p>
       </div>
 
+      <div class="pt-6 border-t border-outline-variant text-center font-body-sm text-body-sm text-on-surface-variant">
+        © <span id="footer-year">2026</span> pioner14 · <a href="https://github.com/pioner14/cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">LICENSE</a>
+      </div>
     </div>
-    <p class="footer__disclaimer" role="note"><strong data-i18n="footer.disclaimer">Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.</strong></p>
-    <p class="footer__copy">© <span id="footer-year">2026</span> pioner14 · <a href="https://github.com/pioner14/cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a></p>
   </footer>
 
   <!-- Main JS (module) -->
-  <script type="module" src="main.js"></script>
+  <script type="module" src="main.js?v=4"></script>
 </body>
 </html>

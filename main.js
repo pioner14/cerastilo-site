@@ -428,6 +428,45 @@ function initFooterYear() {
 }
 
 /* ============================================================
+   7.5. FEATURE TABS
+   ============================================================ */
+function initFeatureTabs() {
+  const tabs = Array.from(document.querySelectorAll('.feat-tab'));
+  const panels = Array.from(document.querySelectorAll('.feat-row[data-feat-panel]'));
+  if (!tabs.length || !panels.length) return;
+
+  document.documentElement.classList.add('has-feat-tabs');
+
+  function activateTab(index, focusTab = false) {
+    tabs.forEach((tab, idx) => {
+      const active = idx === index;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      tab.setAttribute('tabindex', active ? '0' : '-1');
+      if (active && focusTab) tab.focus();
+    });
+    panels.forEach((panel, idx) => {
+      panel.classList.toggle('is-active', idx === index);
+    });
+  }
+
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => activateTab(idx));
+    tab.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        activateTab((idx + 1) % tabs.length, true);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        activateTab((idx - 1 + tabs.length) % tabs.length, true);
+      }
+    });
+  });
+
+  activateTab(0);
+}
+
+/* ============================================================
    8. ICONS — встроенные SVG (формы Lucide, ISC), без CDN
    ============================================================ */
 const ICONS = {
@@ -489,5 +528,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initIcons();
   initLangToggle();
   initMobileNav();
+  initFeatureTabs();
   initFooterYear();
 });
