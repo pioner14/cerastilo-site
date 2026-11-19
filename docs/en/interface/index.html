@@ -1615,19 +1615,19 @@
 <li>“📊 Statistics” shows an assignment heatmap and workload charts by category. See <a href="../history-stats/">chapter 8</a>.</li>
 <li>“⚙️ Settings” includes workbook import (<a href="../workbooks/">chapter 4</a>), congregation settings, appearance, modules, data migration, backups, sync, and email settings. See <a href="../settings/">chapter 11</a>.</li>
 </ol>
-<p>Tab contents refresh automatically when you switch tabs. The publisher list and history reload to reflect changes made elsewhere. If an error occurs during startup or use, the app opens a dialog with details.</p>
+<p>The publisher list and history refresh when you open their tabs.</p>
 <p>The status bar at the bottom briefly shows the results of actions, for example “Part duration updated” or “Auto-assign: N assignments”.</p>
 <h2 id="section-2.2">2.2. Navigating dates (date tree and “‹”, “Today”, “›” buttons)<a class="headerlink" href="#section-2.2" title="Permanent link">&para;</a></h2>
-<p><strong>Date tree.</strong> On “📅 Schedule”, the left pane lists years, months, and weeks. Click a week to display its schedule on the right. Right-click a month for “🎟️ S-89 slips for [month]…”. The list icon on the left of the toolbar (“Show or hide the week list”) hides the tree to make room for the table on tablets and small screens.</p>
-<p><strong>Navigation buttons.</strong> The following buttons are above the schedule:</p>
+<p>Select a week in the date tree on the left to open its schedule. Click the list icon to make room for the table. Its tooltip reads “Show or hide the week list”.</p>
+<p>Navigation buttons. The following buttons are above the schedule:</p>
 <ul>
 <li>“‹” goes to the previous week.</li>
 <li>“Today” returns to the current week.</li>
 <li>“›” goes to the next week.</li>
 </ul>
-<p>Keyboard shortcuts are <strong>Alt+←</strong> to go back and <strong>Alt+→</strong> to go forward. On the month board, these controls move between months.</p>
-<p><strong>Add weeks for a future year.</strong> Click “➕ Future year” below the date tree to create blank schedule templates. The app picks the first incomplete year after the current year (for example, if only January and February are loaded), or the year after the last year in the schedule. The confirmation shows the year and number of missing weeks. Existing weeks are preserved. When finished, the app shows “[year]: blank weeks added — N.”</p>
-<p><strong>Special events.</strong> Right-click a week to choose its type:</p>
+<p>Keyboard shortcuts are Alt+← to go back and Alt+→ to go forward. On the month board, these controls move between months.</p>
+<p>For blank weeks in a future year, see <a href="../workbooks/#section-4.2">chapter 4.2</a>.</p>
+<p>Special events. Right-click a week to choose its type:</p>
 <ul>
 <li>“Regular week” for the usual program.</li>
 <li>“🍷 Memorial”</li>
@@ -1636,21 +1636,16 @@
 <li>“👔 Circuit overseer visit (CO)”</li>
 </ul>
 <p>A check mark indicates the current type. The app saves your selection and refreshes the open week immediately. The type affects auto-assignment and how the schedule appears. For example, a CO visit adds a badge to the week header.</p>
-<p><strong>Create S-89 slips for a month.</strong> Right-click the month and choose “🎟️ S-89 slips for [month]…” to create slips for all weeks in that month. See <a href="../export/#section-10.3">section 10.3</a>.</p>
+<p>Create S-89 slips for a month. Right-click the month and choose <strong>“🎟️ S-89 slips for [month]…”</strong> to create slips for all weeks in that month. See <a href="../export/#section-10.3">section 10.3</a>.</p>
 <h2 id="section-2.3">2.3. Switching between the weekly schedule and month board<a class="headerlink" href="#section-2.3" title="Permanent link">&para;</a></h2>
-<p>The “📅 Schedule” tab has two views.</p>
-<p><strong>Week view.</strong> Select a week to see its table on the right, with columns for “Section”, “№”, “Assignment”, “Start”, “Time”, “Participant”, and “Assistant”. Use it to assign parts, change durations, and manage extra items (<a href="../schedule/">chapter 6</a>).</p>
-<p><strong>Month view (“Month”).</strong> Click “Month” on the toolbar to see the full month as a grid, with one column per week and one row per part.</p>
-<ul>
-<li>The grid shows the entire month and any empty slots.</li>
-<li>Drag a candidate from the right-hand panel onto a part or double-click to assign them. “🔍 Check the month” is above the panel.</li>
-<li>The candidate list shows the time since the last assignment as “N wk” or displays “new” for a publisher with no assignment history. Colored dots show who last had a part at least eight weeks ago and who had one fewer than four weeks ago, helping you share assignments fairly.</li>
-<li>“🪄 Auto-assign” (“🪄 Auto” on narrow screens) fills empty parts for the whole month, preserving existing assignments and skipping special weeks. The app takes a database snapshot before starting. Click the undo button to restore the database to that point if necessary. During assignment, the board, “🪄 Auto”, and the undo button are disabled to protect the schedule and snapshot. See <a href="../schedule/month-board/">section 6.5</a>.</li>
-</ul>
-<p>Select a week in the tree or turn off “Month” to return to the weekly schedule.</p>
-<p><strong>Weekly announcements.</strong> Below the weekly table, “📢 Announcement” takes up a few lines at first. Click “Expand” to open it and “Collapse” to fold it back up. You can turn off the announcements module in “⚙️ Settings” (<a href="../settings/modules/">section 11.2</a>).</p>
+<ol>
+<li>Select a week in the date tree on the left. Its table opens on the right with columns for “Section”, “№”, “Assignment”, “Start”, “Time”, “Participant”, and “Assistant” (<a href="../schedule/">chapter 6</a>).</li>
+<li>Click <strong>“Month”</strong> to open the month board (<a href="../schedule/month-board/">chapter 6.5</a>).</li>
+<li>To return to the weekly schedule, select a week in the tree or switch to week view.</li>
+</ol>
+<p>For announcements below the weekly table, see <a href="../schedule/announcements/">chapter 6.6</a>.</p>
 <h2 id="section-2.4">2.4. Appearance themes (“System default”, “Light”, “Dark”)<a class="headerlink" href="#section-2.4" title="Permanent link">&para;</a></h2>
-<p>In “⚙️ Settings”, open “🎨 Appearance” and use the “Theme:” list.</p>
+<p>In “⚙️ Settings”, open <strong>“🎨 Appearance”</strong> and use the “Theme:” list.</p>
 <ul>
 <li>“System default” follows the operating system theme (such as KDE or GNOME) and updates the app as soon as the system theme changes.</li>
 <li>“Light” uses a light theme.</li>
@@ -1759,8 +1754,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

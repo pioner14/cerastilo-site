@@ -71,6 +71,7 @@ class EnglishPage(HTMLParser):
             ("data-i18n-alt", "alt"),
             ("data-i18n-aria", "aria-label"),
             ("data-i18n-title", "title"),
+            ("data-i18n-href", "href"),
         ):
             if marker in attrs:
                 updates[attribute] = self.translations[attrs[marker]]

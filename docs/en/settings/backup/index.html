@@ -1475,24 +1475,24 @@
 
 <h1 id="backing-up-and-restoring-the-database">Backing up and restoring the database<a class="headerlink" href="#backing-up-and-restoring-the-database" title="Permanent link">&para;</a></h1>
 <p>“🛡️ Data safety” in “⚙️ Settings” has “📦 Create backup” and “📂 Restore”.</p>
-<p><strong>Create a backup</strong></p>
+<p>Create a backup</p>
 <ol>
-<li>Click “📦 Create backup”.</li>
+<li>Click <strong>“📦 Create backup”</strong>.</li>
 <li>Review the default name, <code>NHJS_Backup_YYYY-MM-DD_HH-MM.zip</code>, and choose a location such as an external drive or cloud folders.</li>
-<li>Click “Save”. A “Success” dialog shows “Backup created:” and the path.</li>
+<li>Click <strong>“Save”</strong>. A “Success” dialog shows “Backup created:” and the path.</li>
 <li>On failure, “Error” shows “Failed to create backup:” and the reason.</li>
 </ol>
-<p><strong>What a backup includes.</strong> One ZIP archive contains the database with publishers, schedules, settings, and notification history.</p>
-<p><strong>Restore from a backup</strong></p>
+<p>The ZIP archive contains publisher records, schedules, settings, and notification history. The SMTP password is stored separately and stays outside the archive. Enter it again after restoring the backup on another device (<a href="../../email/smtp/">chapter 9.1</a>).</p>
+<p>Restore from a backup</p>
 <ol>
-<li>Click “📂 Restore”.</li>
-<li>The app warns “Restoring will replace the CURRENT database.” and asks “Are you sure?” Click “Yes” to proceed or “No” to cancel.</li>
+<li>Click <strong>“📂 Restore”</strong>.</li>
+<li>The app warns “Restoring will replace the CURRENT database.” and asks “Are you sure?” Click <strong>“Yes”</strong> to proceed or “No” to cancel.</li>
 <li>Choose the backup using “ZIP Files (*.zip)”.</li>
 <li>“Success” shows “Database restored successfully!” and “Restart the program to apply the changes.”</li>
-<li><strong>Close and reopen the app</strong> to apply the change.</li>
+<li>Close and reopen the app to apply the change.</li>
 <li>If the file is unsuitable or the restore fails, “Error” shows “Failed to restore:” and the reason. The existing database stays in place.</li>
 </ol>
-<p><strong>Important</strong></p>
+<p>Important</p>
 <ul>
 <li>Restoring replaces the entire current database. Changes made since the backup will be lost. Use it to move the database to another computer or to recover a saved version after a problem.</li>
 <li>Back up regularly, for example monthly, and before updating. Store backups on external media or in cloud storage.</li>
@@ -1600,8 +1600,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

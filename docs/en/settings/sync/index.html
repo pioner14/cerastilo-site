@@ -1475,24 +1475,24 @@
 
 <h1 id="syncing-a-computer-and-tablet-over-wi-fi">Syncing a computer and tablet over Wi-Fi<a class="headerlink" href="#syncing-a-computer-and-tablet-over-wi-fi" title="Permanent link">&para;</a></h1>
 <p>“🔄 PC ↔ tablet sync” merges schedules from a computer and tablet, for example after editing the schedule on the tablet while away.</p>
-<p><strong>What you need.</strong> Both devices must be on the same Wi-Fi network.</p>
-<p><strong>Step 1. Open the sync dialog on the tablet</strong></p>
+<p>What you need. Both devices must be on the same Wi-Fi network.</p>
+<p>Step 1. Open the sync dialog on the tablet</p>
 <ol>
 <li>Go to “⚙️ Settings” → “🔄 PC ↔ tablet sync” → “🔄 Sync with PC”. The section says “Show the address and code for the PC: the PC fetches the schedule, merges it and sends it back (over Wi-Fi).”</li>
 <li>“Sync with PC” displays “Address:” (for example, <code>192.168.1.20</code>), “Code:” (for example, <code>ABC234</code>), and “Waiting for the PC…”. Leave the dialog open.</li>
 </ol>
-<p><strong>Step 2. Connect to the tablet from the computer</strong></p>
+<p>Step 2. Connect to the tablet from the computer</p>
 <ol>
 <li>Go to “⚙️ Settings” → “🔄 PC ↔ tablet sync” → “🔄 Sync with tablet”. The section says “Fetch the schedule from the tablet, merge it with this one and send it back (over Wi-Fi).”</li>
-<li>In “Sync with tablet”, enter the information from the tablet screen into “Tablet address:” and “Code:”. Click “🔄 Sync” or press Enter.</li>
+<li>In “Sync with tablet”, enter the information from the tablet screen into “Tablet address:” and “Code:”. Click <strong>“🔄 Sync”</strong> or press Enter.</li>
 <li>“Fetching the database from the tablet and merging…” appears while the computer retrieves the tablet database, merges both copies, and sends the result back.</li>
 </ol>
-<p><strong>Step 3. Finish</strong></p>
+<p>Step 3. Finish</p>
 <ul>
 <li>The computer shows “Sync with tablet complete.” in a “Done” dialog. The schedule refreshes in open tabs automatically.</li>
-<li>On the tablet, “Done” shows “Sync complete. The app will close — open it again to see the merged schedule.” The app then closes to reload the replaced database on startup. <strong>Reopen Cerastilo</strong> to see the merged schedule.</li>
+<li>On the tablet, “Done” shows “Sync complete. The app will close — open it again to see the merged schedule.” The app then closes to reload the replaced database on startup. Reopen Cerastilo to see the merged schedule.</li>
 </ul>
-<p><strong>How sync works</strong></p>
+<p>How sync works</p>
 <ul>
 <li>The tablet runs the server and the computer connects to it. There is no need to configure the computer's firewall.</li>
 <li>The port is always 8765 and is filled in internally. If a sync dialog is already open or the port is in use, the tablet shows “Sync is already running: port 8765 is busy. Close the other sync window and try again.”</li>
@@ -1503,7 +1503,7 @@
 <li>The computer's dialog stays open while the transfer is in progress.</li>
 <li>“unknown — check Wi-Fi” in place of the address means the tablet is disconnected from the network.</li>
 </ul>
-<p><strong>Before syncing.</strong> Sync includes tablet edits in the merged database and overwrites the tablet's local copy with the result. For a separate copy of each device's starting data, make a normal backup on both devices first (<a href="../backup/">section 11.4</a>).</p>
+<p>Before syncing. Sync includes tablet edits in the merged database and overwrites the tablet's local copy with the result. For a separate copy of each device's starting data, make a normal backup on both devices first (<a href="../backup/">section 11.4</a>).</p>
 
 
 
@@ -1605,8 +1605,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

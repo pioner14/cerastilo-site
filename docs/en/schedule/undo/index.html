@@ -21,7 +21,7 @@
 
     
       
-        <title>Undo and redo (including month auto-assignment) - Cerastilo documentation</title>
+        <title>Undo and redo - Cerastilo documentation</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#undo-and-redo-including-month-auto-assignment" class="md-skip">
+        <a href="#undo-and-redo" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Undo and redo (including month auto-assignment)
+              Undo and redo
             
           </span>
         </div>
@@ -1473,23 +1473,22 @@
 
 
 
-<h1 id="undo-and-redo-including-month-auto-assignment">Undo and redo (including month auto-assignment)<a class="headerlink" href="#undo-and-redo-including-month-auto-assignment" title="Permanent link">&para;</a></h1>
-<p><strong>Undo and redo in week view.</strong> Use the undo and redo icons on the toolbar (“Undo the last schedule change (Ctrl+Z)” and “Redo the undone change (Ctrl+Shift+Z)”) or the keyboard shortcuts:</p>
+<h1 id="undo-and-redo">Undo and redo<a class="headerlink" href="#undo-and-redo" title="Permanent link">&para;</a></h1>
+<p>Undo and redo in week view. Use the undo and redo icons on the toolbar (“Undo the last schedule change (Ctrl+Z)” and “Redo the undone change (Ctrl+Shift+Z)”) or the keyboard shortcuts:</p>
 <ul>
-<li><strong>Ctrl+Z</strong> undoes the last change.</li>
-<li><strong>Ctrl+Shift+Z</strong> or <strong>Ctrl+Y</strong> redoes it.</li>
+<li>Ctrl+Z undoes the last change.</li>
+<li>Ctrl+Shift+Z or Ctrl+Y redoes it.</li>
 </ul>
-<p>You can undo assigning, replacing, or removing publishers, changing durations, adding, editing, duplicating, or deleting extra parts, clearing the week, reordering rows, and auto-assigning the week. The history holds the last <strong>30</strong> changes. A new action clears the redo history.</p>
+<p>You can undo assigning, replacing, or removing publishers, changing durations, adding, editing, duplicating, or deleting extra parts, clearing the week, reordering rows, and auto-assigning the week. The history holds the last 30 changes. A new action clears the redo history.</p>
 <p>The buttons are disabled when their histories are empty.</p>
-<p><strong>Undo edits on the month board.</strong> In “Month”, the undo button, the redo button, and <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> undo and redo board edits one at a time. These include assignments made by double-click, drag-and-drop, or the selection dialog, clearing a cell, and swapping people. The undo tooltip reads “Undo the last change on the board (Ctrl+Z)”. The board remembers the last 30 changes and clears the history when you switch months.</p>
-<p><strong>Undo a month auto-assignment.</strong> Once the board's undo history is empty, the undo button in “Month” restores the entire database snapshot from just before the last monthly “🪄 Auto” run.</p>
+<p>Undo edits on the month board. In “Month”, the undo button, the redo button, and Ctrl+Z / Ctrl+Y undo and redo board edits one at a time. These include assignments made by double-click, drag-and-drop, or the selection dialog, clearing a cell, and swapping people. The undo tooltip reads “Undo the last change on the board (Ctrl+Z)”. The board remembers the last 30 changes and clears the history when you switch months.</p>
+<p>Undo a month auto-assignment. Once the board's undo history is empty, the undo button in “Month” restores the entire database snapshot from just before the last monthly “🪄 Auto” run.</p>
 <ol>
 <li>The undo button is available when a snapshot exists. The tooltip reads “Undo month auto-assign (snapshot from HH:MM)” or “Nothing to undo”. Any pre-run board edits are handled through the snapshot.</li>
 <li>Click the undo button. The app asks “Revert the schedule to its state as of HH:MM, before the month auto-assign?” and adds “All changes made after that will also be lost.”</li>
-<li>Click “Yes”. The snapshot replaces the database, the previous weekly undo history clears, and the board and open week reload. The app shows “↶ Month auto-assign undone”.</li>
+<li>Click <strong>“Yes”</strong>. The snapshot replaces the database, the previous weekly undo history clears, and the board and open week reload. The app shows “↶ Month auto-assign undone”.</li>
 </ol>
-<p><strong>Important.</strong> Restoring the snapshot removes the auto-assignment and any manual changes made after the run began. Use it just after an unsatisfactory run, before making further edits.</p>
-<p>The undo button, “🪄 Auto”, and the board are disabled while month auto-assignment is running.</p>
+<p>Restoring the snapshot removes all changes made after it was taken. To run month auto-assignment, see <a href="../auto-assign/">chapter 6.1</a>.</p>
 
 
 
@@ -1591,8 +1590,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

@@ -21,7 +21,7 @@
 
     
       
-        <title>Миграция данных (импорт из NW Scheduler и Excel) - Документация Cerastilo</title>
+        <title>Импорт из NW Scheduler и Excel - Документация Cerastilo</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#миграция-данных-импорт-из-nw-scheduler-и-excel" class="md-skip">
+        <a href="#импорт-из-nw-scheduler-и-excel" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Миграция данных (импорт из NW Scheduler и Excel)
+              Импорт из NW Scheduler и Excel
             
           </span>
         </div>
@@ -1473,31 +1473,31 @@
 
 
 
-<h1 id="миграция-данных-импорт-из-nw-scheduler-и-excel">Миграция данных (импорт из NW Scheduler и Excel)<a class="headerlink" href="#миграция-данных-импорт-из-nw-scheduler-и-excel" title="Permanent link">&para;</a></h1>
+<h1 id="импорт-из-nw-scheduler-и-excel">Импорт из NW Scheduler и Excel<a class="headerlink" href="#импорт-из-nw-scheduler-и-excel" title="Permanent link">&para;</a></h1>
 <p>Здесь два разных импорта — история назначений из программы NW Scheduler и контакты участников из Excel.</p>
-<p><strong>Импорт истории из NW Scheduler.</strong> Расположен в блоке <strong>«💾 Миграция данных»</strong>, кнопка <strong>«🕒 Импортировать историю из NW Scheduler»</strong>. Под кнопкой — пояснение: <em>«Импорт истории прошлых назначений из CSV-файла NW Scheduler.»</em></p>
+<p>Импорт истории из NW Scheduler. Расположен в блоке «💾 Миграция данных», кнопка «🕒 Импортировать историю из NW Scheduler». Под кнопкой — пояснение: «Импорт истории прошлых назначений из CSV-файла NW Scheduler.»</p>
 <ol>
 <li>Нажмите кнопку <strong>«🕒 Импортировать историю из NW Scheduler»</strong>.</li>
-<li>В окне выбора файла укажите CSV-файл, выгруженный из NW Scheduler (фильтр **«CSV Files (<em>.csv)»</em>*).</li>
-<li>Дождитесь окончания импорта. По завершении — окно <strong>«Успех»</strong> с отчётом:</li>
-<li><strong>«Добавлено недель: N»</strong>;</li>
-<li><strong>«Импортировано заданий: M»</strong>;</li>
-<li><strong>«⚠️ Пропущено (не найдены в базе): K»</strong> — задания, которые не удалось привязать к участникам (например, их нет в базе программы).</li>
-<li>Если импорт не удался — <strong>«Ошибка — Не удалось выполнить импорт: …»</strong> с причиной.</li>
+<li>В окне выбора файла укажите CSV-файл, выгруженный из NW Scheduler (фильтр <em>«CSV Files (</em>.csv)»*).</li>
+<li>Дождитесь окончания импорта. По завершении — окно «Успех» с отчётом:</li>
+<li>«Добавлено недель: N»;</li>
+<li>«Импортировано заданий: M»;</li>
+<li>«⚠️ Пропущено (не найдены в базе): K» — задания, которые не удалось привязать к участникам (например, их нет в базе программы).</li>
+<li>Если импорт не удался — «Ошибка — Не удалось выполнить импорт: …» с причиной.</li>
 </ol>
-<p><strong>Как это работает внутри.</strong> Импорт не создаёт новых участников: он добавляет недели и задания и связывает их с уже существующими возвещателями по именам. Те, кого не нашёл в базе, попадают в счётчик «Пропущено». Отмена выбора файла в окне — ничего не импортирует.</p>
-<p><strong>Импорт email и телефонов из Excel.</strong> Находится в блоке <strong>«📧 Email-уведомления»</strong> (это часть настройки почты, но по смыслу — тоже миграция контактов). Кнопка <strong>«📋 Импорт email из Excel»</strong>, подсказка: <em>«Импортировать email и телефоны из «Список возвещателей.xlsx»»</em>.</p>
+<p>Импорт связывает задания с существующими участниками по именам. Если программа не находит участника, она учитывает его в числе «Пропущено».</p>
+<p>Импорт email и телефонов из Excel. Находится в блоке «📧 Email-уведомления» (это часть настройки почты, но по смыслу — тоже миграция контактов). Кнопка «📋 Импорт email из Excel», подсказка: «Импортировать email и телефоны из «Список возвещателей.xlsx»».</p>
 <ol>
 <li>Нажмите <strong>«📋 Импорт email из Excel»</strong>.</li>
-<li>Выберите файл Excel (фильтр **«Excel Files (<em>.xlsx <em>.xls)»</em></em>).</li>
-<li>По завершении — окно <strong>«Успех»</strong> с отчётом:</li>
-<li><strong>«✅ Обновлено участников: N»</strong>;</li>
-<li><strong>«⚠️  Без email в файле: N»</strong>;</li>
-<li><strong>«❓ Не найдены в БД: N»</strong> — имена из файла, которых нет в программе;</li>
-<li><strong>«❓ Нет в файле: N»</strong> — участники программы, которых нет в файле.</li>
-<li>Если импорт не удался — <strong>«Ошибка — Не удалось импортировать: …»</strong>.</li>
+<li>Выберите файл Excel (фильтр <em>«Excel Files (</em>.xlsx <em>.xls)»</em>).</li>
+<li>По завершении — окно «Успех» с отчётом:</li>
+<li>«✅ Обновлено участников: N»;</li>
+<li>«⚠️  Без email в файле: N»;</li>
+<li>«❓ Не найдены в БД: N» — имена из файла, которых нет в программе;</li>
+<li>«❓ Нет в файле: N» — участники программы, которых нет в файле.</li>
+<li>Если импорт не удался — «Ошибка — Не удалось импортировать: …».</li>
 </ol>
-<p><strong>Как это работает внутри.</strong> Программа сопоставляет имена из файла с именами в карточках и подставляет найденным участникам email и телефон. Уже заполненные поля обновляются. Отмена выбора файла ничего не делает.</p>
+<p>Программа сверяет имена в Excel с именами в карточках. У найденных участников она заменяет email и телефон значениями из файла.</p>
 
 
 
@@ -1599,8 +1599,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
+  
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

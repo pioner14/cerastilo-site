@@ -1561,7 +1561,7 @@
 <h1 id="using-cerastilo-on-android-tablets">Using Cerastilo on Android tablets<a class="headerlink" href="#using-cerastilo-on-android-tablets" title="Permanent link">&para;</a></h1>
 <p>Cerastilo uses the same main window and tabs on a tablet and computer. It adapts scrolling, interface scale, and the toolbar for touch and narrow screens.</p>
 <h2 id="section-12.1">12.1. Touch input and scrolling<a class="headerlink" href="#section-12.1" title="Permanent link">&para;</a></h2>
-<p><strong>Finger scrolling.</strong> Drag the content directly in lists, tables, and scrollable areas. This works in:</p>
+<p>Finger scrolling. Drag the content directly in lists, tables, and scrollable areas. This works in:</p>
 <ul>
 <li>The date tree in “📅 Schedule”.</li>
 <li>The weekly schedule table.</li>
@@ -1571,37 +1571,21 @@
 <li>Dialogs with lists, such as participant selection and notifications.</li>
 </ul>
 <p>The app treats a finger drag like a left-button drag. Areas that scroll with the mouse wheel on a computer can be scrolled with a finger on a tablet.</p>
-<p><strong>Touch instead of mouse clicks</strong></p>
+<p>Touch instead of mouse clicks</p>
 <ul>
 <li>Tap a week in the tree to select it.</li>
 <li>Tap a participant cell to open the selection dialog.</li>
-<li><strong>Touch and hold</strong> a row or cell to open its context menu. Use this for “Edit”, “Duplicate”, or “Delete” on extra parts, “✉️ Write / send email...”, “✅ Confirmed”, or “❌ Cannot make it” on publisher cells, and the week type menu in the tree.</li>
+<li>Touch and hold a row or cell to open its context menu. Use this for “Edit”, “Duplicate”, or “Delete” on extra parts, “✉️ Write / send email...”, “✅ Confirmed”, or “❌ Cannot make it” on publisher cells, and the week type menu in the tree.</li>
 <li>Drag a row by its vertical header with your finger to reorder it.</li>
 </ul>
-<p><strong>Interface scaling.</strong> Android scales elements according to display density. On a 1920×1200 tablet the app gets about 1280 logical pixels of width. Cerastilo applies a scale of <strong>0.85</strong> so more buttons and columns fit.</p>
-<p><strong>Maximized window.</strong> The tablet version opens maximized to use as much screen space as possible.</p>
-<p><strong>The same checks as on a computer.</strong> Assignment rules, conflict tooltips, notification marks (⏳, ✅, ❌, ⚠), the elder warning for student assignments, and the “Assign anyway?” confirmation also work on tablets. Use touch instead of a mouse.</p>
+<p>Interface scaling. Android scales elements according to display density. On a 1920×1200 tablet the app gets about 1280 logical pixels of width. Cerastilo applies a scale of 0.85 so more buttons and columns fit.</p>
+<p>Maximized window. The tablet version opens maximized to use as much screen space as possible.</p>
+<p>The same assignment rules (<a href="../rules/">chapter 7</a>), conflict warnings (<a href="../schedule/manual/">chapter 6.2</a>), and reply markers (<a href="../email/replies/">chapter 9.6</a>) apply on tablets.</p>
 <h2 id="section-12.2">12.2. Adaptive toolbar (“⋯ More”)<a class="headerlink" href="#section-12.2" title="Permanent link">&para;</a></h2>
-<p>On a narrow screen, the app rearranges the “📅 Schedule” toolbar to fit the available width.</p>
-<p><strong>How it works</strong></p>
-<ul>
-<li>The app compares the space needed for all buttons with the toolbar width and switches to a compact layout when necessary.</li>
-<li>In the compact layout:</li>
-<li>“🪄 Auto-assign” shortens to “🪄 Auto”.</li>
-<li>PDF and TXT export move off the toolbar into “⋯ More”.</li>
-<li>Open that menu to export in either format.</li>
-<li>If the window becomes wider again, for example after rotating the tablet or connecting a larger display, full labels and individual buttons return.</li>
-<li>In “Month”, weekly actions such as “➕ Part”, the weekly redo button and the trash button are hidden. The undo button can restore the pre-assignment snapshot, as explained in <a href="../schedule/undo/">section 6.7</a>. Its tooltip for the snapshot is “Undo month auto-assign (snapshot from HH:MM)”.</li>
-<li>Tooltips for “‹”, “›”, “🪄 Auto”, and the undo button reflect the current view. For example, “Previous week (Alt+←)” becomes “Previous month (Alt+←)”. On a tablet without a keyboard, tap “‹” and “›” for the same actions as Alt+← and Alt+→.</li>
-</ul>
-<p><strong>Using the tablet toolbar</strong></p>
-<ul>
-<li>If an action such as PDF or TXT export is missing from the toolbar, look in “⋯ More”.</li>
-<li>The weekly redo button is hidden in month view along with “➕ Part” and the trash button. The undo button remains available for weekly undo or month rollback when there is something to undo.</li>
-<li>The “📨 Notify” button has a dropdown with “📋 Notification log” and “📥 Check replies”. Tap the dropdown arrow to open it on a tablet.</li>
-</ul>
-<p><strong>Other tabs.</strong> Their buttons fit without rearrangement. On “🏠 Today”, “⚙️ Settings”, and “📊 Statistics”, scroll vertically to reach content below the screen (<a href="#section-12.1">section 12.1</a>).</p>
-<p><strong>Computer sync.</strong> The tablet button is “🔄 Sync with PC” and the computer button is “🔄 Sync with tablet”. See <a href="../settings/sync/">section 11.5</a>.</p>
+<p>On narrow screens, “🪄 Auto-assign” is shortened to “🪄 Auto”. To export the schedule, open <strong>“⋯ More”</strong> and select <strong>“📕 PDF…”</strong> or “📝 TXT…”. On desktop, the menu also offers “🖨️ Print…”. The individual buttons return when the toolbar has room. See <a href="../export/#section-10.1">chapter 10.1</a> for selecting weeks and saving the file.</p>
+<p>In “Month” view, “➕ Part” and “🗑️ Clear” are hidden. See <a href="../schedule/undo/">chapter 6.7</a> for undo and redo. The toolbar tooltips change with the view. For example, “‹” shows “Previous week (Alt+←)” in week view and “Previous month (Alt+←)” in month view. On a tablet, tap <strong>“‹”</strong> or “›” to move between weeks or months.</p>
+<p>Open <strong>“📨 Notify”</strong> with the arrow next to the button. The menu includes “📋 Notification log” and “📥 Check replies”.</p>
+<p>Scroll “🏠 Today”, “⚙️ Settings”, and “📊 Statistics” with your finger (<a href="#section-12.1">chapter 12.1</a>). For computer sync, see <a href="../settings/sync/">chapter 11.5</a>.</p>
 
 
 
@@ -1687,8 +1671,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
-    <meta name="description" content="Cerastilo is a desktop app for planning and maintaining the congregation&#39;s Life and Ministry Meeting schedule. It helps the brother preparing the schedule save…">
+    <meta name="description" content="The window title is Cerastilo - Meeting Scheduler. What the app does Keeps publisher records with qualifications, family details, contact information, and…">
   
   
     <link rel="canonical" href="https://cerastilo.com/docs/en/about/">
@@ -60,7 +60,7 @@
     <link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/about/">
     <link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/about/">
     
-      <meta property="og:description" content="Cerastilo is a desktop app for planning and maintaining the congregation&#39;s Life and Ministry Meeting schedule. It helps the brother preparing the schedule save…">
+      <meta property="og:description" content="The window title is Cerastilo - Meeting Scheduler. What the app does Keeps publisher records with qualifications, family details, contact information, and…">
     
   
 
@@ -357,7 +357,7 @@
   <a href="#section-1.1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Overview and data storage
+        1.1. Overview
       
     </span>
   </a>
@@ -1525,7 +1525,7 @@
   <a href="#section-1.1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Overview and data storage
+        1.1. Overview
       
     </span>
   </a>
@@ -1561,14 +1561,13 @@
 
 
 <h1 id="introduction-and-purpose">Introduction and purpose<a class="headerlink" href="#introduction-and-purpose" title="Permanent link">&para;</a></h1>
-<h2 id="section-1.1">1.1. Overview and data storage<a class="headerlink" href="#section-1.1" title="Permanent link">&para;</a></h2>
-<p><strong>Cerastilo</strong> is a desktop app for planning and maintaining the congregation's Life and Ministry Meeting schedule. It helps the brother preparing the schedule save time, avoid errors, and share assignments fairly among publishers.</p>
+<h2 id="section-1.1">1.1. Overview<a class="headerlink" href="#section-1.1" title="Permanent link">&para;</a></h2>
 <p>The window title is “Cerastilo - Meeting Scheduler”.</p>
 <p>What the app does</p>
 <ul>
 <li>Keeps publisher records with qualifications, family details, contact information, and periods of absence.</li>
 <li>Assigns parts by week, taking into account assignment intervals, gender, spiritual status, qualifications, safeguards for minors, and rotation of roles.</li>
-<li>Lets you adjust or replace assignments manually and shows any conflicts and their causes.</li>
+<li>Shows conflicts when you replace or clear assignments manually.</li>
 <li>Imports meeting programs from Life and Ministry Meeting Workbook EPUB files and organizes them by week.</li>
 <li>Emails publishers their assignments and collects their replies (“I confirm” / “I can't make it”).</li>
 <li>Creates S-89 slips, exports schedules to PDF, TXT, and Word, and exports assignments to calendar files (.ics).</li>
@@ -1576,20 +1575,20 @@
 <li>Syncs a computer and an Android tablet over Wi-Fi.</li>
 <li>Backs up and restores the database.</li>
 </ul>
-<p>Publisher records, schedules, settings, and notification history are stored in a single local database on the device. On Android, the initial database is set up in the app's persistent data folder on first launch. The schedule stays there when you update the app.</p>
+<p>The app stores publisher records, schedules, settings, and notification history on the device. The Android APK ships without a database. The publisher list and schedule are empty on first launch. To transfer data from a computer, sync over Wi-Fi (<a href="../settings/sync/">chapter 11.5</a>).</p>
 <p>The crash log (<code>crash.log</code>) is written to the application folder on a computer or the app data folder on Android. You can send it to the developer for troubleshooting.</p>
 <h2 id="section-1.2">1.2. Supported platforms (desktop and Android tablets)<a class="headerlink" href="#section-1.2" title="Permanent link">&para;</a></h2>
-<p><strong>Computer (Windows, Linux, macOS).</strong> The desktop version includes all tabs. The window opens maximized except on macOS, where it opens at its normal size. The minimum size is 1000×700 pixels, suitable for a typical monitor or laptop. The status bar shows “Done” when the app starts.</p>
-<p><strong>Android tablet.</strong> Android uses the same main window and tabs, with adaptations for touch.</p>
+<p>Computer (Windows, Linux, macOS). The desktop version includes all tabs. The window opens maximized except on macOS, where it opens at its normal size. The minimum size is 1000×700 pixels, suitable for a typical monitor or laptop. The status bar shows “Done” when the app starts.</p>
+<p>Android tablet. Android uses the same main window and tabs, with adaptations for touch.</p>
 <ul>
-<li><strong>Finger scrolling</strong> works in lists, tables, and scrollable areas. Drag the content with a finger as you would drag with the left mouse button.</li>
-<li><strong>Interface scaling</strong> is reduced to 0.85 to account for Android's display scaling. A 1920×1200 tablet gives the window about 1280 logical pixels of width, so the smaller scale helps fit the toolbar.</li>
-<li><strong>The window opens maximized.</strong></li>
-<li><strong>Data is stored in a persistent folder</strong> separate from the app code, so updates preserve the schedule.</li>
-<li><strong>The toolbar adapts to the available space.</strong> On narrow screens, “🪄 Auto-assign” becomes “🪄 Auto”, and the PDF and TXT export actions move into “⋯ More”.</li>
+<li>Scroll lists and tables by dragging anywhere in the scroll area.</li>
+<li>The tablet interface uses a scale of 0.85. For example, on a 1920×1200 screen the app has about 1280 logical pixels of width.</li>
+<li>The window opens maximized.</li>
+<li>The app keeps data in a persistent folder so updates preserve the schedule.</li>
+<li>The schedule toolbar changes on narrow screens (<a href="../android/#section-12.2">chapter 12.2</a>).</li>
 </ul>
-<p><strong>Computer and tablet sync.</strong> The computer's “⚙️ Settings” tab has a “🔄 PC ↔ tablet sync” section. The tablet shows an address and confirmation code, which you use to connect from the computer over Wi-Fi. See <a href="../settings/sync/">section 11.5</a>.</p>
-<p><strong>Back up regularly</strong>, especially before an app update or before assigning a whole month. See <a href="../settings/backup/">section 11.4</a>.</p>
+<p>Computer and tablet sync. The computer's “⚙️ Settings” tab has a “🔄 PC ↔ tablet sync” section. The tablet shows an address and confirmation code, which you use to connect from the computer over Wi-Fi. See <a href="../settings/sync/">section 11.5</a>.</p>
+<p>Back up regularly, especially before an app update or before assigning a whole month. See <a href="../settings/backup/">section 11.4</a>.</p>
 
 
 
@@ -1691,8 +1690,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>

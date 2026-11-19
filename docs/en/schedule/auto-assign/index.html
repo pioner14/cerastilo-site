@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   
-    <meta name="description" content="Auto-assignment fills empty slots according to the rules in chapter 7. It works in both views. Fill one week Select a week on the left to open its table.">
+    <meta name="description" content="Auto-assignment fills empty parts and finds missing assistants. It keeps manual assignments and replacements. The same rules apply to weeks and months (chapter…">
   
   
     <link rel="canonical" href="https://cerastilo.com/docs/en/schedule/auto-assign/">
@@ -60,7 +60,7 @@
     <link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/auto-assign/">
     <link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/auto-assign/">
     
-      <meta property="og:description" content="Auto-assignment fills empty slots according to the rules in chapter 7. It works in both views. Fill one week Select a week on the left to open its table.">
+      <meta property="og:description" content="Auto-assignment fills empty parts and finds missing assistants. It keeps manual assignments and replacements. The same rules apply to weeks and months (chapter…">
     
   
 
@@ -1474,36 +1474,25 @@
 
 
 <h1 id="automatically-assigning-a-week-or-month--auto">Automatically assigning a week or month (“🪄 Auto”)<a class="headerlink" href="#automatically-assigning-a-week-or-month--auto" title="Permanent link">&para;</a></h1>
-<p>Auto-assignment fills empty slots according to the rules in <a href="../../rules/">chapter 7</a>. It works in both views.</p>
-<p><strong>Fill one week</strong></p>
+<p>Auto-assignment fills empty parts and finds missing assistants. It keeps manual assignments and replacements. The same rules apply to weeks and months (<a href="../../rules/">chapter 7</a>).</p>
+<p>Fill one week</p>
 <ol>
 <li>Select a week on the left to open its table.</li>
-<li>Click “🪄 Auto-assign” on the toolbar (“🪄 Auto” on narrow screens).</li>
-<li>The “Auto-assign” confirmation asks “Fill the empty parts of the week automatically?” and adds “Existing assignments stay as they are.” Click “Yes” to fill empty slots and missing assistants while preserving existing assignments and replacements. To start the week over, first use the trash button (“Clear: remove all assignments for this week”).</li>
-<li>The app works in the background. On completion it shows “✅ Assigned: N assignments” or “ℹ️ All assignments are already filled”. The status bar shows “Auto-assign: N assignments”.</li>
+<li>Click <strong>“🪄 Auto-assign”</strong> on the toolbar (“🪄 Auto” on narrow screens).</li>
+<li>The “Auto-assign” confirmation asks “Fill the empty parts of the week automatically?” and adds “Existing assignments stay as they are.” Click <strong>“Yes”</strong>. To start the week over, first click <strong>“🗑️ Clear”</strong>.</li>
+<li>Auto-assignment runs in the background. The app shows “✅ Assigned: N assignments” or “ℹ️ All assignments are already filled” if it made no new assignments. Empty slots can still remain. The status bar shows “Auto-assign: N assignments”.</li>
 </ol>
-<p><strong>How weekly auto-assignment works</strong></p>
-<ul>
-<li>The app collects the week's program parts.</li>
-<li>For each part, it determines the required qualifications, gender rules, permissible spiritual status (for example, elders followed by ministerial servants for the opening talk), and whether an assistant is needed.</li>
-<li>The app excludes publishers who</li>
-<li>are on vacation or sick leave on the meeting date, according to “Temporary exclusion from the schedule”</li>
-<li>have the week excluded in their shift schedule</li>
-<li>lack the required qualification</li>
-<li>already have an assignment that week</li>
-<li>are still within their general, ministerial servant, or personal assignment interval</li>
-<li>recently had the same role, taking student/assistant rotation into account.</li>
-<li>Among eligible publishers, the app favors the one who has gone longest without an assignment.</li>
-</ul>
-<p><strong>Fill a month.</strong> In “Month”, “🪄 Auto-assign” (“🪄 Auto” on narrow screens) works across the month.</p>
+<p>How the app picks publishers</p>
+<p>For each part, the app checks qualifications, gender, spiritual status, and whether the part needs an assistant. For example, it considers elders before ministerial servants for the opening talk.</p>
+<p>The app checks existing assignments, vacations, sick leave in “Temporary exclusion from the schedule”, and shift schedules. It takes general, ministerial servant, and personal intervals into account and rotates student and assistant roles. It narrows the list based on past assignments, then makes a weighted random choice. Publishers who have gone longer without a part have a better chance of being chosen.</p>
+<p>Fill a month. In “Month”, “🪄 Auto-assign” (“🪄 Auto” on narrow screens) works across the month.</p>
 <ol>
-<li>Click “🪄 Auto”. The app finds weeks with at least one empty slot, including weeks where someone withdrew or went on vacation. It skips assemblies, conventions, and the Memorial and preserves existing assignments.</li>
-<li>The “Auto-assign month” confirmation lists the weeks in “Fill empty parts in weeks (N): [dates]?” and says “Existing assignments stay as they are.” Click “Yes”.</li>
+<li>Click <strong>“🪄 Auto”</strong>. The app finds weeks with at least one empty slot, including weeks where someone withdrew or went on vacation. It skips assemblies, conventions, and the Memorial and preserves existing assignments.</li>
+<li>The “Auto-assign month” confirmation lists the weeks in “Fill empty parts in weeks (N): [dates]?” and says “Existing assignments stay as they are.” Click <strong>“Yes”</strong>.</li>
 <li>The app saves a database snapshot first. If that fails, for example because of disk space or permissions, it stops and shows “Failed to save a database snapshot, auto-assign canceled:” followed by the reason.</li>
 <li>The board, “🪄 Auto”, and the undo button are disabled while it works. The result appears as “✅ Weeks assigned: N, assignments: M”.</li>
 <li>If a failure occurs partway through, the app shows “Weeks assigned: N, then an error:” followed by details. Completed weeks remain assigned until you undo them with the undo button (<a href="../undo/">section 6.7</a>).</li>
 </ol>
-<p><strong>How the two views work.</strong> The same rules fill empty slots in both views. The month board runs the process for several weeks in one operation.</p>
 
 
 
@@ -1605,8 +1594,11 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
+  <script data-goatcounter="https://cerastilo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>
