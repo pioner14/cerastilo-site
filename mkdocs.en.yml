@@ -1,0 +1,106 @@
+site_name: Cerastilo documentation
+site_url: https://cerastilo.com/docs/en/
+docs_dir: docs-src/en
+site_dir: docs/en
+strict: true
+validation:
+  links:
+    anchors: warn
+    unrecognized_links: warn
+
+theme:
+  name: material
+  custom_dir: docs-theme/overrides
+  language: en
+  font: false
+  logo: /icon-small.svg
+  favicon: /icon-small.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - tables
+
+extra_css:
+  - /fonts/fonts.css
+  - docs-theme/extra.css
+
+extra:
+  homepage: https://cerastilo.com/
+  alternate:
+    - name: Русский
+      link: /docs/
+      lang: ru
+    - name: English
+      link: /docs/en/
+      lang: en
+
+nav:
+  - Quick start: index.md
+  - About: about.md
+  - Interface: interface.md
+  - Today: today.md
+  - Workbooks: workbooks.md
+  - Publishers:
+      - publishers/index.md
+      - List: publishers/list.md
+      - Profile: publishers/card.md
+  - Schedule:
+      - schedule/index.md
+      - Auto-assignment: schedule/auto-assign.md
+      - Manual selection: schedule/manual.md
+      - Weekly table: schedule/week-table.md
+      - Extra parts: schedule/extra-items.md
+      - Month board: schedule/month-board.md
+      - Announcements: schedule/announcements.md
+      - Undo and redo: schedule/undo.md
+  - Assignment rules: rules.md
+  - History and statistics: history-stats.md
+  - Email notifications:
+      - email/index.md
+      - SMTP settings: email/smtp.md
+      - Bulk email: email/bulk.md
+      - Individual emails: email/personal.md
+      - Calendar: email/calendar.md
+      - Notification log: email/log.md
+      - Replies: email/replies.md
+  - Export and printing: export.md
+  - Settings:
+      - settings/index.md
+      - Congregation: settings/congregation.md
+      - Modules: settings/modules.md
+      - Data import: settings/import.md
+      - Backups: settings/backup.md
+      - Sync: settings/sync.md
+  - Android: android.md
+  - "← cerastilo.com": https://cerastilo.com/

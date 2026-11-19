@@ -1,0 +1,60 @@
+[data-md-color-scheme="default"] {
+  --st-surface: #f7f2ea;
+  --st-surface-lowest: #fffdf9;
+  --st-surface-container: #ebe1d2;
+  --st-on-surface: #1f1a1c;
+  --st-on-surface-variant: #4f4756;
+  --st-primary: #5d3e89;
+  --st-on-primary: #ffffff;
+  --st-primary-container: #7656a3;
+  --st-on-primary-container: #f2e7ff;
+  --st-outline-variant: #d6c8b6;
+}
+
+[data-md-color-scheme="slate"] {
+  --st-surface: #110d18;
+  --st-surface-lowest: #1a1426;
+  --st-surface-container: #211930;
+  --st-on-surface: #f5f1fa;
+  --st-on-surface-variant: #c5bdd6;
+  --st-primary: #9d71e8;
+  --st-on-primary: #110d18;
+  --st-primary-container: #b899ea;
+  --st-on-primary-container: #110d18;
+  --st-outline-variant: #312545;
+}
+
+[data-md-color-scheme] {
+  --md-default-bg-color: var(--st-surface);
+  --md-default-bg-color--light: var(--st-surface-lowest);
+  --md-default-fg-color: var(--st-on-surface);
+  --md-default-fg-color--light: var(--st-on-surface-variant);
+  --md-default-fg-color--lightest: var(--st-outline-variant);
+  --md-primary-fg-color: var(--st-primary);
+  --md-primary-bg-color: var(--st-on-primary);
+  --md-primary-bg-color--light: var(--st-on-primary);
+  --md-accent-fg-color: var(--st-primary-container);
+  --md-accent-bg-color: var(--st-on-primary-container);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--st-primary-container) 15%, transparent);
+  --md-typeset-a-color: var(--st-primary);
+  --md-code-bg-color: var(--st-surface-container);
+  --md-code-fg-color: var(--st-on-surface);
+  --md-footer-bg-color: var(--st-surface-container);
+  --md-footer-bg-color--dark: var(--st-surface-lowest);
+  --md-footer-fg-color: var(--st-on-surface);
+  --md-footer-fg-color--light: var(--st-on-surface-variant);
+  --md-footer-fg-color--lighter: var(--st-on-surface-variant);
+}
+
+:root {
+  --md-text-font: "Golos Text";
+}
+
+.md-typeset :is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+}

@@ -20,6 +20,12 @@ Run `python3 check_i18n.py` to check translation keys and `python3 build_en.py` 
 
 Preview both pages with `python3 -m http.server 8090 --bind 127.0.0.1`.
 
+## Documentation (/docs/)
+
+After updating the in-app guide, run `./build_docs.sh`. It reads `../NHJS_Q/docs/help` by default. Pass the path as an argument for a different checkout, for example `./build_docs.sh /path/to/docs/help`.
+
+The script regenerates the ignored `docs-src/` directory, builds Russian into `docs/` and English into `docs/en/` with MkDocs Material, and refreshes `sitemap.xml`. Include the generated `docs/` and updated sitemap when publishing the site.
+
 ---
 
 ## 📄 License

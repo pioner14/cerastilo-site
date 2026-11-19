@@ -1,0 +1,106 @@
+site_name: Документация Cerastilo
+site_url: https://cerastilo.com/docs/
+docs_dir: docs-src/ru
+site_dir: docs
+strict: true
+validation:
+  links:
+    anchors: warn
+    unrecognized_links: warn
+
+theme:
+  name: material
+  custom_dir: docs-theme/overrides
+  language: ru
+  font: false
+  logo: /icon-small.svg
+  favicon: /icon-small.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: ru
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - tables
+
+extra_css:
+  - /fonts/fonts.css
+  - docs-theme/extra.css
+
+extra:
+  homepage: https://cerastilo.com/
+  alternate:
+    - name: Русский
+      link: /docs/
+      lang: ru
+    - name: English
+      link: /docs/en/
+      lang: en
+
+nav:
+  - Быстрый старт: index.md
+  - О программе: about.md
+  - Интерфейс: interface.md
+  - Сегодня: today.md
+  - Рабочие тетради: workbooks.md
+  - Возвещатели:
+      - publishers/index.md
+      - Список: publishers/list.md
+      - Карточка: publishers/card.md
+  - Расписание:
+      - schedule/index.md
+      - Автораспределение: schedule/auto-assign.md
+      - Ручной выбор: schedule/manual.md
+      - Таблица недели: schedule/week-table.md
+      - Внеочередные пункты: schedule/extra-items.md
+      - Доска месяца: schedule/month-board.md
+      - Объявления: schedule/announcements.md
+      - Отмена и возврат: schedule/undo.md
+  - Правила распределения заданий: rules.md
+  - История и статистика: history-stats.md
+  - Уведомления:
+      - email/index.md
+      - Настройки SMTP: email/smtp.md
+      - Массовая рассылка: email/bulk.md
+      - Индивидуальные письма: email/personal.md
+      - Календарь: email/calendar.md
+      - Журнал: email/log.md
+      - Ответы: email/replies.md
+  - Экспорт и печать: export.md
+  - Настройки:
+      - settings/index.md
+      - Собрание: settings/congregation.md
+      - Модули: settings/modules.md
+      - Импорт данных: settings/import.md
+      - Резервное копирование: settings/backup.md
+      - Синхронизация: settings/sync.md
+  - Android: android.md
+  - "← cerastilo.com": https://cerastilo.com/

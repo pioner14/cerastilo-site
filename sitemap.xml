@@ -13,4 +13,400 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/en/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/" />
   </url>
+  <url>
+    <loc>https://cerastilo.com/docs/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/about/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/android/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/android/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/android/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/android/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/bulk/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/bulk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/bulk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/bulk/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/calendar/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/calendar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/calendar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/calendar/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/log/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/log/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/log/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/log/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/personal/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/personal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/personal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/personal/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/replies/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/replies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/replies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/replies/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/email/smtp/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/smtp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/smtp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/smtp/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/export/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/export/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/export/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/export/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/history-stats/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/history-stats/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/history-stats/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/history-stats/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/interface/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/interface/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/interface/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/interface/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/publishers/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/publishers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/publishers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/publishers/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/publishers/card/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/publishers/card/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/publishers/card/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/publishers/card/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/publishers/list/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/publishers/list/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/publishers/list/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/publishers/list/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/rules/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/rules/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/rules/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/announcements/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/announcements/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/announcements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/announcements/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/auto-assign/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/auto-assign/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/auto-assign/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/auto-assign/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/extra-items/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/extra-items/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/extra-items/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/extra-items/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/manual/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/manual/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/manual/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/manual/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/month-board/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/month-board/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/month-board/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/month-board/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/undo/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/undo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/undo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/undo/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/schedule/week-table/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/week-table/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/week-table/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/week-table/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/settings/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/settings/backup/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/backup/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/backup/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/backup/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/settings/congregation/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/congregation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/congregation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/congregation/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/settings/import/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/import/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/import/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/import/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/settings/modules/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/modules/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/modules/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/modules/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/settings/sync/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/sync/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/sync/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/sync/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/today/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/today/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/today/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/today/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/workbooks/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/workbooks/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/workbooks/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/workbooks/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/about/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/android/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/android/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/android/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/android/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/bulk/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/bulk/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/bulk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/bulk/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/calendar/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/calendar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/calendar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/calendar/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/log/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/log/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/log/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/log/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/personal/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/personal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/personal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/personal/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/replies/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/replies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/replies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/replies/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/email/smtp/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/email/smtp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/email/smtp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/email/smtp/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/export/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/export/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/export/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/export/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/history-stats/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/history-stats/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/history-stats/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/history-stats/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/interface/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/interface/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/interface/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/interface/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/publishers/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/publishers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/publishers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/publishers/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/publishers/card/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/publishers/card/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/publishers/card/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/publishers/card/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/publishers/list/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/publishers/list/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/publishers/list/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/publishers/list/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/rules/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/rules/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/rules/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/rules/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/announcements/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/announcements/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/announcements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/announcements/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/auto-assign/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/auto-assign/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/auto-assign/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/auto-assign/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/extra-items/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/extra-items/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/extra-items/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/extra-items/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/manual/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/manual/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/manual/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/manual/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/month-board/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/month-board/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/month-board/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/month-board/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/undo/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/undo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/undo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/undo/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/schedule/week-table/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/schedule/week-table/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/schedule/week-table/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/schedule/week-table/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/backup/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/backup/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/backup/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/backup/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/congregation/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/congregation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/congregation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/congregation/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/import/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/import/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/import/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/import/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/modules/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/modules/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/modules/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/modules/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/sync/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/sync/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/sync/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/sync/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/today/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/today/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/today/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/today/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/workbooks/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/workbooks/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/workbooks/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/workbooks/" />
+  </url>
 </urlset>
