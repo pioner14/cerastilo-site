@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cerastilo is a free, unofficial Christian Life and Ministry meeting scheduler for Windows, Linux, and Android tablets, with assignments, schedule printing, and S-89 forms." />
+  <link rel="canonical" href="https://cerastilo.com/en/" />
+  <link rel="alternate" hreflang="ru" href="https://cerastilo.com/" />
+  <link rel="alternate" hreflang="en" href="https://cerastilo.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://cerastilo.com/" />
+  <meta property="og:title" content="Cerastilo — Christian Life and Ministry meeting scheduler" />
+  <meta property="og:description" content="Cerastilo is a free, unofficial Christian Life and Ministry meeting scheduler for Windows, Linux, and Android tablets, with assignments, schedule printing, and S-89 forms." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cerastilo.com/en/" />
+  <meta property="og:image" content="https://cerastilo.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cerastilo logo and name" />
+  <meta name="twitter:image" content="https://cerastilo.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Cerastilo logo and name" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Cerastilo — Christian Life and Ministry meeting scheduler</title>
+  <link rel="icon" type="image/svg+xml" href="/icon-small.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/icon-256.png" />
+
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cerastilo",
+      "description": "Cerastilo is a free, unofficial Christian Life and Ministry meeting scheduler for Windows, Linux, and Android tablets, with assignments, schedule printing, and S-89 forms.",
+      "operatingSystem": "Windows, Linux, Android",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "EUR"
+      },
+      "url": "https://cerastilo.com/en/",
+      "downloadUrl": "https://github.com/pioner14/Cerastilo/releases/latest",
+      "softwareVersion": "0.1.0",
+      "inLanguage": "en",
+      "image": "https://cerastilo.com/og-image.png"
+    }
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
+
+  <!-- ═══════════════════════════════ STITCH HEADER ═══════════════════════════════ -->
+  <header class="fixed top-0 inset-x-0 w-full z-50 bg-surface backdrop-blur-xl border-b border-outline-variant shadow-[0_1px_12px_rgba(0,0,0,0.04)] transition-all" role="banner">
+    <nav class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6" aria-label="Main navigation" data-i18n-aria="nav.main">
+      <a href="#" class="flex items-center gap-3 shrink-0 group" aria-label="Cerastilo — back to top" data-i18n-aria="nav.top">
+        <img src="/icon-256.png" width="38" height="38" alt="" class="w-9 h-9 rounded-xl shadow-sm group-hover:scale-105 transition-transform" />
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Cerastilo</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mt-0.5">Christian Life &amp; Ministry</span>
+        </div>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-6" role="list">
+        <li><a href="#two-apps" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.two">Two apps</a></li>
+        <li><a href="#features" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.features">Features</a></li>
+        <li><a href="#download" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.download">Download</a></li>
+        <li><a href="#beta" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.beta">Testers</a></li>
+        <li><a href="#faq" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#donate" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" data-i18n="nav.donate">Support</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2.5 shrink-0">
+        <a id="lang-toggle" href="/" hreflang="ru" class="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 font-label-sm text-label-sm uppercase tracking-wider transition-opacity cursor-pointer" aria-label="Switch to the Russian version" title="Switch to the Russian version" data-i18n-aria="lang.toggle" data-i18n-title="lang.toggle">
+          <span class="lang-label" data-i18n="lang.label">EN</span>
+        </a>
+
+        <button id="theme-toggle" type="button" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" aria-label="Toggle theme" data-i18n-aria="theme.toggle">
+          <svg class="icon-sun w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="#download" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" data-i18n="nav.download">Download</a>
+
+        <button id="hamburger" type="button" class="lg:hidden w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface flex items-center justify-center" aria-label="Open menu" data-i18n-aria="nav.menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-surface-container-lowest border-b border-outline-variant px-6 py-4 shadow-lg" role="navigation" aria-label="Site menu" data-i18n-aria="nav.menuLabel">
+      <ul class="flex flex-col gap-2" role="list">
+        <li><a href="#two-apps" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.two">Two apps</a></li>
+        <li><a href="#features" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.features">Features</a></li>
+        <li><a href="#download" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.download">Download</a></li>
+        <li><a href="#beta" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.beta">Testers</a></li>
+        <li><a href="#faq" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#donate" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.donate">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+  <main id="main" tabindex="-1" class="w-full pt-20 bg-surface">
+
+    <!-- ── 1. STITCH HERO SECTION ─────────────────────────────────────── -->
+    <div class="relative w-full overflow-hidden border-b border-outline-variant">
+      <!-- Top ambient warm glow -->
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-primary via-secondary-container to-transparent blur-3xl pointer-events-none rounded-full"></div>
+
+      <section id="hero" class="relative max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-24 flex flex-col items-center text-center" aria-labelledby="hero-heading">
+        <!-- Stitch Badge Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant shadow-sm mb-6">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider" data-i18n="two.title">Two apps, one database</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 id="hero-heading" class="font-display-lg text-display-lg max-w-4xl text-on-surface tracking-tight" data-i18n="hero.headline">
+          The Christian Life and Ministry meeting schedule — on your computer and your tablet
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-6 leading-relaxed" data-i18n="hero.sub">
+          Cerastilo is a free scheduler for the Christian Life &amp; Ministry meeting. Two apps: one for your computer (Linux and Windows) and one for your Android tablet. Each works on its own, and together they share one database.
+        </p>
+
+        <!-- Action CTA row -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+          <a href="#download" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:-translate-y-0.5 transition-all">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span data-i18n="hero.cta1">Download</span>
+          </a>
+          <a href="#beta" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant text-secondary hover:bg-surface-container-low font-label-lg text-label-lg shadow-sm hover:-translate-y-0.5 transition-all">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.2 19.4A2 2 0 0 0 5.9 22h12.2a2 2 0 0 0 1.7-2.6L14 9.31V2M8.5 2h7M7 16h10"/></svg>
+            <span data-i18n="hero.cta2">Become a beta tester</span>
+          </a>
+        </div>
+
+        <!-- Micro-feature pills beneath (Stitch Hero Pills) -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <span data-i18n="two.pc.tag">Linux · Windows</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
+            <span data-i18n="two.tab.tag">Android</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0"/></svg>
+            <span data-i18n="two.sync.title">Wi-Fi sync</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+            <span data-i18n="feat.export.l1">PDF, Word, S-89 forms, printing.</span>
+          </span>
+        </div>
+
+        <!-- Stitch Interactive Dual Mockup Showcase with REAL Screenshots -->
+        <div class="w-full mt-14 relative flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 pb-6" role="group" aria-label="Cerastilo on a computer and on a tablet" data-i18n-aria="hero.devices">
+
+          <!-- Desktop Window Mockup (Left/Back) -->
+          <a href="/screenshots/raspisanie.webp" target="_blank" rel="noopener" class="w-full lg:w-[66%] rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-2xl overflow-hidden text-left transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 z-10 block">
+            <div class="bg-surface-container-high px-4 py-3 flex items-center justify-between border-b border-outline-variant">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+                <span class="ml-3 font-label-md text-label-md text-on-surface font-medium truncate">Cerastilo — Desktop</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm" data-i18n="two.pc.title">Computer</span>
+            </div>
+            <img src="/screenshots/raspisanie.webp" alt="Cerastilo on a computer: the weekly schedule table" data-i18n-alt="hero.altPc" width="1600" height="1000" fetchpriority="high" class="w-full h-auto block" />
+          </a>
+
+          <!-- Android Tablet Mockup (Right/Front Overlapping) -->
+          <a href="/screenshots/tablet-mesyac.webp" target="_blank" rel="noopener" class="w-full lg:w-[46%] lg:-ml-14 lg:mt-16 rounded-2xl bg-surface-container-lowest p-3 border-2 border-primary shadow-2xl z-20 transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 block">
+            <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-surface-container-high">
+              <div class="flex items-center gap-1.5">
+                <svg class="text-secondary w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
+                <span class="font-label-md text-label-md font-bold text-on-surface" data-i18n="two.tab.title">Tablet</span>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary">Android • Wi-Fi</span>
+            </div>
+            <img src="/screenshots/tablet-mesyac.webp" alt="Cerastilo on a tablet: the monthly board" data-i18n-alt="hero.altTablet" width="1920" height="1040" loading="lazy" class="w-full h-auto rounded-lg block" />
+          </a>
+
+          <!-- Floating Wi-Fi Sync Capsule Card (Stitch Style) -->
+          <div class="lg:absolute -bottom-3 left-1/2 lg:-translate-x-1/2 z-30 px-5 py-2.5 rounded-full bg-surface-container-lowest border-2 border-primary shadow-xl flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0"/></svg>
+            </div>
+            <div class="text-left">
+              <div class="font-label-md text-label-md text-on-surface font-bold">
+                <span data-i18n="two.sync.title">Wi-Fi sync</span>
+                <span class="ml-1.5 tracking-widest font-mono text-primary font-bold">[ 6-CHAR ]</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ── 2. STITCH BENTO GRID: "ДВЕ ПРОГРАММЫ, ОДНА БАЗА" ───────────── -->
+    <section id="two-apps" class="w-full bg-surface-container-low py-24 border-b border-outline-variant" aria-labelledby="two-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">Cerastilo</span>
+          <h2 id="two-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="two.title">
+            Two apps, one database
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mt-4" data-i18n="two.sub">
+            Each app works fully on its own. If you have both a computer and a tablet, they sync over Wi-Fi and always show the same thing.
+          </p>
+        </div>
+
+        <!-- Bento Grid (12 Columns: 7 + 5 + 12) -->
+        <ul class="grid grid-cols-1 md:grid-cols-12 gap-6" role="list">
+
+          <!-- Card 1: Computer (7 Cols) -->
+          <li class="md:col-span-7 rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold" data-i18n="two.pc.tag">
+                  Linux · Windows
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="two.pc.title">
+                Computer
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="two.pc.desc">
+                Full planning: monthly board, auto-assignment, printing, export, e-mails to participants.
+              </p>
+            </div>
+            <a href="/screenshots/raspisanie.webp" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
+              <img src="/screenshots/raspisanie.webp" alt="Weekly meeting schedule in Cerastilo on a computer" data-i18n-alt="two.pc.alt" width="1600" height="1000" loading="lazy" class="w-full h-56 object-cover object-left-top" />
+            </a>
+          </li>
+
+          <!-- Card 2: Tablet (5 Cols) -->
+          <li class="md:col-span-5 rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold" data-i18n="two.tab.tag">
+                  Android
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="two.tab.title">
+                Tablet
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="two.tab.desc">
+                The same app with the same look. Works without a computer — handy to hold right at the meeting.
+              </p>
+            </div>
+            <a href="/screenshots/tablet-raspisanie.webp" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
+              <img src="/screenshots/tablet-raspisanie.webp" alt="Meeting schedule in Cerastilo on an Android tablet" data-i18n-alt="two.tablet.alt" width="1920" height="1040" loading="lazy" class="w-full h-56 object-cover object-left-top" />
+            </a>
+          </li>
+
+          <!-- Card 3: Wi-Fi Sync (12 Cols Full-Width Bento Span) -->
+          <li class="md:col-span-12 rounded-2xl bg-surface-container-lowest border-2 border-primary p-8 lg:p-10 shadow-md hover:shadow-lg transition-shadow">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider mb-4">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5"/></svg>
+                  <span>Wi-Fi • SQLite</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface mb-3" data-i18n="two.sync.title">
+                  Wi-Fi sync
+                </h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-4 leading-relaxed" data-i18n="two.sync.desc">
+                  The tablet acts as the server and the computer connects by itself — with an address and a 6-character code. No firewall setup needed.
+                </p>
+                <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant flex items-start gap-3">
+                  <svg class="text-primary mt-0.5 w-[22px] h-[22px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6 4-4 4 4"/><path d="M12 2v10.3a4 4 0 0 1-1.17 2.87L4 22"/><path d="m20 22-5-5"/></svg>
+                  <p class="font-body-md text-body-md text-on-surface font-medium" data-i18n="two.sync.merge">
+                    The databases are merged: the more recent edit wins, and a copy is saved before merging.
+                  </p>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 p-5 rounded-xl bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center">
+                <a href="/screenshots/sinhronizaciya.webp" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-md hover:scale-[1.02] transition-transform">
+                  <img src="/screenshots/sinhronizaciya.webp" alt="The sync window: address and code" data-i18n-alt="two.sync.alt" width="560" height="256" loading="lazy" class="w-full h-auto block" />
+                </a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <!-- Optional sync note -->
+        <p class="mt-8 flex items-center justify-center gap-2 text-center font-label-lg text-on-surface-variant">
+          <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span data-i18n="two.note">Need only a computer or only a tablet? Take just one app. Sync is optional.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 3. STITCH INTERACTIVE FEATURE SHOWCASE TABS ────────────────── -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full" aria-labelledby="features-heading">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">UI &amp; Workflow</span>
+        <h2 id="features-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="feat.title">
+          From the workbook to the schedule
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mt-3" data-i18n="feat.sub">
+          Real screenshots of the app (demo data with fictional names). Click an image to open it full size.
+        </p>
+      </div>
+
+      <!-- Stitch Pill Tabs Bar -->
+      <div class="feat-tabs flex flex-wrap items-center justify-center gap-2.5 pb-2 mb-8" role="tablist" aria-labelledby="features-heading">
+        <button type="button" class="feat-tab is-active inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="true" aria-controls="feat-panel-0" id="feat-tab-0" data-feat-tab="0">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72ZM14 7l3 3M5 6v4M19 14v4M10 2v2M7 8H3M21 16h-4M11 3H9"/></svg>
+          <span data-i18n="feat.month.title">Monthly board and auto-assignment</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-1" id="feat-tab-1" data-feat-tab="1">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span data-i18n="feat.today.title">Today — what to do</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-2" id="feat-tab-2" data-feat-tab="2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>
+          <span data-i18n="feat.people.title">Participants and history</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-3" id="feat-tab-3" data-feat-tab="3">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg>
+          <span data-i18n="feat.stats.title">Load statistics</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-4" id="feat-tab-4" data-feat-tab="4">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <span data-i18n="feat.books.title">Workbooks</span>
+        </button>
+        <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-5" id="feat-tab-5" data-feat-tab="5">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+          <span data-i18n="feat.export.title">Print and export</span>
+        </button>
+      </div>
+
+      <!-- Stitch Showcase Container with REAL Screenshots -->
+      <div class="rounded-3xl bg-surface-container-lowest border border-outline-variant p-6 lg:p-10 shadow-lg">
+
+        <!-- Panel 0: Monthly Board -->
+        <article class="feat-row grid is-active grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-0" role="tabpanel" aria-labelledby="feat-tab-0" data-feat-panel="0">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72ZM14 7l3 3M5 6v4M19 14v4M10 2v2M7 8H3M21 16h-4M11 3H9"/></svg>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.month.title">Monthly board and auto-assignment</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.month.l1">Takes qualifications, gender, rest intervals and vacations into account.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.month.l2">Fills only empty items — your manual assignments stay.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.month.l3">Don’t like the result? Undo with one click.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="/screenshots/mesyac.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="/screenshots/mesyac.webp" alt="Monthly board with assignments by week" data-i18n-alt="feat.month.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 1: Today -->
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-1" role="tabpanel" aria-labelledby="feat-tab-1" data-feat-panel="1">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.today.title">Today — what to do</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.today.l1">Who has not replied to a notification and who has not been notified yet.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.today.l2">A card for the upcoming meeting.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.today.l3">Urgent to-dos on a single screen.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="/screenshots/segodnya.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="/screenshots/segodnya.webp" alt="The Today screen: urgent items and the next meeting" data-i18n-alt="feat.today.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 2: Participants -->
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-2" role="tabpanel" aria-labelledby="feat-tab-2" data-feat-panel="2">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.people.title">Participants and history</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.people.l1">Profile cards: qualifications, family, vacation, contacts.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.people.l2">Assignment history and “paired N times” — see who has already worked with whom.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="/screenshots/vozveshchateli.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="/screenshots/vozveshchateli.webp" alt="Publisher database with participant cards" data-i18n-alt="feat.people.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 3: Statistics -->
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-3" role="tabpanel" aria-labelledby="feat-tab-3" data-feat-panel="3">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.stats.title">Load statistics</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.stats.l1">Charts by assignment category.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.stats.l2">See at a glance who is overloaded and who has not taken part for a while.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="/screenshots/statistika.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="/screenshots/statistika.webp" alt="Workload statistics by assignment category" data-i18n-alt="feat.stats.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 4: Workbooks -->
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-4" role="tabpanel" aria-labelledby="feat-tab-4" data-feat-panel="4">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center shadow-sm">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.books.title">Workbooks</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.books.l1">Import from EPUB — you download the workbook yourself from its official source.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.books.l2">The program is laid out by weeks automatically.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="/screenshots/tetradi.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="/screenshots/tetradi.webp" alt="Importing a workbook by week" data-i18n-alt="feat.books.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+        <!-- Panel 5: Print & Export -->
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-5" role="tabpanel" aria-labelledby="feat-tab-5" data-feat-panel="5">
+          <div class="lg:col-span-5 flex flex-col gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.export.title">Print and export</h3>
+            <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.export.l1">PDF, Word, S-89 forms, printing.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.export.l2">E-mails to participants with a .ics calendar file.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span data-i18n="feat.export.l3">The same schedule layout on the computer and on the tablet.</span>
+              </li>
+            </ul>
+          </div>
+          <a href="/screenshots/raspisanie.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+            <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
+              <span class="w-3 h-3 rounded-full bg-error"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+            </div>
+            <img src="/screenshots/raspisanie.webp" alt="The weekly schedule table" data-i18n-alt="feat.export.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── 4. STITCH DOWNLOAD SECTION (#download) ─────────────────────── -->
+    <section id="download" class="w-full bg-surface-container-low py-24 border-y border-outline-variant" aria-labelledby="download-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2" data-i18n="dl.version">Version 0.1.0</span>
+          <h2 id="download-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="dl.title">
+            Download Cerastilo
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mt-3" data-i18n="dl.sub">
+            Free for personal use. Unofficial app.
+          </p>
+        </div>
+
+        <ul class="grid grid-cols-1 md:grid-cols-3 gap-6" role="list">
+          <!-- Android -->
+          <li class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Version 0.1.0</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Android</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.android">
+                APK for arm64 Android tablets.
+              </p>
+            </div>
+            <a href="https://github.com/pioner14/Cerastilo/releases/download/v0.1.0/Cerastilo-0.1.0-arm64-v8a.apk" class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnApk">
+              Download APK
+            </a>
+          </li>
+
+          <!-- Linux -->
+          <li class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Version 0.1.0</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Linux</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.linux">
+                AUR package for Arch Linux and an AppImage (x86_64) for other distributions.
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6"><code>yay -S cerastilo</code></p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="https://aur.archlinux.org/packages/cerastilo" class="py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnAur">
+                AUR
+              </a>
+              <a href="https://github.com/pioner14/Cerastilo/releases/download/v0.1.0/Cerastilo-0.1.0-x86_64.AppImage" class="py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnAppimage">
+                AppImage
+              </a>
+            </div>
+          </li>
+
+          <!-- Windows -->
+          <li class="rounded-2xl bg-surface-container-lowest border border-outline-variant p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Version 0.1.0</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Windows</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.windows">
+                Extract the ZIP and run cerastilo.exe. Leave the other files as they are.
+              </p>
+            </div>
+            <a href="https://github.com/pioner14/Cerastilo/releases/download/v0.1.0/Cerastilo-0.1.0-windows-x64.zip" class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnZip">
+              Download ZIP
+            </a>
+          </li>
+        </ul>
+        <p class="text-center mt-6">
+          <a href="https://github.com/pioner14/Cerastilo/releases" class="font-label-md text-primary hover:underline" data-i18n="dl.releases">All releases</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 5. STITCH BETA TESTERS SECTION (#beta) ─────────────────────── -->
+    <section id="beta" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full" aria-labelledby="beta-heading">
+      <div class="rounded-3xl bg-surface-container-lowest border-2 border-primary p-8 lg:p-12 shadow-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 flex flex-col gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.2 19.4A2 2 0 0 0 5.9 22h12.2a2 2 0 0 0 1.7-2.6L14 9.31V2M8.5 2h7M7 16h10"/></svg>
+            </div>
+            <h2 id="beta-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="beta.title">
+              Looking for beta testers
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-i18n="beta.body">
+              To publish Cerastilo on Google Play I need testers with an Android tablet or phone. What to do: install the app through Google Play (closed testing), use it for a couple of weeks and tell me about any bugs.
+            </p>
+          </div>
+
+          <div class="lg:col-span-5 p-6 lg:p-8 rounded-2xl bg-surface-container-low border border-outline-variant flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="font-label-md text-label-md text-on-surface-variant" data-i18n="beta.contact">Write to me:</div>
+                <a href="mailto:hello@cerastilo.com?subject=Cerastilo%20beta" class="font-label-lg text-label-lg text-primary hover:underline">hello@cerastilo.com</a>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-outline-variant font-body-sm text-body-sm text-on-surface-variant">
+              <span data-i18n="beta.issues">Or leave a message in GitHub Issues:</span>
+              <a href="https://github.com/pioner14/Cerastilo/issues" target="_blank" rel="noopener noreferrer" class="block mt-1 font-label-md text-primary hover:underline">github.com/pioner14/Cerastilo/issues</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. STITCH FAQ ACCORDION (#faq) ─────────────────────────────── -->
+    <section id="faq" class="w-full bg-surface-container-low py-24 border-y border-outline-variant" aria-labelledby="faq-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">FAQ</span>
+          <h2 id="faq-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="faq.title">
+            Frequently asked questions
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q1">Is Cerastilo free?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a1">Yes. Cerastilo is free for personal use. The source code can be viewed, but the project is not open source: modifying, redistributing or selling the app is allowed only with the author’s written permission. See the LICENSE file.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q2">What platforms are supported?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a2">Computer: Linux (AUR and x86_64 AppImage) and Windows (x64 ZIP). Android tablets: arm64 APK.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q3">Is my congregation’s data private?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a3">The data is stored in a local SQLite database on your device; the project has no servers of its own. Sync goes directly between your devices over your local Wi-Fi network: the tablet is the server and the computer connects to it. E-mails to participants go through your own SMTP server.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q9">Do I need both devices?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a9">No. Each app works on its own — you can use just the computer or just the tablet. Sync is needed only if you want both devices to hold the same database.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q4">Do I need an internet connection?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a4">Not for working with the schedule. The internet is needed only for sending and receiving e-mail.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q5">Can I move assignment history from another program?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a5">There is no direct import from NW Scheduler. Assignment history can be loaded from a CSV file.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q6">Is the UI available in English?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a6">Yes. The interface is available in Russian and English; choose the language in Settings (it applies after a restart).</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q7">Does the app include any Jehovah’s Witnesses publications?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a7">No. Cerastilo contains no texts, images or other materials from JW.org and downloads nothing from that site. You download the workbook yourself for personal use and open it in the app. The app lays out the meeting program by weeks only on your own device and does not publish it anywhere. Cerastilo is free and non-commercial.</p>
+            </div>
+          </details>
+
+          <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
+            <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
+              <span data-i18n="faq.q8">Is this an official app?</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              <p data-i18n="faq.a8">No. Unofficial application. Not affiliated with the Watch Tower Bible and Tract Society / JW.org.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. STITCH FEEDBACK + DONATE SECTION ────────────────────────── -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-24 w-full" aria-label="Feedback and support" data-i18n-aria="support.label">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Feedback Card -->
+        <div id="feedback" class="rounded-3xl bg-surface-container-lowest border border-outline-variant p-8 lg:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="feedback.title">
+              Suggest an improvement
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed" data-i18n="feedback.body">
+              I develop Cerastilo on my own. If you are missing a feature or found a bug, tell me what you were trying to do and what happened.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-outline-variant font-body-sm text-body-sm text-on-surface-variant">
+            <span data-i18n="feedback.channel">Feature requests and bug reports go through GitHub Issues of the repository.</span>
+            <a href="https://github.com/pioner14/Cerastilo/issues" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1.5 font-label-md text-primary hover:underline block">
+              github.com/pioner14/Cerastilo/issues
+            </a>
+          </div>
+        </div>
+
+        <!-- Donate Card -->
+        <div id="donate" class="rounded-3xl bg-gradient-to-br from-surface-container-lowest to-surface-container-low border border-outline-variant p-8 lg:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="donate.title">
+              Support the project
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed" data-i18n="donate.body">
+              Cerastilo is developed by one person in their spare time. The app is free, but if it helps you, you can support its development. This is entirely optional.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+              <strong class="text-on-surface" data-i18n="donate.plansTitle">Planned: macOS and iOS.</strong>
+              <span data-i18n="donate.plansBody">Cerastilo already runs on Linux, Windows, and Android. I also plan to bring it to Mac, iPhone, and iPad, but I need Apple devices to develop and test those versions, and I don’t have them yet. Donations will help me buy the devices and release those versions sooner.</span>
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://paypal.me/NikolaiGolotaistrov/5EUR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all">
+              <span data-i18n="donate.btn5">☕ €5</span>
+            </a>
+            <a href="https://paypal.me/NikolaiGolotaistrov" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-on-surface font-label-lg text-label-lg shadow-sm transition-all">
+              <span data-i18n="donate.btnOwn">💝 Custom amount</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ STITCH FOOTER ═══════════════════════════════ -->
+  <footer class="w-full bg-surface-container-low border-t border-outline-variant" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10">
+
+        <div class="md:col-span-5 flex flex-col items-start gap-3">
+          <a href="#" class="flex items-center gap-3" aria-label="Cerastilo — back to top" data-i18n-aria="nav.top">
+            <img src="/icon-256.png" width="32" height="32" alt="" class="w-8 h-8 rounded-lg" />
+            <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Cerastilo</span>
+          </a>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm" data-i18n="footer.tagline">
+            A scheduler for the Christian Life &amp; Ministry meeting.
+          </p>
+        </div>
+
+        <nav class="md:col-span-4 flex flex-col gap-2" aria-label="Footer navigation" data-i18n-aria="nav.footer">
+          <ul class="grid grid-cols-2 gap-2 font-body-sm text-body-sm text-on-surface-variant" role="list">
+            <li><a href="#two-apps" class="hover:text-primary transition-colors" data-i18n="nav.two">Two apps</a></li>
+            <li><a href="#features" class="hover:text-primary transition-colors" data-i18n="nav.features">Features</a></li>
+            <li><a href="#download" class="hover:text-primary transition-colors" data-i18n="nav.download">Download</a></li>
+            <li><a href="#beta" class="hover:text-primary transition-colors" data-i18n="nav.beta">Testers</a></li>
+            <li><a href="#faq" class="hover:text-primary transition-colors" data-i18n="nav.faq">FAQ</a></li>
+            <li><a href="#feedback" class="hover:text-primary transition-colors" data-i18n="nav.feedback">Feedback</a></li>
+            <li><a href="#donate" class="hover:text-primary transition-colors" data-i18n="nav.donate">Support</a></li>
+          </ul>
+        </nav>
+
+        <div class="md:col-span-3 flex flex-col items-start gap-3">
+          <a href="https://github.com/pioner14/Cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant text-on-surface hover:border-primary transition-colors font-label-md text-label-md shadow-sm">
+            <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span data-i18n="footer.license">License (LICENSE)</span>
+          </a>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            <span data-i18n="footer.built">Built with ♥ and</span>
+            <a href="https://python.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Python</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="my-6 p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant text-center">
+        <p class="font-body-md text-body-md text-on-surface" role="note">
+          <strong data-i18n="footer.disclaimer">Unofficial application. Not affiliated with the Watch Tower Bible and Tract Society / JW.org.</strong>
+        </p>
+      </div>
+
+      <div class="pt-6 border-t border-outline-variant text-center font-body-sm text-body-sm text-on-surface-variant">
+        © <span id="footer-year">2026</span> <span data-i18n="footer.author">Nikolai Golotaistrov</span> · Cerastilo · <a href="https://github.com/pioner14/Cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">LICENSE</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS (module) -->
+  <script type="module" src="/main.js?v=4"></script>
+</body>
+</html>

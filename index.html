@@ -1,251 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta name="robots" content="noindex" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cerastilo (Церастило) — бесплатный планировщик встречи «Христианская жизнь и служение»: две программы — для компьютера и для Android-планшета — и одна база. Неофициальное приложение." />
+  <meta name="description" content="Cerastilo — бесплатный неофициальный планировщик встречи «Христианская жизнь и служение» для Windows, Linux и Android-планшета; назначения, печать расписания, бланки S-89." />
   <link rel="canonical" href="https://cerastilo.com/" />
-  <meta property="og:title" content="Cerastilo — расписание встречи на компьютере и планшете" />
-  <meta property="og:description" content="Расписание встречи на компьютере и на Android-планшете: две программы, одна база. Неофициальное приложение." />
+  <link rel="alternate" hreflang="ru" href="https://cerastilo.com/" />
+  <link rel="alternate" hreflang="en" href="https://cerastilo.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://cerastilo.com/" />
+  <meta property="og:title" content="Cerastilo — планировщик встречи «Христианская жизнь и служение»" />
+  <meta property="og:description" content="Cerastilo — бесплатный неофициальный планировщик встречи «Христианская жизнь и служение» для Windows, Linux и Android-планшета; назначения, печать расписания, бланки S-89." />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cerastilo.com/" />
   <meta property="og:image" content="https://cerastilo.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Логотип и название Cerastilo" />
+  <meta name="twitter:image" content="https://cerastilo.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Логотип и название Cerastilo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>Cerastilo — расписание встречи на компьютере и планшете</title>
-  <link rel="icon" type="image/svg+xml" href="icon-small.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
-  <link rel="apple-touch-icon" href="icon-256.png" />
+  <title>Cerastilo — планировщик встречи «Христианская жизнь и служение»</title>
+  <link rel="icon" type="image/svg+xml" href="/icon-small.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/icon-256.png" />
 
-  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Golos Text & Material Symbols (Stitch Design System) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500..800;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+  <link rel="stylesheet" href="/assets/site.css" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            "surface": "var(--st-surface)",
-            "surface-container-lowest": "var(--st-surface-lowest)",
-            "surface-container-low": "var(--st-surface-low)",
-            "surface-container": "var(--st-surface-container)",
-            "surface-container-high": "var(--st-surface-high)",
-            "surface-container-highest": "var(--st-surface-highest)",
-            "on-surface": "var(--st-on-surface)",
-            "on-surface-variant": "var(--st-on-surface-variant)",
-            "primary": "var(--st-primary)",
-            "on-primary": "var(--st-on-primary)",
-            "primary-container": "var(--st-primary-container)",
-            "on-primary-container": "var(--st-on-primary-container)",
-            "primary-fixed": "var(--st-primary-fixed)",
-            "on-primary-fixed": "var(--st-on-primary-fixed)",
-            "secondary": "var(--st-secondary)",
-            "on-secondary": "var(--st-on-secondary)",
-            "secondary-container": "var(--st-secondary-container)",
-            "on-secondary-container": "var(--st-on-secondary-container)",
-            "secondary-fixed": "var(--st-secondary-fixed)",
-            "on-secondary-fixed": "var(--st-on-secondary-fixed)",
-            "tertiary": "var(--st-tertiary)",
-            "tertiary-container": "var(--st-tertiary-container)",
-            "tertiary-fixed": "var(--st-tertiary-fixed)",
-            "on-tertiary-fixed": "var(--st-on-tertiary-fixed)",
-            "tertiary-fixed-dim": "var(--st-tertiary-fixed-dim)",
-            "outline": "var(--st-outline)",
-            "outline-variant": "var(--st-outline-variant)",
-            "error": "#ba1a1a"
-          },
-          fontFamily: {
-            "display-lg": ["Playfair Display", "Georgia", "serif"],
-            "display-md": ["Playfair Display", "Georgia", "serif"],
-            "headline-lg": ["Playfair Display", "Georgia", "serif"],
-            "headline-md": ["Playfair Display", "Georgia", "serif"],
-            "headline-sm": ["Playfair Display", "Georgia", "serif"],
-            "body-lg": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
-            "body-md": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
-            "body-sm": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
-            "label-lg": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
-            "label-md": ["Golos Text", "Plus Jakarta Sans", "sans-serif"],
-            "label-sm": ["Golos Text", "Plus Jakarta Sans", "sans-serif"]
-          },
-          fontSize: {
-            "display-lg": ["clamp(2.35rem, 4.8vw, 3.6rem)", { "lineHeight": "1.12", "letterSpacing": "-0.02em", "fontWeight": "600" }],
-            "display-md": ["clamp(2rem, 4vw, 2.85rem)", { "lineHeight": "1.16", "letterSpacing": "-0.015em", "fontWeight": "600" }],
-            "headline-lg": ["clamp(1.75rem, 3.2vw, 2.35rem)", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
-            "headline-md": ["clamp(1.35rem, 2.2vw, 1.75rem)", { "lineHeight": "1.28", "fontWeight": "600" }],
-            "headline-sm": ["1.35rem", { "lineHeight": "1.32", "fontWeight": "600" }],
-            "body-lg": ["1.125rem", { "lineHeight": "1.7", "fontWeight": "400" }],
-            "body-md": ["0.96rem", { "lineHeight": "1.6", "fontWeight": "400" }],
-            "body-sm": ["0.85rem", { "lineHeight": "1.5", "fontWeight": "400" }],
-            "label-lg": ["0.92rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600" }],
-            "label-md": ["0.8rem", { "lineHeight": "1.35", "letterSpacing": "0.03em", "fontWeight": "600" }],
-            "label-sm": ["0.72rem", { "lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "700" }]
-          }
-        }
-      }
-    };
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cerastilo",
+      "description": "Cerastilo — бесплатный неофициальный планировщик встречи «Христианская жизнь и служение» для Windows, Linux и Android-планшета; назначения, печать расписания, бланки S-89.",
+      "operatingSystem": "Windows, Linux, Android",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "EUR"
+      },
+      "url": "https://cerastilo.com/",
+      "downloadUrl": "https://github.com/pioner14/Cerastilo/releases/latest",
+      "softwareVersion": "0.1.0",
+      "inLanguage": "ru",
+      "image": "https://cerastilo.com/og-image.png"
+    }
   </script>
-
-  <style>
-    :root {
-      /* Stitch Variant 1: Warm Editorial Craft & Violet (Light Mode) */
-      --st-surface: #f7f2ea;
-      --st-surface-lowest: #fffdf9;
-      --st-surface-low: #f1e9dc;
-      --st-surface-container: #ebe1d2;
-      --st-surface-high: #e3d7c5;
-      --st-surface-highest: #d9cbb6;
-      --st-on-surface: #1f1a1c;
-      --st-on-surface-variant: #4f4756;
-      --st-primary: #5d3e89;
-      --st-on-primary: #ffffff;
-      --st-primary-container: #7656a3;
-      --st-on-primary-container: #f2e7ff;
-      --st-primary-fixed: #eddcff;
-      --st-on-primary-fixed: #280253;
-      --st-secondary: #7b573a;
-      --st-on-secondary: #ffffff;
-      --st-secondary-container: #f5d5b8;
-      --st-on-secondary-container: #5c3d22;
-      --st-secondary-fixed: #f7DEC6;
-      --st-on-secondary-fixed: #2e1501;
-      --st-tertiary: #654907;
-      --st-tertiary-container: #7f6120;
-      --st-tertiary-fixed: #ffdea5;
-      --st-on-tertiary-fixed: #261900;
-      --st-tertiary-fixed-dim: #e9c176;
-      --st-outline: #7b7481;
-      --st-outline-variant: #d6c8b6;
-    }
-
-    /* Stitch Variant 2: Dark Craft Obsidian (Dark Mode — via system prefers-color-scheme or [data-theme="dark"]) */
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --st-surface: #110d18;
-        --st-surface-lowest: #1a1426;
-        --st-surface-low: #16111f;
-        --st-surface-container: #211930;
-        --st-surface-high: #2a203d;
-        --st-surface-highest: #35284c;
-        --st-on-surface: #f5f1fa;
-        --st-on-surface-variant: #c5bdd6;
-        --st-primary: #9d71e8;
-        --st-on-primary: #110d18;
-        --st-primary-container: #b899ea;
-        --st-on-primary-container: #110d18;
-        --st-primary-fixed: #2d2046;
-        --st-on-primary-fixed: #e4d7fa;
-        --st-secondary: #e2b887;
-        --st-on-secondary: #1d1206;
-        --st-secondary-container: #38291b;
-        --st-on-secondary-container: #f7dec6;
-        --st-secondary-fixed: #332518;
-        --st-on-secondary-fixed: #f5d5b8;
-        --st-tertiary: #e9c176;
-        --st-tertiary-container: #4a3810;
-        --st-tertiary-fixed: #3b2c0c;
-        --st-on-tertiary-fixed: #ffdea5;
-        --st-tertiary-fixed-dim: #e9c176;
-        --st-outline: #8b809d;
-        --st-outline-variant: #312545;
-      }
-    }
-
-    [data-theme="dark"] {
-      --st-surface: #110d18;
-      --st-surface-lowest: #1a1426;
-      --st-surface-low: #16111f;
-      --st-surface-container: #211930;
-      --st-surface-high: #2a203d;
-      --st-surface-highest: #35284c;
-      --st-on-surface: #f5f1fa;
-      --st-on-surface-variant: #c5bdd6;
-      --st-primary: #9d71e8;
-      --st-on-primary: #110d18;
-      --st-primary-container: #b899ea;
-      --st-on-primary-container: #110d18;
-      --st-primary-fixed: #2d2046;
-      --st-on-primary-fixed: #e4d7fa;
-      --st-secondary: #e2b887;
-      --st-on-secondary: #1d1206;
-      --st-secondary-container: #38291b;
-      --st-on-secondary-container: #f7dec6;
-      --st-secondary-fixed: #332518;
-      --st-on-secondary-fixed: #f5d5b8;
-      --st-tertiary: #e9c176;
-      --st-tertiary-container: #4a3810;
-      --st-tertiary-fixed: #3b2c0c;
-      --st-on-tertiary-fixed: #ffdea5;
-      --st-tertiary-fixed-dim: #e9c176;
-      --st-outline: #8b809d;
-      --st-outline-variant: #312545;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 5.5rem;
-    }
-
-    /* Skip link */
-    .skip-link {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1000;
-      padding: 0.5rem 1rem;
-      background: var(--st-primary);
-      color: var(--st-on-primary);
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transform: translateY(-250%);
-      transition: transform 0.2s;
-    }
-    .skip-link:focus-visible {
-      transform: translateY(0);
-    }
-
-    /* Theme icon visibility */
-    .icon-moon { display: none; }
-    [data-theme="dark"] .icon-sun   { display: none; }
-    [data-theme="dark"] .icon-moon  { display: block; }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) .icon-sun  { display: none; }
-      :root:not([data-theme="light"]) .icon-moon { display: block; }
-    }
-
-    /* Mobile drawer */
-    .mobile-menu { display: none; }
-    .mobile-menu.is-open { display: block; }
-
-    /* Feature tabs */
-    .feat-row[data-feat-panel] { display: none; }
-    .feat-row[data-feat-panel].is-active {
-      display: grid;
-      animation: stFade 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .feat-tab.is-active {
-      background-color: var(--st-primary);
-      color: var(--st-on-primary);
-      box-shadow: 0 4px 14px rgba(93, 62, 137, 0.28);
-    }
-
-    @keyframes stFade {
-      from { opacity: 0; transform: translateY(6px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* FAQ details accordion */
-    details.faq-card > summary { list-style: none; }
-    details.faq-card > summary::-webkit-details-marker { display: none; }
-    details.faq-card[open] .faq-chevron { transform: rotate(180deg); }
-  </style>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
@@ -254,9 +56,9 @@
 
   <!-- ═══════════════════════════════ STITCH HEADER ═══════════════════════════════ -->
   <header class="fixed top-0 inset-x-0 w-full z-50 bg-surface backdrop-blur-xl border-b border-outline-variant shadow-[0_1px_12px_rgba(0,0,0,0.04)] transition-all" role="banner">
-    <nav class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6" aria-label="Основная навигация">
-      <a href="#" class="flex items-center gap-3 shrink-0 group" aria-label="Cerastilo — в начало страницы">
-        <img src="icon-256.png" width="38" height="38" alt="" class="w-9 h-9 rounded-xl shadow-sm group-hover:scale-105 transition-transform" />
+    <nav class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6" aria-label="Основная навигация" data-i18n-aria="nav.main">
+      <a href="#" class="flex items-center gap-3 shrink-0 group" aria-label="Cerastilo — в начало страницы" data-i18n-aria="nav.top">
+        <img src="/icon-256.png" width="38" height="38" alt="" class="w-9 h-9 rounded-xl shadow-sm group-hover:scale-105 transition-transform" />
         <div class="flex flex-col">
           <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none">Cerastilo</span>
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mt-0.5">Christian Life &amp; Ministry</span>
@@ -273,25 +75,25 @@
       </ul>
 
       <div class="flex items-center gap-2.5 shrink-0">
-        <button id="lang-toggle" type="button" class="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 font-label-sm text-label-sm uppercase tracking-wider transition-opacity cursor-pointer" aria-label="Сменить язык сайта" title="Сменить язык сайта" data-i18n-aria="lang.toggle" data-i18n-title="lang.toggle">
-          <span class="lang-label">RU</span>
-        </button>
+        <a id="lang-toggle" href="/en/" hreflang="en" class="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 font-label-sm text-label-sm uppercase tracking-wider transition-opacity cursor-pointer" aria-label="Перейти на английскую версию" title="Перейти на английскую версию" data-i18n-aria="lang.toggle" data-i18n-title="lang.toggle">
+          <span class="lang-label" data-i18n="lang.label">RU</span>
+        </a>
 
         <button id="theme-toggle" type="button" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors cursor-pointer" aria-label="Переключить тему" data-i18n-aria="theme.toggle">
-          <i data-lucide="sun" class="icon-sun w-4 h-4" aria-hidden="true"></i>
-          <i data-lucide="moon" class="icon-moon w-4 h-4" aria-hidden="true"></i>
+          <svg class="icon-sun w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
 
         <a href="#download" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" data-i18n="nav.download">Скачать</a>
 
         <button id="hamburger" type="button" class="lg:hidden w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container border border-outline-variant text-on-surface flex items-center justify-center" aria-label="Открыть меню" data-i18n-aria="nav.menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i data-lucide="menu" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </nav>
 
     <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="mobile-menu lg:hidden bg-surface-container-lowest border-b border-outline-variant px-6 py-4 shadow-lg" aria-hidden="true" role="navigation" aria-label="Меню сайта" data-i18n-aria="nav.menuLabel">
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-surface-container-lowest border-b border-outline-variant px-6 py-4 shadow-lg" role="navigation" aria-label="Меню сайта" data-i18n-aria="nav.menuLabel">
       <ul class="flex flex-col gap-2" role="list">
         <li><a href="#two-apps" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.two">Две программы</a></li>
         <li><a href="#features" class="mobile-menu__link block py-2 px-3 rounded-lg hover:bg-surface-container-low font-label-lg" data-i18n="nav.features">Возможности</a></li>
@@ -320,7 +122,7 @@
 
         <!-- Main Headline -->
         <h1 id="hero-heading" class="font-display-lg text-display-lg max-w-4xl text-on-surface tracking-tight" data-i18n="hero.headline">
-          Расписание встречи — на компьютере и на планшете
+          Расписание встречи «Христианская жизнь и служение» — на компьютере и на планшете
         </h1>
 
         <!-- Subtitle -->
@@ -331,11 +133,11 @@
         <!-- Action CTA row -->
         <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
           <a href="#download" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:-translate-y-0.5 transition-all">
-            <i data-lucide="download" class="w-5 h-5" aria-hidden="true"></i>
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
             <span data-i18n="hero.cta1">Скачать</span>
           </a>
           <a href="#beta" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant text-secondary hover:bg-surface-container-low font-label-lg text-label-lg shadow-sm hover:-translate-y-0.5 transition-all">
-            <i data-lucide="flask-conical" class="w-5 h-5" aria-hidden="true"></i>
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.2 19.4A2 2 0 0 0 5.9 22h12.2a2 2 0 0 0 1.7-2.6L14 9.31V2M8.5 2h7M7 16h10"/></svg>
             <span data-i18n="hero.cta2">Стать бета-тестером</span>
           </a>
         </div>
@@ -343,19 +145,19 @@
         <!-- Micro-feature pills beneath (Stitch Hero Pills) -->
         <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
-            <span class="material-symbols-outlined text-[16px] text-primary">computer</span>
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             <span data-i18n="two.pc.tag">Linux · Windows</span>
           </span>
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
-            <span class="material-symbols-outlined text-[16px] text-primary">tablet_android</span>
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
             <span data-i18n="two.tab.tag">Android</span>
           </span>
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
-            <span class="material-symbols-outlined text-[16px] text-primary">wifi</span>
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0"/></svg>
             <span data-i18n="two.sync.title">Синхронизация по Wi-Fi</span>
           </span>
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
-            <span class="material-symbols-outlined text-[16px] text-primary">print</span>
+            <svg class=" text-primary w-[16px] h-[16px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
             <span data-i18n="feat.export.l1">PDF, Word, бланки S-89, печать.</span>
           </span>
         </div>
@@ -364,7 +166,7 @@
         <div class="w-full mt-14 relative flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 pb-6" role="group" aria-label="Cerastilo на компьютере и на планшете" data-i18n-aria="hero.devices">
 
           <!-- Desktop Window Mockup (Left/Back) -->
-          <a href="screenshots/raspisanie.png" target="_blank" rel="noopener" class="w-full lg:w-[66%] rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-2xl overflow-hidden text-left transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 z-10 block">
+          <a href="/screenshots/raspisanie.webp" target="_blank" rel="noopener" class="w-full lg:w-[66%] rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-2xl overflow-hidden text-left transform lg:-rotate-1 hover:rotate-0 transition-transform duration-500 z-10 block">
             <div class="bg-surface-container-high px-4 py-3 flex items-center justify-between border-b border-outline-variant">
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-error inline-block"></span>
@@ -374,25 +176,25 @@
               </div>
               <span class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm" data-i18n="two.pc.title">Компьютер</span>
             </div>
-            <img src="screenshots/raspisanie.png" alt="Cerastilo на компьютере: таблица недельного расписания" data-i18n-alt="hero.altPc" width="1600" height="1000" fetchpriority="high" class="w-full h-auto block" />
+            <img src="/screenshots/raspisanie.webp" alt="Cerastilo на компьютере: таблица недельного расписания" data-i18n-alt="hero.altPc" width="1600" height="1000" fetchpriority="high" class="w-full h-auto block" />
           </a>
 
           <!-- Android Tablet Mockup (Right/Front Overlapping) -->
-          <a href="screenshots/tablet-mesyac.png" target="_blank" rel="noopener" class="w-full lg:w-[46%] lg:-ml-14 lg:mt-16 rounded-2xl bg-surface-container-lowest p-3 border-2 border-primary shadow-2xl z-20 transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 block">
+          <a href="/screenshots/tablet-mesyac.webp" target="_blank" rel="noopener" class="w-full lg:w-[46%] lg:-ml-14 lg:mt-16 rounded-2xl bg-surface-container-lowest p-3 border-2 border-primary shadow-2xl z-20 transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 block">
             <div class="flex items-center justify-between px-2 pb-2 mb-2 border-b border-surface-container-high">
               <div class="flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-secondary text-[18px]">tablet_android</span>
+                <svg class="text-secondary w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
                 <span class="font-label-md text-label-md font-bold text-on-surface" data-i18n="two.tab.title">Планшет</span>
               </div>
               <span class="font-label-sm text-label-sm text-secondary">Android • Wi-Fi</span>
             </div>
-            <img src="screenshots/tablet-mesyac.png" alt="Cerastilo на планшете: доска месяца" data-i18n-alt="hero.altTablet" width="1920" height="1040" loading="lazy" class="w-full h-auto rounded-lg block" />
+            <img src="/screenshots/tablet-mesyac.webp" alt="Cerastilo на планшете: доска месяца" data-i18n-alt="hero.altTablet" width="1920" height="1040" loading="lazy" class="w-full h-auto rounded-lg block" />
           </a>
 
           <!-- Floating Wi-Fi Sync Capsule Card (Stitch Style) -->
           <div class="lg:absolute -bottom-3 left-1/2 lg:-translate-x-1/2 z-30 px-5 py-2.5 rounded-full bg-surface-container-lowest border-2 border-primary shadow-xl flex items-center gap-3">
             <div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
-              <i data-lucide="wifi" class="w-4 h-4" aria-hidden="true"></i>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0"/></svg>
             </div>
             <div class="text-left">
               <div class="font-label-md text-label-md text-on-surface font-bold">
@@ -431,7 +233,7 @@
                   Linux · Windows
                 </span>
                 <div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
-                  <i data-lucide="monitor" class="w-5 h-5" aria-hidden="true"></i>
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                 </div>
               </div>
               <h3 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="two.pc.title">
@@ -441,8 +243,8 @@
                 Полноценное планирование: доска месяца, авто-распределение, печать, экспорт, письма участникам.
               </p>
             </div>
-            <a href="screenshots/raspisanie.png" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
-              <img src="screenshots/raspisanie.png" alt="" width="1600" height="1000" loading="lazy" class="w-full h-56 object-cover object-left-top" />
+            <a href="/screenshots/raspisanie.webp" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
+              <img src="/screenshots/raspisanie.webp" alt="Недельное расписание встречи в Cerastilo на компьютере" data-i18n-alt="two.pc.alt" width="1600" height="1000" loading="lazy" class="w-full h-56 object-cover object-left-top" />
             </a>
           </li>
 
@@ -454,7 +256,7 @@
                   Android
                 </span>
                 <div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
-                  <i data-lucide="tablet" class="w-5 h-5" aria-hidden="true"></i>
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
                 </div>
               </div>
               <h3 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="two.tab.title">
@@ -464,8 +266,8 @@
                 То же самое приложение и тот же вид. Работает без компьютера — удобно держать в руках прямо на встрече.
               </p>
             </div>
-            <a href="screenshots/tablet-raspisanie.png" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
-              <img src="screenshots/tablet-raspisanie.png" alt="" width="1920" height="1040" loading="lazy" class="w-full h-56 object-cover object-left-top" />
+            <a href="/screenshots/tablet-raspisanie.webp" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:opacity-95 transition-opacity">
+              <img src="/screenshots/tablet-raspisanie.webp" alt="Расписание встречи в Cerastilo на Android-планшете" data-i18n-alt="two.tablet.alt" width="1920" height="1040" loading="lazy" class="w-full h-56 object-cover object-left-top" />
             </a>
           </li>
 
@@ -474,7 +276,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div class="lg:col-span-7">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider mb-4">
-                  <i data-lucide="refresh-cw" class="w-3.5 h-3.5" aria-hidden="true"></i>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5"/></svg>
                   <span>Wi-Fi • SQLite</span>
                 </div>
                 <h3 class="font-headline-lg text-headline-lg text-on-surface mb-3" data-i18n="two.sync.title">
@@ -484,7 +286,7 @@
                   Планшет становится сервером, компьютер подключается сам — по адресу и коду из 6 символов. Брандмауэр настраивать не нужно.
                 </p>
                 <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant flex items-start gap-3">
-                  <span class="material-symbols-outlined text-primary text-[22px] mt-0.5">merge</span>
+                  <svg class="text-primary mt-0.5 w-[22px] h-[22px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 6 4-4 4 4"/><path d="M12 2v10.3a4 4 0 0 1-1.17 2.87L4 22"/><path d="m20 22-5-5"/></svg>
                   <p class="font-body-md text-body-md text-on-surface font-medium" data-i18n="two.sync.merge">
                     Базы объединяются: побеждает более свежая правка, а копия перед слиянием сохраняется.
                   </p>
@@ -492,8 +294,8 @@
               </div>
 
               <div class="lg:col-span-5 p-5 rounded-xl bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-center">
-                <a href="screenshots/sinhronizaciya.png" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-md hover:scale-[1.02] transition-transform">
-                  <img src="screenshots/sinhronizaciya.png" alt="Окно синхронизации: адрес и код" data-i18n-alt="two.sync.alt" width="560" height="256" loading="lazy" class="w-full h-auto block" />
+                <a href="/screenshots/sinhronizaciya.webp" target="_blank" rel="noopener" class="block rounded-xl overflow-hidden border border-outline-variant shadow-md hover:scale-[1.02] transition-transform">
+                  <img src="/screenshots/sinhronizaciya.webp" alt="Окно синхронизации: адрес и код" data-i18n-alt="two.sync.alt" width="560" height="256" loading="lazy" class="w-full h-auto block" />
                 </a>
               </div>
             </div>
@@ -503,7 +305,7 @@
 
         <!-- Optional sync note -->
         <p class="mt-8 flex items-center justify-center gap-2 text-center font-label-lg text-on-surface-variant">
-          <i data-lucide="check" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+          <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           <span data-i18n="two.note">Нужен только компьютер или только планшет — берите одну программу. Синхронизация — по желанию.</span>
         </p>
       </div>
@@ -524,27 +326,27 @@
       <!-- Stitch Pill Tabs Bar -->
       <div class="feat-tabs flex flex-wrap items-center justify-center gap-2.5 pb-2 mb-8" role="tablist" aria-labelledby="features-heading">
         <button type="button" class="feat-tab is-active inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="true" aria-controls="feat-panel-0" id="feat-tab-0" data-feat-tab="0">
-          <i data-lucide="wand-2" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72ZM14 7l3 3M5 6v4M19 14v4M10 2v2M7 8H3M21 16h-4M11 3H9"/></svg>
           <span data-i18n="feat.month.title">Доска месяца и авто-распределение</span>
         </button>
         <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-1" id="feat-tab-1" data-feat-tab="1">
-          <i data-lucide="layout-dashboard" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
           <span data-i18n="feat.today.title">Сегодня — что сделать</span>
         </button>
         <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-2" id="feat-tab-2" data-feat-tab="2">
-          <i data-lucide="users" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>
           <span data-i18n="feat.people.title">Возвещатели и история</span>
         </button>
         <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-3" id="feat-tab-3" data-feat-tab="3">
-          <i data-lucide="bar-chart-3" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg>
           <span data-i18n="feat.stats.title">Статистика нагрузки</span>
         </button>
         <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-4" id="feat-tab-4" data-feat-tab="4">
-          <i data-lucide="book-open" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           <span data-i18n="feat.books.title">Рабочие тетради</span>
         </button>
         <button type="button" class="feat-tab inline-flex items-center gap-2 px-4 py-2.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" role="tab" aria-selected="false" aria-controls="feat-panel-5" id="feat-tab-5" data-feat-tab="5">
-          <i data-lucide="printer" class="w-4 h-4" aria-hidden="true"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
           <span data-i18n="feat.export.title">Печать и экспорт</span>
         </button>
       </div>
@@ -553,182 +355,182 @@
       <div class="rounded-3xl bg-surface-container-lowest border border-outline-variant p-6 lg:p-10 shadow-lg">
 
         <!-- Panel 0: Monthly Board -->
-        <article class="feat-row is-active grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-0" role="tabpanel" aria-labelledby="feat-tab-0" data-feat-panel="0">
+        <article class="feat-row grid is-active grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-0" role="tabpanel" aria-labelledby="feat-tab-0" data-feat-panel="0">
           <div class="lg:col-span-5 flex flex-col gap-4">
             <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
-              <i data-lucide="wand-2" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72ZM14 7l3 3M5 6v4M19 14v4M10 2v2M7 8H3M21 16h-4M11 3H9"/></svg>
             </div>
             <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.month.title">Доска месяца и авто-распределение</h3>
             <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.month.l1">Учитывает квалификации, пол, отдых и отпуск.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.month.l2">Заполняет только пустые пункты — ваши ручные назначения остаются.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.month.l3">Не понравилось — откат одним нажатием.</span>
               </li>
             </ul>
           </div>
-          <a href="screenshots/mesyac.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+          <a href="/screenshots/mesyac.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
             <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
               <span class="w-3 h-3 rounded-full bg-error"></span>
               <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
               <span class="w-3 h-3 rounded-full bg-secondary"></span>
             </div>
-            <img src="screenshots/mesyac.png" alt="Доска месяца с назначениями по неделям" data-i18n-alt="feat.month.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+            <img src="/screenshots/mesyac.webp" alt="Доска месяца с назначениями по неделям" data-i18n-alt="feat.month.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
           </a>
         </article>
 
         <!-- Panel 1: Today -->
-        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-1" role="tabpanel" aria-labelledby="feat-tab-1" data-feat-panel="1">
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-1" role="tabpanel" aria-labelledby="feat-tab-1" data-feat-panel="1">
           <div class="lg:col-span-5 flex flex-col gap-4">
             <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
-              <i data-lucide="layout-dashboard" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
             </div>
             <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.today.title">Сегодня — что сделать</h3>
             <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.today.l1">Кто не ответил на уведомление и кто ещё не уведомлён.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.today.l2">Карточка ближайшей встречи.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.today.l3">Неотложные дела — на одном экране.</span>
               </li>
             </ul>
           </div>
-          <a href="screenshots/segodnya.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+          <a href="/screenshots/segodnya.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
             <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
               <span class="w-3 h-3 rounded-full bg-error"></span>
               <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
               <span class="w-3 h-3 rounded-full bg-secondary"></span>
             </div>
-            <img src="screenshots/segodnya.png" alt="Экран «Сегодня»: неотложные дела и ближайшая встреча" data-i18n-alt="feat.today.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+            <img src="/screenshots/segodnya.webp" alt="Экран «Сегодня»: неотложные дела и ближайшая встреча" data-i18n-alt="feat.today.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
           </a>
         </article>
 
         <!-- Panel 2: Participants -->
-        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-2" role="tabpanel" aria-labelledby="feat-tab-2" data-feat-panel="2">
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-2" role="tabpanel" aria-labelledby="feat-tab-2" data-feat-panel="2">
           <div class="lg:col-span-5 flex flex-col gap-4">
             <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
-              <i data-lucide="users" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>
             </div>
             <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.people.title">Возвещатели и история</h3>
             <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.people.l1">Карточки: квалификации, семья, отпуск, контакты.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.people.l2">История назначений и «в паре N раз» — видно, кто с кем уже был.</span>
               </li>
             </ul>
           </div>
-          <a href="screenshots/vozveshchateli.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+          <a href="/screenshots/vozveshchateli.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
             <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
               <span class="w-3 h-3 rounded-full bg-error"></span>
               <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
               <span class="w-3 h-3 rounded-full bg-secondary"></span>
             </div>
-            <img src="screenshots/vozveshchateli.png" alt="База возвещателей с карточками участников" data-i18n-alt="feat.people.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+            <img src="/screenshots/vozveshchateli.webp" alt="База возвещателей с карточками участников" data-i18n-alt="feat.people.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
           </a>
         </article>
 
         <!-- Panel 3: Statistics -->
-        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-3" role="tabpanel" aria-labelledby="feat-tab-3" data-feat-panel="3">
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-3" role="tabpanel" aria-labelledby="feat-tab-3" data-feat-panel="3">
           <div class="lg:col-span-5 flex flex-col gap-4">
             <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
-              <i data-lucide="bar-chart-3" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></svg>
             </div>
             <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.stats.title">Статистика нагрузки</h3>
             <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.stats.l1">Графики по категориям назначений.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.stats.l2">Сразу видно, кто перегружен, а кто давно не участвовал.</span>
               </li>
             </ul>
           </div>
-          <a href="screenshots/statistika.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+          <a href="/screenshots/statistika.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
             <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
               <span class="w-3 h-3 rounded-full bg-error"></span>
               <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
               <span class="w-3 h-3 rounded-full bg-secondary"></span>
             </div>
-            <img src="screenshots/statistika.png" alt="Статистика нагрузки по категориям назначений" data-i18n-alt="feat.stats.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+            <img src="/screenshots/statistika.webp" alt="Статистика нагрузки по категориям назначений" data-i18n-alt="feat.stats.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
           </a>
         </article>
 
         <!-- Panel 4: Workbooks -->
-        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-4" role="tabpanel" aria-labelledby="feat-tab-4" data-feat-panel="4">
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-4" role="tabpanel" aria-labelledby="feat-tab-4" data-feat-panel="4">
           <div class="lg:col-span-5 flex flex-col gap-4">
             <div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center shadow-sm">
-              <i data-lucide="book-open" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
             </div>
             <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.books.title">Рабочие тетради</h3>
             <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.books.l1">Импорт из EPUB — вы скачиваете тетрадь сами, из официального источника.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.books.l2">Программа автоматически раскладывается по неделям.</span>
               </li>
             </ul>
           </div>
-          <a href="screenshots/tetradi.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+          <a href="/screenshots/tetradi.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
             <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
               <span class="w-3 h-3 rounded-full bg-error"></span>
               <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
               <span class="w-3 h-3 rounded-full bg-secondary"></span>
             </div>
-            <img src="screenshots/tetradi.png" alt="Импорт рабочей тетради по неделям" data-i18n-alt="feat.books.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+            <img src="/screenshots/tetradi.webp" alt="Импорт рабочей тетради по неделям" data-i18n-alt="feat.books.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
           </a>
         </article>
 
         <!-- Panel 5: Print & Export -->
-        <article class="feat-row grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-5" role="tabpanel" aria-labelledby="feat-tab-5" data-feat-panel="5">
+        <article class="feat-row grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" id="feat-panel-5" role="tabpanel" aria-labelledby="feat-tab-5" data-feat-panel="5">
           <div class="lg:col-span-5 flex flex-col gap-4">
             <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
-              <i data-lucide="printer" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect width="12" height="8" x="6" y="14" rx="1"/></svg>
             </div>
             <h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="feat.export.title">Печать и экспорт</h3>
             <ul class="space-y-3 pt-2 font-body-md text-on-surface-variant">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.export.l1">PDF, Word, бланки S-89, печать.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.export.l2">Письма участникам с файлом календаря .ics.</span>
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                <svg class="text-primary mt-0.5 w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                 <span data-i18n="feat.export.l3">Один и тот же вид расписания на ПК и на планшете.</span>
               </li>
             </ul>
           </div>
-          <a href="screenshots/raspisanie.png" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
+          <a href="/screenshots/raspisanie.webp" target="_blank" rel="noopener" class="lg:col-span-7 block rounded-2xl overflow-hidden bg-surface-container-low border border-outline-variant shadow-md hover:shadow-xl transition-shadow">
             <div class="bg-surface-container-high px-4 py-2.5 flex items-center gap-2 border-b border-outline-variant">
               <span class="w-3 h-3 rounded-full bg-error"></span>
               <span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
               <span class="w-3 h-3 rounded-full bg-secondary"></span>
             </div>
-            <img src="screenshots/raspisanie.png" alt="Таблица недельного расписания" data-i18n-alt="feat.export.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
+            <img src="/screenshots/raspisanie.webp" alt="Таблица недельного расписания" data-i18n-alt="feat.export.alt" width="1600" height="1000" loading="lazy" class="w-full h-auto block" />
           </a>
         </article>
 
@@ -754,7 +556,7 @@
             <div>
               <div class="flex items-center justify-between mb-6">
                 <div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
-                  <i data-lucide="tablet" class="w-6 h-6" aria-hidden="true"></i>
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></svg>
                 </div>
                 <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Версия 0.1.0</span>
               </div>
@@ -773,7 +575,7 @@
             <div>
               <div class="flex items-center justify-between mb-6">
                 <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
-                  <i data-lucide="terminal" class="w-6 h-6" aria-hidden="true"></i>
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg>
                 </div>
                 <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Версия 0.1.0</span>
               </div>
@@ -798,7 +600,7 @@
             <div>
               <div class="flex items-center justify-between mb-6">
                 <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
-                  <i data-lucide="panels-top-left" class="w-6 h-6" aria-hidden="true"></i>
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
                 </div>
                 <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Версия 0.1.0</span>
               </div>
@@ -824,7 +626,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-7 flex flex-col gap-4">
             <div class="w-14 h-14 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shadow-sm">
-              <i data-lucide="flask-conical" class="w-7 h-7" aria-hidden="true"></i>
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.2 19.4A2 2 0 0 0 5.9 22h12.2a2 2 0 0 0 1.7-2.6L14 9.31V2M8.5 2h7M7 16h10"/></svg>
             </div>
             <h2 id="beta-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="beta.title">
               Ищу бета-тестеров
@@ -837,7 +639,7 @@
           <div class="lg:col-span-5 p-6 lg:p-8 rounded-2xl bg-surface-container-low border border-outline-variant flex flex-col gap-4">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
-                <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               </div>
               <div>
                 <div class="font-label-md text-label-md text-on-surface-variant" data-i18n="beta.contact">Напишите мне:</div>
@@ -868,7 +670,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q1">Cerastilo бесплатный?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a1">Да. Cerastilo бесплатное для личного использования. Исходный код можно посмотреть, но проект не является открытым: изменять, распространять и продавать приложение можно только с письменного разрешения автора. Подробности — в файле LICENSE.</p>
@@ -878,7 +680,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q2">Какие платформы поддерживаются?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a2">Компьютер: Linux (AUR и AppImage x86_64) и Windows (ZIP для x64). Android-планшеты: APK для arm64.</p>
@@ -888,7 +690,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q3">Данные собрания в безопасности?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a3">Данные хранятся в локальной базе SQLite на вашем устройстве, своих серверов у проекта нет. Синхронизация идёт напрямую между вашими устройствами в локальной сети Wi-Fi: планшет — сервер, компьютер подключается к нему. Письма участникам уходят через ваш собственный SMTP-сервер.</p>
@@ -898,7 +700,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q9">Нужны ли оба устройства?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a9">Нет. Каждая программа работает сама по себе — можно пользоваться только компьютером или только планшетом. Синхронизация нужна, только если вы хотите, чтобы на обоих устройствах была одна и та же база.</p>
@@ -908,7 +710,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q4">Нужен ли интернет?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a4">Для работы с расписанием — нет. Интернет нужен только для отправки и получения писем.</p>
@@ -918,7 +720,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q5">Можно перенести историю назначений из другой программы?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a5">Прямого импорта из NW Scheduler нет. Историю назначений можно загрузить из CSV-файла.</p>
@@ -928,7 +730,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q6">Есть ли английский интерфейс?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a6">Да. Интерфейс есть на русском и английском; язык выбирается в «Настройках» и применяется после перезапуска.</p>
@@ -938,7 +740,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q7">Есть ли в приложении публикации Свидетелей Иеговы?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a7">Нет. Cerastilo не содержит текстов, изображений и других материалов JW.org и сам ничего не скачивает с этого сайта. Рабочую тетрадь вы скачиваете сами для личного использования и открываете в программе. Она раскладывает программу встреч по неделям только на вашем устройстве и никуда её не публикует. Cerastilo бесплатное и некоммерческое.</p>
@@ -948,7 +750,7 @@
           <details class="faq-card rounded-2xl bg-surface-container-lowest border border-outline-variant shadow-sm overflow-hidden group">
             <summary class="p-6 cursor-pointer flex items-center justify-between gap-4 font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors">
               <span data-i18n="faq.q8">Это официальное приложение?</span>
-              <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
+              <svg class="faq-chevron text-outline transition-transform duration-300 w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
               <p data-i18n="faq.a8">Нет. Неофициальное приложение. Не связано с Watch Tower Bible and Tract Society / JW.org.</p>
@@ -966,7 +768,7 @@
         <div id="feedback" class="rounded-3xl bg-surface-container-lowest border border-outline-variant p-8 lg:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-6">
-              <i data-lucide="message-square" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
             <h2 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="feedback.title">
               Предложить улучшение
@@ -987,7 +789,7 @@
         <div id="donate" class="rounded-3xl bg-gradient-to-br from-surface-container-lowest to-surface-container-low border border-outline-variant p-8 lg:p-10 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-6">
-              <i data-lucide="heart" class="w-6 h-6" aria-hidden="true"></i>
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
             </div>
             <h2 class="font-headline-md text-headline-md text-on-surface mb-3" data-i18n="donate.title">
               Поддержать проект
@@ -1021,8 +823,8 @@
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10">
 
         <div class="md:col-span-5 flex flex-col items-start gap-3">
-          <a href="#" class="flex items-center gap-3" aria-label="Cerastilo — в начало страницы">
-            <img src="icon-256.png" width="32" height="32" alt="" class="w-8 h-8 rounded-lg" />
+          <a href="#" class="flex items-center gap-3" aria-label="Cerastilo — в начало страницы" data-i18n-aria="nav.top">
+            <img src="/icon-256.png" width="32" height="32" alt="" class="w-8 h-8 rounded-lg" />
             <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Cerastilo</span>
           </a>
           <p class="font-body-md text-body-md text-on-surface-variant max-w-sm" data-i18n="footer.tagline">
@@ -1030,7 +832,7 @@
           </p>
         </div>
 
-        <nav class="md:col-span-4 flex flex-col gap-2" aria-label="Навигация внизу страницы">
+        <nav class="md:col-span-4 flex flex-col gap-2" aria-label="Навигация внизу страницы" data-i18n-aria="nav.footer">
           <ul class="grid grid-cols-2 gap-2 font-body-sm text-body-sm text-on-surface-variant" role="list">
             <li><a href="#two-apps" class="hover:text-primary transition-colors" data-i18n="nav.two">Две программы</a></li>
             <li><a href="#features" class="hover:text-primary transition-colors" data-i18n="nav.features">Возможности</a></li>
@@ -1044,7 +846,7 @@
 
         <div class="md:col-span-3 flex flex-col items-start gap-3">
           <a href="https://github.com/pioner14/Cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant text-on-surface hover:border-primary transition-colors font-label-md text-label-md shadow-sm">
-            <i data-lucide="shield-check" class="w-4 h-4 text-primary" aria-hidden="true"></i>
+            <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
             <span data-i18n="footer.license">Лицензия (LICENSE)</span>
           </a>
           <p class="font-body-sm text-body-sm text-on-surface-variant">
@@ -1068,6 +870,6 @@
   </footer>
 
   <!-- Main JS (module) -->
-  <script type="module" src="main.js?v=4"></script>
+  <script type="module" src="/main.js?v=4"></script>
 </body>
 </html>

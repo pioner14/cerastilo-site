@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Stitch Variant 1: Warm Editorial Craft & Violet (Light Mode) */
+  --st-surface: #f7f2ea;
+  --st-surface-lowest: #fffdf9;
+  --st-surface-low: #f1e9dc;
+  --st-surface-container: #ebe1d2;
+  --st-surface-high: #e3d7c5;
+  --st-surface-highest: #d9cbb6;
+  --st-on-surface: #1f1a1c;
+  --st-on-surface-variant: #4f4756;
+  --st-primary: #5d3e89;
+  --st-on-primary: #ffffff;
+  --st-primary-container: #7656a3;
+  --st-on-primary-container: #f2e7ff;
+  --st-primary-fixed: #eddcff;
+  --st-on-primary-fixed: #280253;
+  --st-secondary: #7b573a;
+  --st-on-secondary: #ffffff;
+  --st-secondary-container: #f5d5b8;
+  --st-on-secondary-container: #5c3d22;
+  --st-secondary-fixed: #f7DEC6;
+  --st-on-secondary-fixed: #2e1501;
+  --st-tertiary: #654907;
+  --st-tertiary-container: #7f6120;
+  --st-tertiary-fixed: #ffdea5;
+  --st-on-tertiary-fixed: #261900;
+  --st-tertiary-fixed-dim: #e9c176;
+  --st-outline: #7b7481;
+  --st-outline-variant: #d6c8b6;
+}
+
+/* Stitch Variant 2: Dark Craft Obsidian (Dark Mode — via system prefers-color-scheme or [data-theme="dark"]) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --st-surface: #110d18;
+    --st-surface-lowest: #1a1426;
+    --st-surface-low: #16111f;
+    --st-surface-container: #211930;
+    --st-surface-high: #2a203d;
+    --st-surface-highest: #35284c;
+    --st-on-surface: #f5f1fa;
+    --st-on-surface-variant: #c5bdd6;
+    --st-primary: #9d71e8;
+    --st-on-primary: #110d18;
+    --st-primary-container: #b899ea;
+    --st-on-primary-container: #110d18;
+    --st-primary-fixed: #2d2046;
+    --st-on-primary-fixed: #e4d7fa;
+    --st-secondary: #e2b887;
+    --st-on-secondary: #1d1206;
+    --st-secondary-container: #38291b;
+    --st-on-secondary-container: #f7dec6;
+    --st-secondary-fixed: #332518;
+    --st-on-secondary-fixed: #f5d5b8;
+    --st-tertiary: #e9c176;
+    --st-tertiary-container: #4a3810;
+    --st-tertiary-fixed: #3b2c0c;
+    --st-on-tertiary-fixed: #ffdea5;
+    --st-tertiary-fixed-dim: #e9c176;
+    --st-outline: #8b809d;
+    --st-outline-variant: #312545;
+  }
+}
+
+[data-theme="dark"] {
+  --st-surface: #110d18;
+  --st-surface-lowest: #1a1426;
+  --st-surface-low: #16111f;
+  --st-surface-container: #211930;
+  --st-surface-high: #2a203d;
+  --st-surface-highest: #35284c;
+  --st-on-surface: #f5f1fa;
+  --st-on-surface-variant: #c5bdd6;
+  --st-primary: #9d71e8;
+  --st-on-primary: #110d18;
+  --st-primary-container: #b899ea;
+  --st-on-primary-container: #110d18;
+  --st-primary-fixed: #2d2046;
+  --st-on-primary-fixed: #e4d7fa;
+  --st-secondary: #e2b887;
+  --st-on-secondary: #1d1206;
+  --st-secondary-container: #38291b;
+  --st-on-secondary-container: #f7dec6;
+  --st-secondary-fixed: #332518;
+  --st-on-secondary-fixed: #f5d5b8;
+  --st-tertiary: #e9c176;
+  --st-tertiary-container: #4a3810;
+  --st-tertiary-fixed: #3b2c0c;
+  --st-on-tertiary-fixed: #ffdea5;
+  --st-tertiary-fixed-dim: #e9c176;
+  --st-outline: #8b809d;
+  --st-outline-variant: #312545;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+/* Skip link */
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: var(--st-primary);
+  color: var(--st-on-primary);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transform: translateY(-250%);
+  transition: transform 0.2s;
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Theme icon visibility */
+.icon-moon { display: none; }
+[data-theme="dark"] .icon-sun   { display: none; }
+[data-theme="dark"] .icon-moon  { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-sun  { display: none; }
+  :root:not([data-theme="light"]) .icon-moon { display: block; }
+}
+
+/* Mobile drawer */
+.js .mobile-menu:not(.is-open) { display: none; }
+
+html:not(.js) #hamburger,
+html:not(.js) #theme-toggle,
+html:not(.js) .feat-tabs { display: none; }
+
+@media (max-width: 1023px) {
+  html:not(.js) { scroll-padding-top: 0; }
+  html:not(.js) header[role="banner"] { position: static; }
+  html:not(.js) #main { padding-top: 0; }
+}
+
+/* Feature tabs */
+.js .feat-row[data-feat-panel]:not(.is-active) { display: none; }
+html:not(.js) .feat-row + .feat-row { margin-top: 3rem; }
+.js .feat-row[data-feat-panel].is-active {
+  animation: stFade 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.feat-tab.is-active {
+  background-color: var(--st-primary);
+  color: var(--st-on-primary);
+  box-shadow: 0 4px 14px rgba(93, 62, 137, 0.28);
+}
+
+@keyframes stFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* FAQ details accordion */
+details.faq-card > summary { list-style: none; }
+details.faq-card > summary::-webkit-details-marker { display: none; }
+details.faq-card[open] .faq-chevron { transform: rotate(180deg); }
+
+:focus-visible {
+  outline: 2.5px solid var(--st-primary);
+  outline-offset: 3px;
+  border-radius: 0.45rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
