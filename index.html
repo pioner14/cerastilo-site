@@ -325,7 +325,7 @@
 
         <!-- Subtitle -->
         <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-6 leading-relaxed" data-i18n="hero.sub">
-          Cerastilo — бесплатный планировщик встречи «Христианская жизнь и служение». Две программы: для компьютера (Linux, скоро Windows) и для Android-планшета. Каждая работает сама по себе, а вместе — делят одну базу.
+          Cerastilo — бесплатный планировщик встречи «Христианская жизнь и служение». Две программы: для компьютера (Linux и Windows) и для Android-планшета. Каждая работает сама по себе, а вместе — делят одну базу.
         </p>
 
         <!-- Action CTA row -->
@@ -344,7 +344,7 @@
         <div class="flex flex-wrap items-center justify-center gap-3 mt-8">
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
             <span class="material-symbols-outlined text-[16px] text-primary">computer</span>
-            <span data-i18n="two.pc.tag">Linux · Windows скоро</span>
+            <span data-i18n="two.pc.tag">Linux · Windows</span>
           </span>
           <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-sm text-label-sm">
             <span class="material-symbols-outlined text-[16px] text-primary">tablet_android</span>
@@ -428,7 +428,7 @@
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold" data-i18n="two.pc.tag">
-                  Linux · Windows скоро
+                  Linux · Windows
                 </span>
                 <div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
                   <i data-lucide="monitor" class="w-5 h-5" aria-hidden="true"></i>
@@ -739,12 +739,12 @@
     <section id="download" class="w-full bg-surface-container-low py-24 border-y border-outline-variant" aria-labelledby="download-heading">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2">Releases</span>
+          <span class="font-label-md text-label-md text-secondary uppercase font-semibold tracking-widest block mb-2" data-i18n="dl.version">Версия 0.1.0</span>
           <h2 id="download-heading" class="font-headline-lg text-headline-lg text-on-surface" data-i18n="dl.title">
             Скачать Cerastilo
           </h2>
           <p class="font-body-lg text-body-lg text-on-surface-variant mt-3" data-i18n="dl.sub">
-            Бесплатно для личного использования. Неофициальное приложение. Скачивание появится скоро.
+            Бесплатно для личного использования. Неофициальное приложение.
           </p>
         </div>
 
@@ -756,14 +756,14 @@
                 <div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
                   <i data-lucide="tablet" class="w-6 h-6" aria-hidden="true"></i>
                 </div>
-                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="install.soon">Скоро</span>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Версия 0.1.0</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Android</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.android">
-                Планшет: APK на GitHub Releases. В Google Play пока нет — сначала закрытое тестирование.
+                APK для Android-планшетов с архитектурой arm64.
               </p>
             </div>
-            <a class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm opacity-75 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnApk">
+            <a href="https://github.com/pioner14/Cerastilo/releases/download/v0.1.0/Cerastilo-0.1.0-arm64-v8a.apk" class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnApk">
               Скачать APK
             </a>
           </li>
@@ -775,18 +775,19 @@
                 <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
                   <i data-lucide="terminal" class="w-6 h-6" aria-hidden="true"></i>
                 </div>
-                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="install.soon">Скоро</span>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Версия 0.1.0</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Linux</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.linux">
-                AUR-пакет «cerastilo» и AppImage для других дистрибутивов.
+                AUR-пакет для Arch Linux и AppImage (x86_64) для других дистрибутивов.
               </p>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6"><code>yay -S cerastilo</code></p>
             </div>
             <div class="grid grid-cols-2 gap-3">
-              <a class="py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm opacity-75 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnAur">
+              <a href="https://aur.archlinux.org/packages/cerastilo" class="py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnAur">
                 AUR
               </a>
-              <a class="py-3.5 px-4 rounded-xl bg-surface-container-high border-2 border-primary text-on-surface font-label-lg text-label-lg text-center shadow-sm opacity-80 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnAppimage">
+              <a href="https://github.com/pioner14/Cerastilo/releases/download/v0.1.0/Cerastilo-0.1.0-x86_64.AppImage" class="py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnAppimage">
                 AppImage
               </a>
             </div>
@@ -799,18 +800,21 @@
                 <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
                   <i data-lucide="panels-top-left" class="w-6 h-6" aria-hidden="true"></i>
                 </div>
-                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="install.soon">Скоро</span>
+                <span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" data-i18n="dl.version">Версия 0.1.0</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Windows</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="dl.windows">
-                Установщик .exe — готовится.
+                Распакуйте ZIP и запустите cerastilo.exe. Остальные файлы оставьте без изменений.
               </p>
             </div>
-            <a class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm opacity-75 cursor-not-allowed pointer-events-none select-none block" role="link" aria-disabled="true" data-i18n="dl.btnExe">
-              Скачать .exe
+            <a href="https://github.com/pioner14/Cerastilo/releases/download/v0.1.0/Cerastilo-0.1.0-windows-x64.zip" class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary border border-primary font-label-lg text-label-lg text-center shadow-sm block hover:-translate-y-0.5 transition-all" data-i18n="dl.btnZip">
+              Скачать ZIP
             </a>
           </li>
         </ul>
+        <p class="text-center mt-6">
+          <a href="https://github.com/pioner14/Cerastilo/releases" class="font-label-md text-primary hover:underline" data-i18n="dl.releases">Все версии</a>
+        </p>
       </div>
     </section>
 
@@ -843,7 +847,7 @@
 
             <div class="pt-4 border-t border-outline-variant font-body-sm text-body-sm text-on-surface-variant">
               <span data-i18n="beta.issues">Или оставьте сообщение в разделе Issues на GitHub:</span>
-              <a href="https://github.com/pioner14/cerastilo/issues" target="_blank" rel="noopener noreferrer" class="block mt-1 font-label-md text-primary hover:underline">github.com/pioner14/cerastilo/issues</a>
+              <a href="https://github.com/pioner14/Cerastilo/issues" target="_blank" rel="noopener noreferrer" class="block mt-1 font-label-md text-primary hover:underline">github.com/pioner14/Cerastilo/issues</a>
             </div>
           </div>
         </div>
@@ -877,7 +881,7 @@
               <span class="material-symbols-outlined faq-chevron text-outline transition-transform duration-300">expand_more</span>
             </summary>
             <div class="px-6 pb-6 pt-3 border-t border-outline-variant font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              <p data-i18n="faq.a2">Компьютер: Linux (AUR-пакет «cerastilo» и AppImage), версия для Windows готовится. Android-планшеты: APK (позже — Google Play). Пока сборки не опубликованы — скоро.</p>
+              <p data-i18n="faq.a2">Компьютер: Linux (AUR и AppImage x86_64) и Windows (ZIP для x64). Android-планшеты: APK для arm64.</p>
             </div>
           </details>
 
@@ -973,8 +977,8 @@
           </div>
           <div class="pt-4 border-t border-outline-variant font-body-sm text-body-sm text-on-surface-variant">
             <span data-i18n="feedback.channel">Для предложений и сообщений об ошибках — раздел Issues в репозитории на GitHub.</span>
-            <a href="https://github.com/pioner14/cerastilo/issues" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1.5 font-label-md text-primary hover:underline block">
-              github.com/pioner14/cerastilo/issues
+            <a href="https://github.com/pioner14/Cerastilo/issues" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1.5 font-label-md text-primary hover:underline block">
+              github.com/pioner14/Cerastilo/issues
             </a>
           </div>
         </div>
@@ -1039,7 +1043,7 @@
         </nav>
 
         <div class="md:col-span-3 flex flex-col items-start gap-3">
-          <a href="https://github.com/pioner14/cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant text-on-surface hover:border-primary transition-colors font-label-md text-label-md shadow-sm">
+          <a href="https://github.com/pioner14/Cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant text-on-surface hover:border-primary transition-colors font-label-md text-label-md shadow-sm">
             <i data-lucide="shield-check" class="w-4 h-4 text-primary" aria-hidden="true"></i>
             <span data-i18n="footer.license">Лицензия (LICENSE)</span>
           </a>
@@ -1058,7 +1062,7 @@
       </div>
 
       <div class="pt-6 border-t border-outline-variant text-center font-body-sm text-body-sm text-on-surface-variant">
-        © <span id="footer-year">2026</span> pioner14 · <a href="https://github.com/pioner14/cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">LICENSE</a>
+        © <span id="footer-year">2026</span> pioner14 · <a href="https://github.com/pioner14/Cerastilo/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">LICENSE</a>
       </div>
     </div>
   </footer>
