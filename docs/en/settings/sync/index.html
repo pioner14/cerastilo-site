@@ -1509,12 +1509,12 @@
 <p>Step 1. Open the sync dialog on the tablet</p>
 <ol>
 <li>Go to “⚙️ Settings” → “🔄 PC ↔ tablet sync” → “🔄 Sync with PC”. The section says “Show the address and code for the PC: the PC fetches the schedule, merges it and sends it back (over Wi-Fi).”</li>
-<li>“Sync with PC” displays “Address:” (for example, <code>192.168.1.20</code>), “Code:” (for example, <code>ABC234</code>), and “Waiting for the PC…”. Leave the dialog open.</li>
+<li>“Sync with PC” displays “Address:” (for example, <code>192.168.1.20</code>), “Code:” (for example, <code>ABCD-EFGH-JKMN</code>), and “Waiting for the PC…”. Leave the dialog open.</li>
 </ol>
 <p>Step 2. Connect to the tablet from the computer</p>
 <ol>
 <li>Go to “⚙️ Settings” → “🔄 PC ↔ tablet sync” → “🔄 Sync with tablet”. The section says “Fetch the schedule from the tablet, merge it with this one and send it back (over Wi-Fi).”</li>
-<li>In “Sync with tablet”, enter the information from the tablet screen into “Tablet address:” and “Code:”. Click <strong>“🔄 Sync”</strong> or press Enter.</li>
+<li>In “Sync with tablet”, enter the information from the tablet screen into “Tablet address:” and “Code:”. You can type the code with or without dashes; after the first successful sync the computer remembers it. Click <strong>“🔄 Sync”</strong> or press Enter.</li>
 <li>“Fetching the database from the tablet and merging…” appears while the computer retrieves the tablet database, merges both copies, and sends the result back.</li>
 </ol>
 <p>Step 3. Finish</p>
@@ -1526,7 +1526,10 @@
 <ul>
 <li>The tablet runs the server and the computer connects to it. There is no need to configure the computer's firewall.</li>
 <li>The port is always 8765 and is filled in internally. If a sync dialog is already open or the port is in use, the tablet shows “Sync is already running: port 8765 is busy. Close the other sync window and try again.”</li>
-<li>Each time you open the tablet dialog, it displays a fresh code that is valid while the window stays open. Five incorrect attempts stop the sync. Close and reopen the tablet window to try again.</li>
+<li>The transfer is encrypted (TLS 1.3). The code is the encryption key and is never sent over the network, so others on the network cannot read or change the data.</li>
+<li>The tablet keeps the same code until you tap <strong>“New code”</strong> in the sync dialog. After a new code, enter it on the computer once.</li>
+<li>Five incorrect attempts stop the sync. Close and reopen the tablet window to try again.</li>
+<li>Only version 0.1.1 or newer can sync. If the computer says “The tablet is running an older version of Cerastilo”, update the app on both devices.</li>
 <li>The computer remembers the tablet's address for next time.</li>
 <li>The computer saves a pre-merge copy (<code>…pre-sync-…bak</code>) and keeps the last five. The tablet saves a copy before replacement.</li>
 <li>If Wi-Fi drops after the computer has merged the databases but before the tablet receives the result, the computer reports it. You can safely repeat the sync.</li>
