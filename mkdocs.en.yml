@@ -102,5 +102,6 @@ nav:
       - Data import: settings/import.md
       - Backups: settings/backup.md
       - Sync: settings/sync.md
+      - Updates: settings/updates.md
   - Android: android.md
   - "← cerastilo.com": https://cerastilo.com/

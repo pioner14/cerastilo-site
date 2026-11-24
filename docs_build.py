@@ -27,7 +27,7 @@ SECTIONS = {
     8: (None, None, None),
     9: ("smtp", "bulk", "personal", "calendar", "log", "replies"),
     10: (None, None, None),
-    11: ("congregation", "modules", "import", "backup", "sync"),
+    11: ("congregation", "modules", "import", "backup", "sync", "updates"),
     12: (None, None),
 }
 SPLIT = {5, 6, 9, 11}

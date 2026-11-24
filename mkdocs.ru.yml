@@ -102,5 +102,6 @@ nav:
       - Импорт данных: settings/import.md
       - Резервное копирование: settings/backup.md
       - Синхронизация: settings/sync.md
+      - Обновления: settings/updates.md
   - Android: android.md
   - "← cerastilo.com": https://cerastilo.com/

@@ -200,6 +200,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/sync/" />
   </url>
   <url>
+    <loc>https://cerastilo.com/docs/settings/updates/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/updates/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/updates/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/updates/" />
+  </url>
+  <url>
     <loc>https://cerastilo.com/docs/today/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/today/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/today/" />
@@ -396,6 +402,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/sync/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/sync/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/sync/" />
+  </url>
+  <url>
+    <loc>https://cerastilo.com/docs/en/settings/updates/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cerastilo.com/docs/settings/updates/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://cerastilo.com/docs/en/settings/updates/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cerastilo.com/docs/settings/updates/" />
   </url>
   <url>
     <loc>https://cerastilo.com/docs/en/today/</loc>
